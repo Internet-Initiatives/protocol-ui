@@ -1,0 +1,156 @@
+export const metadata = {
+  title: 'Brand Colours',
+  description:
+    'The actual brand colours: Yellow (#FFCB05) and Black (#171717). These define the brand identity and should be used prominently in all brand applications.',
+}
+
+export const sections = [
+  { title: 'Primary Brand Colours', id: 'primary-brand-colours' },
+  { title: 'Brand Combinations', id: 'brand-combinations' },
+  { title: 'Usage Guidelines', id: 'usage-guidelines' },
+]
+
+# Brand Colours - Core Identity
+
+The actual brand colours: Yellow (#FFCB05) and Black (#171717). These define the brand identity and should be used prominently in all brand applications. {{ className: 'lead' }}
+
+---
+
+## Primary Brand Colours {{ id: 'primary-brand-colours' }}
+
+<div className="not-prose mt-8 grid grid-cols-1 gap-8 sm:grid-cols-2">
+  <div className="overflow-hidden rounded-2xl border-4 border-zinc-900 bg-[#FFCB05] p-16 text-center">
+    <h2 className="text-5xl font-black uppercase tracking-wider text-zinc-900">
+      Yellow
+    </h2>
+    <p className="mt-4 text-2xl font-bold text-zinc-900">#FFCB05</p>
+    <p className="mt-2 font-semibold text-zinc-900">RGB(255, 203, 5)</p>
+    <div className="mt-8 border-t-2 border-zinc-900 pt-8">
+      <p className="font-semibold text-zinc-900">ENERGY • OPTIMISM • POWER</p>
+    </div>
+  </div>
+
+  <div className="overflow-hidden rounded-2xl border-4 border-[#FFCB05] bg-zinc-900 p-16 text-center">
+    <h2 className="text-5xl font-black uppercase tracking-wider text-[#FFCB05]">
+      Black
+    </h2>
+    <p className="mt-4 text-2xl font-bold text-[#FFCB05]">#171717</p>
+    <p className="mt-2 font-semibold text-[#FFCB05]">RGB(23, 23, 23)</p>
+    <div className="mt-8 border-t-2 border-[#FFCB05] pt-8">
+      <p className="font-semibold text-[#FFCB05]">
+        SOPHISTICATION • POWER • PREMIUM
+      </p>
+    </div>
+  </div>
+</div>
+
+---
+
+## Brand Colour Combinations {{ id: 'brand-combinations' }}
+
+These are the core combinations that define the UPA brand identity:
+
+### Yellow on Black
+
+<div className="not-prose mt-6">
+  <div className="rounded-xl bg-zinc-900 p-12 text-center">
+    <h2 className="text-4xl font-black leading-tight text-[#FFCB05]">
+      YELLOW ON BLACK
+    </h2>
+    <p className="mt-4 text-white">Maximum impact and energy</p>
+  </div>
+</div>
+
+This is the signature UPA combination. Use for:
+- Hero sections and major headings
+- Call-to-action buttons
+- Brand statements and taglines
+- Marketing materials that need maximum impact
+
+### Black on Yellow
+
+<div className="not-prose mt-6">
+  <div className="rounded-xl border-2 border-zinc-900 bg-[#FFCB05] p-12 text-center">
+    <h2 className="text-4xl font-black leading-tight text-zinc-900">
+      BLACK ON YELLOW
+    </h2>
+    <p className="mt-4 text-zinc-900">High visibility and boldness</p>
+  </div>
+</div>
+
+Use for:
+- Important buttons and CTAs
+- Warning alerts and notifications
+- Highlight sections
+- Emphasis and standout elements
+
+### Black on White with Yellow Accents
+
+<div className="not-prose mt-6">
+  <div className="rounded-xl border-2 border-zinc-200 bg-white p-12 text-center dark:border-zinc-700 dark:bg-zinc-900">
+    <h2 className="text-4xl font-black leading-tight text-zinc-900 dark:text-white">
+      BLACK ON WHITE{' '}
+      <span className="rounded bg-[#FFCB05] px-3 py-1 text-zinc-900">
+        ACCENT
+      </span>
+    </h2>
+    <p className="mt-4 text-zinc-900 dark:text-zinc-100">
+      Clean with yellow highlights
+    </p>
+  </div>
+</div>
+
+Use for:
+- Application interfaces and dashboards
+- Content-heavy pages
+- Professional documents
+- Long-form reading experiences
+
+---
+
+## Usage Guidelines {{ id: 'usage-guidelines' }}
+
+### Yellow (#FFCB05)
+
+<Properties>
+  <Property name="Primary Use">
+    Backgrounds, buttons, accents, and highlights
+  </Property>
+  <Property name="Never Use For">
+    Body text on white or light backgrounds (fails WCAG contrast)
+  </Property>
+  <Property name="Best Paired With">
+    Black (#171717) for text and elements
+  </Property>
+  <Property name="Brand Psychology">
+    Optimism, energy, confidence, and forward momentum
+  </Property>
+</Properties>
+
+### Black (#171717)
+
+<Properties>
+  <Property name="Primary Use">
+    Text, headings, UI elements, and backgrounds
+  </Property>
+  <Property name="Best Paired With">
+    Yellow (#FFCB05) for accents, white for backgrounds
+  </Property>
+  <Property name="Brand Psychology">
+    Premium quality, sophistication, power, and professionalism
+  </Property>
+  <Property name="Accessibility">
+    Excellent contrast on white (21:1 ratio) - exceeds WCAG AAA
+  </Property>
+</Properties>
+
+---
+
+<div className="not-prose mt-12 flex gap-3">
+  <Button href="/black-scale" arrow="right">
+    <>Explore Black Scale</>
+  </Button>
+  <Button href="/gradients" variant="outline">
+    <>View Gradients</>
+  </Button>
+</div>

@@ -1,0 +1,182 @@
+export const metadata = {
+  title: 'Typography',
+  description:
+    'Inter font family (weights 400-900) for all UI elements. Professional, highly readable, and optimised for screens.',
+}
+
+export const sections = [
+  { title: 'Font Family', id: 'font-family' },
+  { title: 'Font Weights', id: 'font-weights' },
+  { title: 'Type Scale', id: 'type-scale' },
+  { title: 'Best Practices', id: 'best-practices' },
+]
+
+# Typography
+
+Inter font family (weights 400-900) for all UI elements. Professional, highly readable, and optimised for screens. {{ className: 'lead' }}
+
+---
+
+## Inter - Primary Font Family {{ id: 'font-family' }}
+
+<div className="not-prose mt-8">
+  <div className="overflow-hidden rounded-xl border border-zinc-900/10 p-8 dark:border-white/10">
+    <div className="text-5xl font-bold">Inter Font Family</div>
+    <div className="mt-4 text-2xl text-zinc-600 dark:text-zinc-400">
+      The quick brown fox jumps over the lazy dog
+    </div>
+    <div className="mt-6 grid gap-4 border-t border-zinc-200 pt-6 dark:border-zinc-700">
+      <div className="flex justify-between">
+        <span className="font-semibold text-zinc-900 dark:text-white">Usage</span>
+        <span className="text-zinc-600 dark:text-zinc-400">All UI elements, body text, headings, buttons, labels</span>
+      </div>
+      <div className="flex justify-between">
+        <span className="font-semibold text-zinc-900 dark:text-white">Weights Available</span>
+        <span className="text-zinc-600 dark:text-zinc-400">400, 500, 600, 700, 800, 900</span>
+      </div>
+      <div className="flex justify-between">
+        <span className="font-semibold text-zinc-900 dark:text-white">Optimised For</span>
+        <span className="text-zinc-600 dark:text-zinc-400">Screen reading, UI elements, app interfaces</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+---
+
+## Font Weights {{ id: 'font-weights' }}
+
+Inter provides six weights perfect for establishing clear visual hierarchy:
+
+<div className="not-prose mt-6 space-y-4">
+  <div className="rounded-lg border border-zinc-900/10 p-4 dark:border-white/10">
+    <div className="text-sm font-semibold text-zinc-600 dark:text-zinc-400">Regular 400</div>
+    <div className="mt-2 text-lg font-normal">Transform your business and become the man your family needs</div>
+  </div>
+
+  <div className="rounded-lg border border-zinc-900/10 p-4 dark:border-white/10">
+    <div className="text-sm font-semibold text-zinc-600 dark:text-zinc-400">Medium 500</div>
+    <div className="mt-2 text-lg font-medium">Transform your business and become the man your family needs</div>
+  </div>
+
+  <div className="rounded-lg border border-zinc-900/10 p-4 dark:border-white/10">
+    <div className="text-sm font-semibold text-zinc-600 dark:text-zinc-400">Semibold 600</div>
+    <div className="mt-2 text-lg font-semibold">Transform your business and become the man your family needs</div>
+  </div>
+
+  <div className="rounded-lg border border-zinc-900/10 p-4 dark:border-white/10">
+    <div className="text-sm font-semibold text-zinc-600 dark:text-zinc-400">Bold 700</div>
+    <div className="mt-2 text-lg font-bold">Transform your business and become the man your family needs</div>
+  </div>
+
+  <div className="rounded-lg border border-zinc-900/10 p-4 dark:border-white/10">
+    <div className="text-sm font-semibold text-zinc-600 dark:text-zinc-400">Extrabold 800</div>
+    <div className="mt-2 text-lg font-extrabold">Transform your business and become the man your family needs</div>
+  </div>
+
+  <div className="rounded-lg border border-zinc-900/10 p-4 dark:border-white/10">
+    <div className="text-sm font-semibold text-zinc-600 dark:text-zinc-400">Black 900</div>
+    <div className="mt-2 text-lg font-black">Transform your business and become the man your family needs</div>
+  </div>
+</div>
+
+---
+
+## Type Scale {{ id: 'type-scale' }}
+
+A harmonious type scale based on a 1.25 ratio (Major Third) for clear visual hierarchy:
+
+<div className="not-prose mt-6 space-y-6">
+  <div>
+    <div className="text-6xl font-black">Heading 1</div>
+    <div className="mt-1 text-sm text-zinc-600 dark:text-zinc-400">60px / 3.75rem - Font weight 900</div>
+  </div>
+
+  <div>
+    <div className="text-5xl font-bold">Heading 2</div>
+    <div className="mt-1 text-sm text-zinc-600 dark:text-zinc-400">48px / 3rem - Font weight 700</div>
+  </div>
+
+  <div>
+    <div className="text-4xl font-bold">Heading 3</div>
+    <div className="mt-1 text-sm text-zinc-600 dark:text-zinc-400">36px / 2.25rem - Font weight 700</div>
+  </div>
+
+  <div>
+    <div className="text-3xl font-semibold">Heading 4</div>
+    <div className="mt-1 text-sm text-zinc-600 dark:text-zinc-400">30px / 1.875rem - Font weight 600</div>
+  </div>
+
+  <div>
+    <div className="text-2xl font-semibold">Heading 5</div>
+    <div className="mt-1 text-sm text-zinc-600 dark:text-zinc-400">24px / 1.5rem - Font weight 600</div>
+  </div>
+
+  <div>
+    <div className="text-xl font-semibold">Heading 6</div>
+    <div className="mt-1 text-sm text-zinc-600 dark:text-zinc-400">20px / 1.25rem - Font weight 600</div>
+  </div>
+
+  <div>
+    <div className="text-base">Body Text (Base)</div>
+    <div className="mt-1 text-sm text-zinc-600 dark:text-zinc-400">16px / 1rem - Font weight 400</div>
+  </div>
+
+  <div>
+    <div className="text-sm">Small Text</div>
+    <div className="mt-1 text-xs text-zinc-600 dark:text-zinc-400">14px / 0.875rem - Font weight 400</div>
+  </div>
+</div>
+
+---
+
+## Best Practices {{ id: 'best-practices' }}
+
+### Body Text
+
+<Properties>
+  <Property name="Minimum Size">
+    16px (1rem) - Never go below 16px for body text
+  </Property>
+  <Property name="Line Height">
+    1.6 for body text (25.6px at 16px)
+  </Property>
+  <Property name="Font Weight">
+    400 (Regular) for optimal readability
+  </Property>
+  <Property name="Colour">
+    Black 800 (#262626) on light backgrounds, Slate 200 (#E2E8F0) on dark
+  </Property>
+</Properties>
+
+### Headings
+
+<Properties>
+  <Property name="Line Height">
+    1.2 for headings - tighter for impact
+  </Property>
+  <Property name="Font Weights">
+    700-900 for maximum presence
+  </Property>
+  <Property name="Letter Spacing">
+    -0.02em for large headings (48px+) to improve optical balance
+  </Property>
+</Properties>
+
+### Accessibility
+
+- **Minimum contrast**: 4.5:1 for body text (WCAG AA)
+- **Large text contrast**: 3:1 for 24px+ or 19px+ bold (WCAG AA)
+- **Line length**: 50-75 characters for optimal reading
+- **Paragraph spacing**: 1.5em between paragraphs
+
+---
+
+<div className="not-prose mt-12 flex gap-3">
+  <Button href="/buttons" arrow="right">
+    <>View Buttons</>
+  </Button>
+  <Button href="/forms" variant="outline">
+    <>Explore Forms</>
+  </Button>
+</div>

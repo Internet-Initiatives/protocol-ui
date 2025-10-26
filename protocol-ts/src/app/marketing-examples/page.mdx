@@ -1,0 +1,145 @@
+export const metadata = {
+  title: 'Marketing Examples',
+  description:
+    'Real-world marketing examples using the UPA brand colours with maximum impact.',
+}
+
+export const sections = [
+  { title: 'Black Backgrounds', id: 'black-backgrounds' },
+  { title: 'White Backgrounds', id: 'white-backgrounds' },
+  { title: 'All Caps Typography', id: 'all-caps-typography' },
+]
+
+# Marketing Examples - Real Copy
+
+Real-world marketing examples using the UPA brand colours with maximum impact and energy. {{ className: 'lead' }}
+
+---
+
+## Black Backgrounds with Yellow Highlights {{ id: 'black-backgrounds' }}
+
+The signature UPA combination: Black backgrounds with yellow highlights create maximum impact and energy.
+
+<div className="not-prose mt-8">
+  <div className="rounded-2xl bg-zinc-900 p-12 text-center">
+    <h2 className="text-5xl font-black leading-tight text-white">
+      Transform your business and become the{' '}
+      <span className="text-[#FFCB05]">man your family needs</span>
+    </h2>
+    <p className="mt-6 text-xl text-zinc-300">
+      Ultimate Performance Academy helps driven entrepreneurs build the physique, mindset, and business they deserve.
+    </p>
+    <div className="mt-8">
+      <button className="rounded-lg bg-[#FFCB05] px-8 py-4 text-lg font-bold text-zinc-900 transition-all hover:bg-[#D97706]">
+        Start Your Transformation
+      </button>
+    </div>
+  </div>
+</div>
+
+### Key Features
+
+- **High contrast**: White and yellow text on black (21:1 and 18:1 respectively)
+- **Emotional impact**: Yellow highlights the key emotional hook
+- **Clear CTA**: Yellow button stands out against black background
+- **Brand consistency**: Signature UPA look and feel
+
+---
+
+<div className="not-prose mt-8">
+  <div className="rounded-2xl bg-zinc-900 p-12">
+    <h2 className="text-4xl font-extrabold text-white">
+      Stop settling for{' '}
+      <span className="rounded bg-[#FFCB05] px-2 py-1 text-zinc-900">mediocre results</span>{' '}
+      in your health and business
+    </h2>
+    <p className="mt-6 text-lg text-zinc-300">
+      You're working 60+ hour weeks. Building an empire. But your health is suffering. Your energy is crashing. Your family barely recognizes you.
+    </p>
+    <p className="mt-4 text-lg font-semibold text-[#FFCB05]">
+      It doesn't have to be this way.
+    </p>
+  </div>
+</div>
+
+---
+
+## White Backgrounds (Yellow as Accent Only) {{ id: 'white-backgrounds' }}
+
+On white backgrounds, yellow is used sparingly as an accent. Black dominates for readability.
+
+<div className="not-prose mt-8">
+  <div className="rounded-2xl border-2 border-zinc-200 bg-white p-12 dark:border-zinc-700 dark:bg-zinc-900">
+    <h2 className="text-4xl font-black text-zinc-900 dark:text-white">
+      Build a business{' '}
+      <span className="rounded bg-[#FFCB05] px-2 py-1 text-zinc-900">AND</span>{' '}
+      the body you deserve
+    </h2>
+    <p className="mt-6 text-lg text-zinc-700 dark:text-zinc-300">
+      Most business programs ignore your health. Most fitness programs ignore your business. We integrate both because you can't sustain success in one without the other.
+    </p>
+    <div className="mt-8 flex flex-wrap gap-4">
+      <button className="rounded-lg bg-zinc-900 px-6 py-3 font-semibold text-white dark:bg-white dark:text-zinc-900">
+        Learn More
+      </button>
+      <button className="rounded-lg bg-[#FFCB05] px-6 py-3 font-semibold text-zinc-900">
+        Get Started
+      </button>
+    </div>
+  </div>
+</div>
+
+### Best Practices for White Backgrounds
+
+- **Black for body text**: Maximum readability (21:1 contrast)
+- **Yellow for accents**: Highlights, badges, important CTAs
+- **Never yellow body text**: Fails WCAG contrast requirements
+- **Use yellow sparingly**: Strategic emphasis only
+
+---
+
+## All Caps Typography {{ id: 'all-caps-typography' }}
+
+ALL CAPS with tight line height creates powerful, commanding headlines.
+
+<div className="not-prose mt-8 space-y-6">
+  <div className="rounded-2xl bg-zinc-900 p-12 text-center">
+    <h1 className="text-6xl font-black leading-none tracking-tight text-white">
+      STOP WAITING
+    </h1>
+    <h1 className="mt-2 text-6xl font-black leading-none tracking-tight text-[#FFCB05]">
+      START BUILDING
+    </h1>
+    <h1 className="mt-2 text-6xl font-black leading-none tracking-tight text-white">
+      BECOME UNSTOPPABLE
+    </h1>
+  </div>
+</div>
+
+<Note>
+  **Use ALL CAPS sparingly** - Great for hero sections and impactful statements, but use sentence case for body text and longer content for better readability.
+</Note>
+
+---
+
+<div className="not-prose mt-8">
+  <div className="rounded-2xl bg-gradient-to-r from-zinc-900 to-zinc-800 p-12 text-center">
+    <h2 className="bg-gradient-to-r from-[#FFCB05] to-[#FDE047] bg-clip-text text-5xl font-black leading-tight text-transparent">
+      The Man. The Mission. The Method.
+    </h2>
+    <p className="mt-6 text-xl text-zinc-300">
+      Our proven system transforms entrepreneurs into high-performers who dominate in business AND life.
+    </p>
+  </div>
+</div>
+
+---
+
+<div className="not-prose mt-12 flex gap-3">
+  <Button href="/usage-guidelines" arrow="right">
+    <>View Usage Guidelines</>
+  </Button>
+  <Button href="/accessibility" variant="outline">
+    <>Explore Accessibility</>
+  </Button>
+</div>

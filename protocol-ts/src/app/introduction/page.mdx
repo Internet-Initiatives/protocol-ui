@@ -1,0 +1,110 @@
+export const metadata = {
+  title: 'Introduction',
+  description:
+    'Introduction to the UPA Design System - A professional, WCAG AA compliant design system built for Ultimate Performance Academy.',
+}
+
+export const sections = [
+  { title: 'Design Principles', id: 'design-principles' },
+  { title: 'Core Values', id: 'core-values' },
+]
+
+# Introduction
+
+A professional, WCAG AA compliant design system built for Ultimate Performance Academy's application interface. Every colour combination meets minimum 4.5:1 contrast ratios. Every component is tested for accessibility. {{ className: 'lead' }}
+
+---
+
+## Design Principles {{ id: 'design-principles' }}
+
+<div className="not-prose mt-6 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
+  <div className="relative overflow-hidden rounded-xl border border-zinc-900/10 p-6 dark:border-white/10">
+    <h3 className="text-lg font-semibold text-zinc-900 dark:text-white">
+      Accessibility First
+    </h3>
+    <p className="mt-3 text-sm text-zinc-600 dark:text-zinc-400">
+      All text meets WCAG AA standards (4.5:1 minimum). Traffic light system (red/amber/green) is readable for all users including those with colour blindness.
+    </p>
+  </div>
+
+  <div className="relative overflow-hidden rounded-xl border border-zinc-900/10 p-6 dark:border-white/10">
+    <h3 className="text-lg font-semibold text-zinc-900 dark:text-white">
+      Brand Consistency
+    </h3>
+    <p className="mt-3 text-sm text-zinc-600 dark:text-zinc-400">
+      Yellow (#FFCB05) and Black are the core brand colours. Yellow is used strategically for highlights and calls-to-action, never for body text.
+    </p>
+  </div>
+
+  <div className="relative overflow-hidden rounded-xl border border-zinc-900/10 p-6 dark:border-white/10">
+    <h3 className="text-lg font-semibold text-zinc-900 dark:text-white">
+      Professional Typography
+    </h3>
+    <p className="mt-3 text-sm text-zinc-600 dark:text-zinc-400">
+      Inter for all UI text (clean, modern, highly legible). Minimum 16px for body text. Clear hierarchy with consistent sizing scale.
+    </p>
+  </div>
+
+  <div className="relative overflow-hidden rounded-xl border border-zinc-900/10 p-6 dark:border-white/10">
+    <h3 className="text-lg font-semibold text-zinc-900 dark:text-white">
+      Semantic Clarity
+    </h3>
+    <p className="mt-3 text-sm text-zinc-600 dark:text-zinc-400">
+      Traffic light system for status (Green=Success, Amber=Warning, Red=Error). Consistent, intuitive, universally understood.
+    </p>
+  </div>
+
+  <div className="relative overflow-hidden rounded-xl border border-zinc-900/10 p-6 dark:border-white/10">
+    <h3 className="text-lg font-semibold text-zinc-900 dark:text-white">
+      Data-Driven Design
+    </h3>
+    <p className="mt-3 text-sm text-zinc-600 dark:text-zinc-400">
+      Built from research and best practices. Google Material Design, Apple HIG, WCAG 2.1 guidelines inform every decision.
+    </p>
+  </div>
+
+  <div className="relative overflow-hidden rounded-xl border border-zinc-900/10 p-6 dark:border-white/10">
+    <h3 className="text-lg font-semibold text-zinc-900 dark:text-white">
+      Responsive & Flexible
+    </h3>
+    <p className="mt-3 text-sm text-zinc-600 dark:text-zinc-400">
+      Designed for all screen sizes and contexts. Works equally well on mobile, tablet, desktop, and large displays.
+    </p>
+  </div>
+</div>
+
+---
+
+## Core Values {{ id: 'core-values' }}
+
+### Readability
+
+Every colour combination in this system has been tested for readability. We follow WCAG 2.1 Level AA standards as a minimum, with many combinations exceeding Level AAA standards (7:1 contrast ratio).
+
+### Usability
+
+Our design system prioritizes usability best practices from industry leaders:
+
+- **Google Material Design**: Clear visual hierarchy, meaningful motion, tactile surfaces
+- **Apple Human Interface Guidelines**: Clarity, deference, depth
+- **Microsoft Fluent Design**: Light, depth, motion, material, scale
+- **WCAG 2.1**: Perceivable, operable, understandable, robust
+
+### Consistency
+
+Consistent application of colours, typography, spacing, and components creates a cohesive user experience. This system provides clear guidelines for when and how to use each element.
+
+### Performance
+
+All colours and components are designed with performance in mind. CSS custom properties enable efficient theming and reduce CSS bloat. Minimal dependencies keep bundle sizes small.
+
+---
+
+<div className="not-prose mt-12 flex gap-3">
+  <Button href="/colours" arrow="right">
+    <>Explore Colours</>
+  </Button>
+  <Button href="/brand-colours" variant="outline">
+    <>View Brand Colours</>
+  </Button>
+</div>

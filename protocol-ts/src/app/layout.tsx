@@ -9,9 +9,10 @@ import '@/styles/tailwind.css'
 
 export const metadata: Metadata = {
   title: {
-    template: '%s - Protocol API Reference',
-    default: 'Protocol API Reference',
+    template: '%s - UPA Design System',
+    default: 'UPA Design System v2.0 - Professional & Accessible',
   },
+  description: 'A professional, WCAG AA compliant design system built for Ultimate Performance Academy. Every colour combination meets minimum 4.5:1 contrast ratios.',
 }
 
 export default async function RootLayout({

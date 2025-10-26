@@ -234,25 +234,37 @@ function NavigationGroup({
 
 export const navigation: Array<NavGroup> = [
   {
-    title: 'Guides',
+    title: 'Foundation',
     links: [
-      { title: 'Introduction', href: '/' },
-      { title: 'Quickstart', href: '/quickstart' },
-      { title: 'SDKs', href: '/sdks' },
-      { title: 'Authentication', href: '/authentication' },
-      { title: 'Pagination', href: '/pagination' },
-      { title: 'Errors', href: '/errors' },
-      { title: 'Webhooks', href: '/webhooks' },
+      { title: 'Introduction', href: '/introduction' },
+      { title: 'Colours', href: '/colours' },
+      { title: 'Brand Colours', href: '/brand-colours' },
+      { title: 'Black Scale', href: '/black-scale' },
+      { title: 'Gradients', href: '/gradients' },
+      { title: 'Typography', href: '/typography' },
     ],
   },
   {
-    title: 'Resources',
+    title: 'Components',
     links: [
-      { title: 'Contacts', href: '/contacts' },
-      { title: 'Conversations', href: '/conversations' },
-      { title: 'Messages', href: '/messages' },
-      { title: 'Groups', href: '/groups' },
-      { title: 'Attachments', href: '/attachments' },
+      { title: 'Alerts', href: '/alerts' },
+      { title: 'Buttons', href: '/buttons' },
+      { title: 'Forms', href: '/forms' },
+      { title: 'Badges', href: '/badges' },
+    ],
+  },
+  {
+    title: 'Marketing & Usage',
+    links: [
+      { title: 'Marketing Examples', href: '/marketing-examples' },
+      { title: 'Usage Guidelines', href: '/usage-guidelines' },
+    ],
+  },
+  {
+    title: 'Reference',
+    links: [
+      { title: 'Accessibility', href: '/accessibility' },
+      { title: 'Design Tokens', href: '/tokens' },
     ],
   },
 ]
@@ -261,9 +273,8 @@ export function Navigation(props: React.ComponentPropsWithoutRef<'nav'>) {
   return (
     <nav {...props}>
       <ul role="list">
-        <TopLevelNavItem href="/">API</TopLevelNavItem>
-        <TopLevelNavItem href="#">Documentation</TopLevelNavItem>
-        <TopLevelNavItem href="#">Support</TopLevelNavItem>
+        <TopLevelNavItem href="/">Home</TopLevelNavItem>
+        <TopLevelNavItem href="/introduction">Get Started</TopLevelNavItem>
         {navigation.map((group, groupIndex) => (
           <NavigationGroup
             key={group.title}
@@ -271,11 +282,6 @@ export function Navigation(props: React.ComponentPropsWithoutRef<'nav'>) {
             className={groupIndex === 0 ? 'md:mt-0' : ''}
           />
         ))}
-        <li className="sticky bottom-0 z-10 mt-6 min-[416px]:hidden">
-          <Button href="#" variant="filled" className="w-full">
-            Sign in
-          </Button>
-        </li>
       </ul>
     </nav>
   )

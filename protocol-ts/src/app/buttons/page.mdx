@@ -1,0 +1,173 @@
+export const metadata = {
+  title: 'Buttons',
+  description:
+    'Button components with clear visual hierarchy, proper touch targets, and WCAG compliant colour combinations.',
+}
+
+export const sections = [
+  { title: 'Button Variants', id: 'button-variants' },
+  { title: 'Button Sizes', id: 'button-sizes' },
+  { title: 'Button States', id: 'button-states' },
+]
+
+# Buttons
+
+Button components with clear visual hierarchy, proper touch targets (minimum 44x44px), and WCAG compliant colour combinations. {{ className: 'lead' }}
+
+---
+
+## Button Variants {{ id: 'button-variants' }}
+
+### Primary Button - Yellow
+
+<div className="not-prose mt-6 flex flex-wrap gap-4">
+  <button className="rounded-lg bg-[#FFCB05] px-6 py-3 font-semibold text-zinc-900 transition-all hover:bg-[#D97706] focus:outline-none focus:ring-2 focus:ring-[#FFCB05] focus:ring-offset-2">
+    Primary Button
+  </button>
+</div>
+
+Use for primary actions, most important CTAs, and conversion-focused buttons.
+
+### Secondary Button - Black
+
+<div className="not-prose mt-6 flex flex-wrap gap-4">
+  <button className="rounded-lg bg-zinc-900 px-6 py-3 font-semibold text-white transition-all hover:bg-zinc-700 focus:outline-none focus:ring-2 focus:ring-zinc-900 focus:ring-offset-2 dark:bg-white dark:text-zinc-900 dark:hover:bg-zinc-200">
+    Secondary Button
+  </button>
+</div>
+
+Use for secondary actions, alternative paths, and supporting CTAs.
+
+### Outline Button
+
+<div className="not-prose mt-6 flex flex-wrap gap-4">
+  <button className="rounded-lg border-2 border-zinc-900 bg-transparent px-6 py-3 font-semibold text-zinc-900 transition-all hover:bg-zinc-900 hover:text-white focus:outline-none focus:ring-2 focus:ring-zinc-900 focus:ring-offset-2 dark:border-white dark:text-white dark:hover:bg-white dark:hover:text-zinc-900">
+    Outline Button
+  </button>
+</div>
+
+Use for tertiary actions, cancel buttons, and less prominent options.
+
+### Ghost Button
+
+<div className="not-prose mt-6 flex flex-wrap gap-4">
+  <button className="rounded-lg px-6 py-3 font-semibold text-zinc-900 transition-all hover:bg-zinc-100 focus:outline-none focus:ring-2 focus:ring-zinc-900 focus:ring-offset-2 dark:text-white dark:hover:bg-zinc-800">
+    Ghost Button
+  </button>
+</div>
+
+Use for navigation, minimal interfaces, and subtle actions.
+
+### Danger Button
+
+<div className="not-prose mt-6 flex flex-wrap gap-4">
+  <button className="rounded-lg bg-red-600 px-6 py-3 font-semibold text-white transition-all hover:bg-red-700 focus:outline-none focus:ring-2 focus:ring-red-600 focus:ring-offset-2">
+    Delete Account
+  </button>
+</div>
+
+Use for destructive actions and critical operations.
+
+---
+
+## Button Sizes {{ id: 'button-sizes' }}
+
+<div className="not-prose mt-6 flex flex-wrap items-center gap-4">
+  <button className="rounded-lg bg-[#FFCB05] px-3 py-1.5 text-sm font-semibold text-zinc-900">
+    Small
+  </button>
+  <button className="rounded-lg bg-[#FFCB05] px-4 py-2 text-base font-semibold text-zinc-900">
+    Medium
+  </button>
+  <button className="rounded-lg bg-[#FFCB05] px-6 py-3 text-base font-semibold text-zinc-900">
+    Large
+  </button>
+  <button className="rounded-lg bg-[#FFCB05] px-8 py-4 text-lg font-semibold text-zinc-900">
+    Extra Large
+  </button>
+</div>
+
+<Properties>
+  <Property name="Small">
+    12px vertical padding - Use for compact interfaces
+  </Property>
+  <Property name="Medium">
+    16px vertical padding - Standard button size
+  </Property>
+  <Property name="Large">
+    24px vertical padding - Primary CTAs and hero sections
+  </Property>
+  <Property name="Extra Large">
+    32px vertical padding - Landing pages and marketing
+  </Property>
+</Properties>
+
+---
+
+## Button States {{ id: 'button-states' }}
+
+### Normal State
+
+<div className="not-prose mt-6">
+  <button className="rounded-lg bg-[#FFCB05] px-6 py-3 font-semibold text-zinc-900">
+    Normal State
+  </button>
+</div>
+
+### Hover State
+
+<div className="not-prose mt-6">
+  <button className="rounded-lg bg-[#D97706] px-6 py-3 font-semibold text-zinc-900">
+    Hover State (Darker)
+  </button>
+</div>
+
+### Disabled State
+
+<div className="not-prose mt-6">
+  <button className="cursor-not-allowed rounded-lg bg-zinc-200 px-6 py-3 font-semibold text-zinc-400 dark:bg-zinc-800 dark:text-zinc-600" disabled>
+    Disabled State
+  </button>
+</div>
+
+### Loading State
+
+<div className="not-prose mt-6">
+  <button className="flex items-center gap-2 rounded-lg bg-[#FFCB05] px-6 py-3 font-semibold text-zinc-900" disabled>
+    <svg className="h-5 w-5 animate-spin" viewBox="0 0 24 24" fill="none">
+      <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
+      <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+    </svg>
+    Loading...
+  </button>
+</div>
+
+---
+
+## Accessibility Guidelines
+
+<Properties>
+  <Property name="Minimum Size">
+    44x44px touch target (WCAG 2.1 Level AAA)
+  </Property>
+  <Property name="Focus Indicator">
+    2px ring with 2px offset, visible in all states
+  </Property>
+  <Property name="Contrast Ratio">
+    4.5:1 minimum for text (all buttons meet this)
+  </Property>
+  <Property name="Keyboard Accessible">
+    Tab to focus, Enter/Space to activate
+  </Property>
+</Properties>
+
+---
+
+<div className="not-prose mt-12 flex gap-3">
+  <Button href="/forms" arrow="right">
+    <>View Forms</>
+  </Button>
+  <Button href="/badges" variant="outline">
+    <>Explore Badges</>
+  </Button>
+</div>

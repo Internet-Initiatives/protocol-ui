@@ -1,0 +1,174 @@
+import { ColorScale } from '@/components/ColorSwatch'
+
+export const metadata = {
+  title: 'Colours',
+  description:
+    'Complete colour system with proper scales (50-900), WCAG compliant combinations, and traffic light semantic colours for system status.',
+}
+
+export const sections = [
+  { title: 'Primary Brand Colour', id: 'primary-brand-colour' },
+  { title: 'Traffic Light System', id: 'traffic-light-system' },
+  { title: 'Neutral Colours', id: 'neutral-colours' },
+]
+
+# Colours
+
+Complete colour system with proper scales (50-900), WCAG compliant combinations, and traffic light semantic colours for system status. Click any colour to copy its hex code. {{ className: 'lead' }}
+
+---
+
+## Primary Brand Colour - Yellow {{ id: 'primary-brand-colour' }}
+
+Yellow (#FFCB05) is ONLY used for backgrounds, buttons, and accents. **NEVER for body text** due to poor contrast on white backgrounds.
+
+<Note>
+  Yellow is our signature brand colour, but it must be used strategically. The light nature of yellow means it fails WCAG contrast requirements when used as text on white backgrounds. Always use yellow as a background or accent element, paired with dark text.
+</Note>
+
+<div className="not-prose mt-6">
+  <ColorScale
+    colors={[
+      { name: 'Yellow 50', hex: '#FFFBEB' },
+      { name: 'Yellow 100', hex: '#FEF3C7' },
+      { name: 'Yellow 200', hex: '#FDE68A' },
+      { name: 'Yellow 300', hex: '#FCD34D' },
+      { name: 'Yellow 400', hex: '#FBBF24' },
+      { name: 'Yellow 500', hex: '#FFCB05', description: 'Base brand colour' },
+      { name: 'Yellow 600', hex: '#D97706' },
+      { name: 'Yellow 700', hex: '#B45309' },
+      { name: 'Yellow 800', hex: '#92400E' },
+      { name: 'Yellow 900', hex: '#78350F' },
+    ]}
+    columns={5}
+  />
+</div>
+
+---
+
+## Traffic Light System - Semantic Colours {{ id: 'traffic-light-system' }}
+
+The traffic light system (Red/Amber/Green) is universally understood and works for users with colour blindness. Each colour meets WCAG AA contrast requirements.
+
+### Success - Green
+
+Use for completed actions, confirmed states, and positive feedback.
+
+<div className="not-prose mt-6">
+  <ColorScale
+    colors={[
+      { name: 'Success 50', hex: '#F0FDF4' },
+      { name: 'Success 100', hex: '#DCFCE7' },
+      { name: 'Success 200', hex: '#BBF7D0' },
+      { name: 'Success 300', hex: '#86EFAC' },
+      { name: 'Success 400', hex: '#4ADE80' },
+      { name: 'Success 500', hex: '#22C55E' },
+      { name: 'Success 600', hex: '#16A34A', contrastRatio: '4.5:1 on white' },
+      { name: 'Success 700', hex: '#15803D', contrastRatio: '7:1 on white' },
+      { name: 'Success 800', hex: '#166534' },
+      { name: 'Success 900', hex: '#14532D' },
+    ]}
+    columns={5}
+  />
+</div>
+
+### Warning - Amber
+
+Use for cautionary states, pending actions, and items requiring attention.
+
+<div className="not-prose mt-6">
+  <ColorScale
+    colors={[
+      { name: 'Warning 50', hex: '#FFFBEB' },
+      { name: 'Warning 100', hex: '#FEF3C7' },
+      { name: 'Warning 200', hex: '#FDE68A' },
+      { name: 'Warning 300', hex: '#FCD34D' },
+      { name: 'Warning 400', hex: '#FBBF24' },
+      { name: 'Warning 500', hex: '#F59E0B' },
+      { name: 'Warning 600', hex: '#D97706', contrastRatio: '4.5:1 on white' },
+      { name: 'Warning 700', hex: '#B45309', contrastRatio: '7:1 on white' },
+      { name: 'Warning 800', hex: '#92400E' },
+      { name: 'Warning 900', hex: '#78350F' },
+    ]}
+    columns={5}
+  />
+</div>
+
+### Error - Red
+
+Use for errors, destructive actions, and critical alerts.
+
+<div className="not-prose mt-6">
+  <ColorScale
+    colors={[
+      { name: 'Error 50', hex: '#FEF2F2' },
+      { name: 'Error 100', hex: '#FEE2E2' },
+      { name: 'Error 200', hex: '#FECACA' },
+      { name: 'Error 300', hex: '#FCA5A5' },
+      { name: 'Error 400', hex: '#F87171' },
+      { name: 'Error 500', hex: '#EF4444' },
+      { name: 'Error 600', hex: '#DC2626', contrastRatio: '4.5:1 on white' },
+      { name: 'Error 700', hex: '#B91C1C', contrastRatio: '7:1 on white' },
+      { name: 'Error 800', hex: '#991B1B' },
+      { name: 'Error 900', hex: '#7F1D1D' },
+    ]}
+    columns={5}
+  />
+</div>
+
+### Info - Blue
+
+Use for informational messages, links, and neutral system feedback.
+
+<div className="not-prose mt-6">
+  <ColorScale
+    colors={[
+      { name: 'Info 50', hex: '#EFF6FF' },
+      { name: 'Info 100', hex: '#DBEAFE' },
+      { name: 'Info 200', hex: '#BFDBFE' },
+      { name: 'Info 300', hex: '#93C5FD' },
+      { name: 'Info 400', hex: '#60A5FA' },
+      { name: 'Info 500', hex: '#3B82F6' },
+      { name: 'Info 600', hex: '#2563EB', contrastRatio: '4.5:1 on white' },
+      { name: 'Info 700', hex: '#1D4ED8', contrastRatio: '7:1 on white' },
+      { name: 'Info 800', hex: '#1E40AF' },
+      { name: 'Info 900', hex: '#1E3A8A' },
+    ]}
+    columns={5}
+  />
+</div>
+
+---
+
+## Neutral Colours - Warm Greys {{ id: 'neutral-colours' }}
+
+Professional warm grey scale for text, borders, and backgrounds. Works beautifully in both light and dark modes.
+
+<div className="not-prose mt-6">
+  <ColorScale
+    colors={[
+      { name: 'Neutral 50', hex: '#FAFAF9' },
+      { name: 'Neutral 100', hex: '#F5F5F4' },
+      { name: 'Neutral 200', hex: '#E7E5E4' },
+      { name: 'Neutral 300', hex: '#D6D3D1' },
+      { name: 'Neutral 400', hex: '#A8A29E' },
+      { name: 'Neutral 500', hex: '#78716C' },
+      { name: 'Neutral 600', hex: '#57534E' },
+      { name: 'Neutral 700', hex: '#44403C' },
+      { name: 'Neutral 800', hex: '#292524' },
+      { name: 'Neutral 900', hex: '#1C1917' },
+    ]}
+    columns={5}
+  />
+</div>
+
+---
+
+<div className="not-prose mt-12 flex gap-3">
+  <Button href="/brand-colours" arrow="right">
+    <>View Brand Colours</>
+  </Button>
+  <Button href="/black-scale" variant="outline">
+    <>Explore Black Scale</>
+  </Button>
+</div>

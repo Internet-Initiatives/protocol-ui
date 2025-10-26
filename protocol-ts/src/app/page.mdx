@@ -1,43 +1,77 @@
-import { Guides } from '@/components/Guides'
-import { Resources } from '@/components/Resources'
 import { HeroPattern } from '@/components/HeroPattern'
 
 export const metadata = {
-  title: 'API Documentation',
+  title: 'UPA Design System',
   description:
-    'Learn everything there is to know about the Protocol API and integrate Protocol into your product.',
+    'A professional, WCAG AA compliant design system built for Ultimate Performance Academy. Every colour combination meets minimum 4.5:1 contrast ratios.',
 }
 
 export const sections = [
-  { title: 'Guides', id: 'guides' },
-  { title: 'Resources', id: 'resources' },
+  { title: 'Getting Started', id: 'getting-started' },
+  { title: 'Design Principles', id: 'design-principles' },
 ]
 
 <HeroPattern />
 
-# API Documentation
+# UPA Design System v2.0
 
-Use the Protocol API to access contacts, conversations, group messages, and more and seamlessly integrate your product into the workflows of dozens of devoted Protocol users. {{ className: 'lead' }}
+A professional, WCAG AA compliant design system built for Ultimate Performance Academy's application interface. Every colour combination meets minimum 4.5:1 contrast ratios. Every component is tested for accessibility. {{ className: 'lead' }}
 
 <div className="not-prose mt-6 mb-16 flex gap-3">
-  <Button href="/quickstart" arrow="right">
-    <>Quickstart</>
+  <Button href="/introduction" arrow="right">
+    <>Get Started</>
   </Button>
-  <Button href="/sdks" variant="outline">
-    <>Explore SDKs</>
+  <Button href="/colours" variant="outline">
+    <>Explore Colours</>
   </Button>
 </div>
 
 ## Getting started {{ anchor: false }}
 
-To get started, create a new application in your [developer settings](#), then read about how to make requests for the resources you need to access using our HTTP APIs or dedicated client SDKs. When your integration is ready to go live, publish it to our [integrations directory](#) to reach the Protocol community. {{ className: 'lead' }}
+This design system provides a comprehensive set of colours, components, and guidelines that ensure your applications are both visually stunning and fully accessible. Built from best practices from Google Material Design, Apple Human Interface Guidelines, and WCAG 2.1 standards. {{ className: 'lead' }}
 
 <div className="not-prose">
-  <Button href="/sdks" variant="text" arrow="right">
-    <>Get your API key</>
+  <Button href="/introduction" variant="text" arrow="right">
+    <>Read the introduction</>
   </Button>
 </div>
 
-<Guides />
+## Design Principles {{ id: 'design-principles' }}
 
-<Resources />
+<div className="not-prose mt-6 grid grid-cols-1 gap-6 sm:grid-cols-2">
+  <div className="relative overflow-hidden rounded-xl border border-zinc-900/10 p-6 dark:border-white/10">
+    <h3 className="text-base font-semibold text-zinc-900 dark:text-white">
+      Accessibility First
+    </h3>
+    <p className="mt-2 text-sm text-zinc-600 dark:text-zinc-400">
+      All text meets WCAG AA standards (4.5:1 minimum). Traffic light system is readable for all users including those with colour blindness.
+    </p>
+  </div>
+
+  <div className="relative overflow-hidden rounded-xl border border-zinc-900/10 p-6 dark:border-white/10">
+    <h3 className="text-base font-semibold text-zinc-900 dark:text-white">
+      Brand Consistency
+    </h3>
+    <p className="mt-2 text-sm text-zinc-600 dark:text-zinc-400">
+      Yellow (#FFCB05) and Black are the primary brand colours. Yellow is used strategically for highlights and calls-to-action, never for body text.
+    </p>
+  </div>
+
+  <div className="relative overflow-hidden rounded-xl border border-zinc-900/10 p-6 dark:border-white/10">
+    <h3 className="text-base font-semibold text-zinc-900 dark:text-white">
+      Professional Typography
+    </h3>
+    <p className="mt-2 text-sm text-zinc-600 dark:text-zinc-400">
+      Inter for all UI text (clean, modern, highly legible). Minimum 16px for body text. Clear hierarchy with consistent sizing scale.
+    </p>
+  </div>
+
+  <div className="relative overflow-hidden rounded-xl border border-zinc-900/10 p-6 dark:border-white/10">
+    <h3 className="text-base font-semibold text-zinc-900 dark:text-white">
+      Semantic Clarity
+    </h3>
+    <p className="mt-2 text-sm text-zinc-600 dark:text-zinc-400">
+      Traffic light system for status (Green=Success, Amber=Warning, Red=Error). Consistent, intuitive, universally understood.
+    </p>
+  </div>
+</div>

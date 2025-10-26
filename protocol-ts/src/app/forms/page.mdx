@@ -1,0 +1,185 @@
+export const metadata = {
+  title: 'Forms',
+  description:
+    'Form components with clear labels, validation states, and accessible interactions.',
+}
+
+export const sections = [
+  { title: 'Input Fields', id: 'input-fields' },
+  { title: 'Validation States', id: 'validation-states' },
+  { title: 'Form Best Practices', id: 'form-best-practices' },
+]
+
+# Forms
+
+Form components with clear labels, validation states, and accessible interactions. All form elements meet WCAG 2.1 standards. {{ className: 'lead' }}
+
+---
+
+## Input Fields {{ id: 'input-fields' }}
+
+### Text Input
+
+<div className="not-prose mt-6 max-w-md">
+  <label htmlFor="demo-input" className="block text-sm font-semibold text-zinc-900 dark:text-white">
+    Email Address
+  </label>
+  <input
+    type="email"
+    id="demo-input"
+    className="mt-2 block w-full rounded-lg border border-zinc-300 px-4 py-2 focus:border-[#FFCB05] focus:outline-none focus:ring-2 focus:ring-[#FFCB05]/20 dark:border-zinc-700 dark:bg-zinc-900"
+    placeholder="you@example.com"
+  />
+  <p className="mt-1 text-sm text-zinc-600 dark:text-zinc-400">We'll never share your email.</p>
+</div>
+
+### Textarea
+
+<div className="not-prose mt-6 max-w-md">
+  <label htmlFor="demo-textarea" className="block text-sm font-semibold text-zinc-900 dark:text-white">
+    Message
+  </label>
+  <textarea
+    id="demo-textarea"
+    rows={4}
+    className="mt-2 block w-full rounded-lg border border-zinc-300 px-4 py-2 focus:border-[#FFCB05] focus:outline-none focus:ring-2 focus:ring-[#FFCB05]/20 dark:border-zinc-700 dark:bg-zinc-900"
+    placeholder="Tell us more..."
+  />
+</div>
+
+### Select
+
+<div className="not-prose mt-6 max-w-md">
+  <label htmlFor="demo-select" className="block text-sm font-semibold text-zinc-900 dark:text-white">
+    Country
+  </label>
+  <select
+    id="demo-select"
+    className="mt-2 block w-full rounded-lg border border-zinc-300 px-4 py-2 focus:border-[#FFCB05] focus:outline-none focus:ring-2 focus:ring-[#FFCB05]/20 dark:border-zinc-700 dark:bg-zinc-900"
+  >
+    <option>United States</option>
+    <option>Canada</option>
+    <option>United Kingdom</option>
+    <option>Australia</option>
+  </select>
+</div>
+
+---
+
+## Validation States {{ id: 'validation-states' }}
+
+### Success State
+
+<div className="not-prose mt-6 max-w-md">
+  <label htmlFor="success-input" className="block text-sm font-semibold text-zinc-900 dark:text-white">
+    Username
+  </label>
+  <input
+    type="text"
+    id="success-input"
+    className="mt-2 block w-full rounded-lg border-2 border-green-600 bg-green-50 px-4 py-2 focus:outline-none focus:ring-2 focus:ring-green-600/20 dark:bg-green-950/20"
+    value="johndoe"
+  />
+  <p className="mt-1 flex items-center gap-1 text-sm text-green-700 dark:text-green-400">
+    <svg className="h-4 w-4" viewBox="0 0 20 20" fill="currentColor">
+      <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clipRule="evenodd" />
+    </svg>
+    Username is available
+  </p>
+</div>
+
+### Error State
+
+<div className="not-prose mt-6 max-w-md">
+  <label htmlFor="error-input" className="block text-sm font-semibold text-zinc-900 dark:text-white">
+    Email Address
+  </label>
+  <input
+    type="email"
+    id="error-input"
+    className="mt-2 block w-full rounded-lg border-2 border-red-600 bg-red-50 px-4 py-2 focus:outline-none focus:ring-2 focus:ring-red-600/20 dark:bg-red-950/20"
+    value="invalid-email"
+  />
+  <p className="mt-1 flex items-center gap-1 text-sm text-red-700 dark:text-red-400">
+    <svg className="h-4 w-4" viewBox="0 0 20 20" fill="currentColor">
+      <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM8.28 7.22a.75.75 0 00-1.06 1.06L8.94 10l-1.72 1.72a.75.75 0 101.06 1.06L10 11.06l1.72 1.72a.75.75 0 101.06-1.06L11.06 10l1.72-1.72a.75.75 0 00-1.06-1.06L10 8.94 8.28 7.22z" clipRule="evenodd" />
+    </svg>
+    Please enter a valid email address
+  </p>
+</div>
+
+### Warning State
+
+<div className="not-prose mt-6 max-w-md">
+  <label htmlFor="warning-input" className="block text-sm font-semibold text-zinc-900 dark:text-white">
+    Password
+  </label>
+  <input
+    type="password"
+    id="warning-input"
+    className="mt-2 block w-full rounded-lg border-2 border-amber-600 bg-amber-50 px-4 py-2 focus:outline-none focus:ring-2 focus:ring-amber-600/20 dark:bg-amber-950/20"
+    value="weak"
+  />
+  <p className="mt-1 flex items-center gap-1 text-sm text-amber-700 dark:text-amber-400">
+    <svg className="h-4 w-4" viewBox="0 0 20 20" fill="currentColor">
+      <path fillRule="evenodd" d="M8.485 2.495c.673-1.167 2.357-1.167 3.03 0l6.28 10.875c.673 1.167-.17 2.625-1.516 2.625H3.72c-1.347 0-2.189-1.458-1.515-2.625L8.485 2.495zM10 5a.75.75 0 01.75.75v3.5a.75.75 0 01-1.5 0v-3.5A.75.75 0 0110 5zm0 9a1 1 0 100-2 1 1 0 000 2z" clipRule="evenodd" />
+    </svg>
+    Password strength: Weak
+  </p>
+</div>
+
+---
+
+## Form Best Practices {{ id: 'form-best-practices' }}
+
+### Labels
+
+<Properties>
+  <Property name="Always Visible">
+    Never use placeholder text as a label - keep labels visible above inputs
+  </Property>
+  <Property name="Font Weight">
+    600 (Semibold) for clear distinction from input text
+  </Property>
+  <Property name="Font Size">
+    14px minimum - ensures readability
+  </Property>
+  <Property name="Association">
+    Use htmlFor attribute to properly link labels to inputs
+  </Property>
+</Properties>
+
+### Input Fields
+
+<Properties>
+  <Property name="Minimum Height">
+    44px - ensures adequate touch targets
+  </Property>
+  <Property name="Border Radius">
+    8px (0.5rem) - consistent with button radius
+  </Property>
+  <Property name="Focus State">
+    2px ring in yellow (#FFCB05) with 20% opacity
+  </Property>
+  <Property name="Padding">
+    16px horizontal, 8px vertical for comfortable spacing
+  </Property>
+</Properties>
+
+### Validation
+
+- **Inline validation**: Show validation messages immediately below the field
+- **Icons**: Use checkmark (success), X (error), or warning triangle
+- **Colour + Text**: Never rely on colour alone - always include text/icons
+- **Clear messaging**: Specific error messages ("Email is required" not "Error")
+
+---
+
+<div className="not-prose mt-12 flex gap-3">
+  <Button href="/badges" arrow="right">
+    <>View Badges</>
+  </Button>
+  <Button href="/accessibility" variant="outline">
+    <>Explore Accessibility</>
+  </Button>
+</div>
