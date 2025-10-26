@@ -1,0 +1,251 @@
+import { HeroPattern } from '@/components/HeroPattern'
+
+export const metadata = {
+  title: 'Spacing',
+  description:
+    'Spacing scale based on an 8px grid system for consistent layouts in the UPA Design System.',
+}
+
+<HeroPattern />
+
+# Spacing
+
+Our spacing system uses an 8px base unit to create consistent, harmonious layouts. This system ensures visual rhythm and makes designs feel cohesive. {{ className: 'lead' }}
+
+---
+
+## Spacing Scale {{ id: 'spacing-scale' }}
+
+All spacing values are multiples of 4px, based on an 8px grid system.
+
+<div className="not-prose mt-8">
+  <div className="overflow-hidden rounded-xl border border-zinc-200 dark:border-zinc-800">
+    <div className="border-b border-zinc-200 bg-zinc-50 px-6 py-3 dark:border-zinc-800 dark:bg-zinc-900">
+      <div className="text-sm font-semibold text-zinc-900 dark:text-white">Spacing Values</div>
+    </div>
+    <div className="divide-y divide-zinc-200 dark:divide-zinc-800">
+      <div className="flex items-center gap-6 px-6 py-4">
+        <div className="w-16 font-mono text-sm font-semibold text-zinc-900 dark:text-white">xs</div>
+        <div className="h-4 bg-[#FFCB05]" style={{width: '4px'}}></div>
+        <div className="flex-1 text-sm text-zinc-600 dark:text-zinc-400">4px / 0.25rem</div>
+      </div>
+      <div className="flex items-center gap-6 px-6 py-4">
+        <div className="w-16 font-mono text-sm font-semibold text-zinc-900 dark:text-white">sm</div>
+        <div className="h-4 bg-[#FFCB05]" style={{width: '8px'}}></div>
+        <div className="flex-1 text-sm text-zinc-600 dark:text-zinc-400">8px / 0.5rem</div>
+      </div>
+      <div className="flex items-center gap-6 px-6 py-4">
+        <div className="w-16 font-mono text-sm font-semibold text-zinc-900 dark:text-white">md</div>
+        <div className="h-4 bg-[#FFCB05]" style={{width: '16px'}}></div>
+        <div className="flex-1 text-sm text-zinc-600 dark:text-zinc-400">16px / 1rem</div>
+      </div>
+      <div className="flex items-center gap-6 px-6 py-4">
+        <div className="w-16 font-mono text-sm font-semibold text-zinc-900 dark:text-white">lg</div>
+        <div className="h-4 bg-[#FFCB05]" style={{width: '24px'}}></div>
+        <div className="flex-1 text-sm text-zinc-600 dark:text-zinc-400">24px / 1.5rem</div>
+      </div>
+      <div className="flex items-center gap-6 px-6 py-4">
+        <div className="w-16 font-mono text-sm font-semibold text-zinc-900 dark:text-white">xl</div>
+        <div className="h-4 bg-[#FFCB05]" style={{width: '32px'}}></div>
+        <div className="flex-1 text-sm text-zinc-600 dark:text-zinc-400">32px / 2rem</div>
+      </div>
+      <div className="flex items-center gap-6 px-6 py-4">
+        <div className="w-16 font-mono text-sm font-semibold text-zinc-900 dark:text-white">2xl</div>
+        <div className="h-4 bg-[#FFCB05]" style={{width: '48px'}}></div>
+        <div className="flex-1 text-sm text-zinc-600 dark:text-zinc-400">48px / 3rem</div>
+      </div>
+      <div className="flex items-center gap-6 px-6 py-4">
+        <div className="w-16 font-mono text-sm font-semibold text-zinc-900 dark:text-white">3xl</div>
+        <div className="h-4 bg-[#FFCB05]" style={{width: '64px'}}></div>
+        <div className="flex-1 text-sm text-zinc-600 dark:text-zinc-400">64px / 4rem</div>
+      </div>
+      <div className="flex items-center gap-6 px-6 py-4">
+        <div className="w-16 font-mono text-sm font-semibold text-zinc-900 dark:text-white">4xl</div>
+        <div className="h-4 bg-[#FFCB05]" style={{width: '96px'}}></div>
+        <div className="flex-1 text-sm text-zinc-600 dark:text-zinc-400">96px / 6rem</div>
+      </div>
+      <div className="flex items-center gap-6 px-6 py-4">
+        <div className="w-16 font-mono text-sm font-semibold text-zinc-900 dark:text-white">5xl</div>
+        <div className="h-4 bg-[#FFCB05]" style={{width: '128px'}}></div>
+        <div className="flex-1 text-sm text-zinc-600 dark:text-zinc-400">128px / 8rem</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+---
+
+## Usage Guidelines {{ id: 'usage-guidelines' }}
+
+### When to Use Each Size
+
+<div className="not-prose mt-6">
+  <div className="overflow-hidden rounded-xl border border-zinc-200 dark:border-zinc-800">
+    <div className="border-b border-zinc-200 bg-zinc-50 px-6 py-3 dark:border-zinc-800 dark:bg-zinc-900">
+      <div className="text-sm font-semibold text-zinc-900 dark:text-white">Spacing Usage</div>
+    </div>
+    <div className="divide-y divide-zinc-200 dark:divide-zinc-800">
+      <div className="px-6 py-4">
+        <div className="font-semibold text-zinc-900 dark:text-white">xs (4px)</div>
+        <div className="mt-1 text-sm text-zinc-600 dark:text-zinc-400">
+          Minimal spacing between tightly related elements (icon + text, badge spacing)
+        </div>
+      </div>
+      <div className="px-6 py-4">
+        <div className="font-semibold text-zinc-900 dark:text-white">sm (8px)</div>
+        <div className="mt-1 text-sm text-zinc-600 dark:text-zinc-400">
+          Small gaps between related items (list items, form field groups)
+        </div>
+      </div>
+      <div className="px-6 py-4">
+        <div className="font-semibold text-zinc-900 dark:text-white">md (16px)</div>
+        <div className="mt-1 text-sm text-zinc-600 dark:text-zinc-400">
+          Standard spacing for most UI elements (padding in cards, gaps between components)
+        </div>
+      </div>
+      <div className="px-6 py-4">
+        <div className="font-semibold text-zinc-900 dark:text-white">lg (24px)</div>
+        <div className="mt-1 text-sm text-zinc-600 dark:text-zinc-400">
+          Section spacing within containers (between content blocks in a card)
+        </div>
+      </div>
+      <div className="px-6 py-4">
+        <div className="font-semibold text-zinc-900 dark:text-white">xl (32px)</div>
+        <div className="mt-1 text-sm text-zinc-600 dark:text-zinc-400">
+          Major section separations (between cards, content sections)
+        </div>
+      </div>
+      <div className="px-6 py-4">
+        <div className="font-semibold text-zinc-900 dark:text-white">2xl - 5xl (48px+)</div>
+        <div className="mt-1 text-sm text-zinc-600 dark:text-zinc-400">
+          Large layout spacing (page margins, hero sections, major layout breaks)
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+### Visual Examples
+
+<div className="not-prose mt-8">
+  <div className="rounded-xl bg-zinc-50 p-8 dark:bg-zinc-900">
+    <div className="mb-6 text-sm font-semibold text-zinc-900 dark:text-white">Card with Proper Spacing</div>
+    <div className="overflow-hidden rounded-xl border border-zinc-200 bg-white shadow-md dark:border-zinc-800 dark:bg-zinc-950">
+      <div className="p-6">
+        <div className="text-2xl font-bold text-zinc-900 dark:text-white">Card Title</div>
+        <div className="mt-2 text-sm text-zinc-600 dark:text-zinc-400">
+          This card uses md (16px) padding around the content
+        </div>
+      </div>
+      <div className="border-t border-zinc-200 p-6 dark:border-zinc-800">
+        <div className="flex gap-3">
+          <button className="rounded-lg bg-[#FFCB05] px-4 py-2 text-sm font-semibold text-[#171717]">
+            Primary
+          </button>
+          <button className="rounded-lg border-2 border-zinc-300 px-4 py-2 text-sm font-semibold text-zinc-900 dark:border-zinc-700 dark:text-white">
+            Secondary
+          </button>
+        </div>
+        <div className="mt-3 text-xs text-zinc-500 dark:text-zinc-500">
+          Buttons use sm (8px) padding and sm (8px) gap between them
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+---
+
+## Best Practices {{ id: 'best-practices' }}
+
+<div className="not-prose mt-6">
+  <div className="overflow-hidden rounded-xl border border-zinc-200 dark:border-zinc-800">
+    <div className="border-b border-zinc-200 bg-zinc-50 px-6 py-3 dark:border-zinc-800 dark:bg-zinc-900">
+      <div className="text-sm font-semibold text-zinc-900 dark:text-white">Spacing Guidelines</div>
+    </div>
+    <div className="bg-white px-6 py-6 dark:bg-zinc-950">
+      <div className="space-y-4 text-sm">
+        <div className="flex gap-3">
+          <span className="text-green-600 dark:text-green-400">✓</span>
+          <div>
+            <strong className="text-zinc-900 dark:text-white">Use the scale consistently:</strong>
+            <span className="text-zinc-600 dark:text-zinc-400"> Stick to defined values, avoid arbitrary spacing</span>
+          </div>
+        </div>
+        <div className="flex gap-3">
+          <span className="text-green-600 dark:text-green-400">✓</span>
+          <div>
+            <strong className="text-zinc-900 dark:text-white">Increase spacing for hierarchy:</strong>
+            <span className="text-zinc-600 dark:text-zinc-400"> More space = greater separation</span>
+          </div>
+        </div>
+        <div className="flex gap-3">
+          <span className="text-green-600 dark:text-green-400">✓</span>
+          <div>
+            <strong className="text-zinc-900 dark:text-white">Group related elements:</strong>
+            <span className="text-zinc-600 dark:text-zinc-400"> Use smaller spacing between related items</span>
+          </div>
+        </div>
+        <div className="flex gap-3">
+          <span className="text-red-600 dark:text-red-400">✗</span>
+          <div>
+            <strong className="text-zinc-900 dark:text-white">Don't use odd numbers:</strong>
+            <span className="text-zinc-600 dark:text-zinc-400"> Avoid 5px, 7px, 13px - use the scale</span>
+          </div>
+        </div>
+        <div className="flex gap-3">
+          <span className="text-red-600 dark:text-red-400">✗</span>
+          <div>
+            <strong className="text-zinc-900 dark:text-white">Don't cram elements:</strong>
+            <span className="text-zinc-600 dark:text-zinc-400"> Give content room to breathe</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+---
+
+## Code Reference {{ id: 'code-reference' }}
+
+### CSS Custom Properties
+
+```css
+:root {
+  --space-xs: 0.25rem;  /* 4px */
+  --space-sm: 0.5rem;   /* 8px */
+  --space-md: 1rem;     /* 16px */
+  --space-lg: 1.5rem;   /* 24px */
+  --space-xl: 2rem;     /* 32px */
+  --space-2xl: 3rem;    /* 48px */
+  --space-3xl: 4rem;    /* 64px */
+  --space-4xl: 6rem;    /* 96px */
+  --space-5xl: 8rem;    /* 128px */
+}
+```
+
+### Tailwind CSS Classes
+
+```css
+/* Padding */
+.p-1 { padding: 0.25rem; }  /* 4px */
+.p-2 { padding: 0.5rem; }   /* 8px */
+.p-4 { padding: 1rem; }     /* 16px */
+.p-6 { padding: 1.5rem; }   /* 24px */
+.p-8 { padding: 2rem; }     /* 32px */
+
+/* Margin */
+.m-1 { margin: 0.25rem; }   /* 4px */
+.m-2 { margin: 0.5rem; }    /* 8px */
+.m-4 { margin: 1rem; }      /* 16px */
+.m-6 { margin: 1.5rem; }    /* 24px */
+.m-8 { margin: 2rem; }      /* 32px */
+
+/* Gap */
+.gap-1 { gap: 0.25rem; }    /* 4px */
+.gap-2 { gap: 0.5rem; }     /* 8px */
+.gap-4 { gap: 1rem; }       /* 16px */
+.gap-6 { gap: 1.5rem; }     /* 24px */
+.gap-8 { gap: 2rem; }       /* 32px */
+```
