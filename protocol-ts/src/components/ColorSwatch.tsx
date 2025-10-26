@@ -32,11 +32,22 @@ export function ColorSwatch({
     }
   }
 
+  // Check if color is white or very light (needs border)
+  const isLightColor = () => {
+    const rgb = parseInt(hex.slice(1), 16)
+    const r = (rgb >> 16) & 0xff
+    const g = (rgb >> 8) & 0xff
+    const b = (rgb >> 0) & 0xff
+    const luminance = (0.299 * r + 0.587 * g + 0.114 * b) / 255
+    return luminance > 0.95 // Very light colors get border
+  }
+
   return (
     <button
       onClick={copyToClipboard}
       className={clsx(
         'group relative overflow-hidden rounded-lg transition-all duration-200 hover:scale-105 hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-zinc-900 dark:focus:ring-white',
+        isLightColor() && 'border border-zinc-200 dark:border-zinc-700',
         className,
       )}
       style={{ backgroundColor: hex }}

@@ -46,7 +46,7 @@
     --shiki-color-text: var(--color-white);
     --shiki-token-constant: var(--color-yellow-300);
     --shiki-token-string: var(--color-yellow-300);
-    --shiki-token-comment: var(--color-zinc-500);
+    --shiki-token-comment: var(--color-lime-400);
     --shiki-token-keyword: var(--color-sky-300);
     --shiki-token-parameter: var(--color-pink-300);
     --shiki-token-function: var(--color-violet-300);
