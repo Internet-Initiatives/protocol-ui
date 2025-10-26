@@ -1,3 +1,5 @@
+import { ColorChip } from '@/components/ColorChip'
+
 export const metadata = {
   title: 'Introduction',
   description:
@@ -28,9 +30,9 @@ A professional, WCAG AA compliant design system built for Ultimate Performance A
     <h3 className="text-lg font-semibold text-zinc-900 dark:text-white">
       Accessibility First
     </h3>
-    <p className="mt-3 text-sm text-zinc-600 dark:text-zinc-400">
+    <div className="mt-3 text-sm text-zinc-600 dark:text-zinc-400">
       All text meets WCAG AA standards (4.5:1 minimum). Traffic light system (red/amber/green) is readable for all users including those with colour blindness.
-    </p>
+    </div>
   </div>
 
   <div className="group relative overflow-hidden rounded-xl border border-zinc-900/10 p-6 transition-all duration-200 hover:border-[#FFCB05] hover:shadow-lg dark:border-white/10 dark:hover:border-[#FFCB05]">
@@ -42,9 +44,15 @@ A professional, WCAG AA compliant design system built for Ultimate Performance A
     <h3 className="text-lg font-semibold text-zinc-900 dark:text-white">
       Brand Consistency
     </h3>
-    <p className="mt-3 text-sm text-zinc-600 dark:text-zinc-400">
-      Yellow (#FFCB05) and Black are the core brand colours. Yellow is used strategically for highlights and calls-to-action, never for body text.
-    </p>
+    <div className="mt-3 text-sm text-zinc-600 dark:text-zinc-400">
+      <div className="mb-3 flex flex-wrap items-center gap-2">
+        <span>Primary brand colours:</span>
+        <ColorChip hex="#FFCB05" label="#FFCB05" />
+        <ColorChip hex="#171717" label="#171717" />
+        <ColorChip hex="#FFFFFF" label="#FFFFFF" border />
+      </div>
+      <div>Yellow is used strategically for highlights and calls-to-action, never for body text.</div>
+    </div>
   </div>
 
   <div className="group relative overflow-hidden rounded-xl border border-zinc-900/10 p-6 transition-all duration-200 hover:border-[#FFCB05] hover:shadow-lg dark:border-white/10 dark:hover:border-[#FFCB05]">
@@ -56,9 +64,9 @@ A professional, WCAG AA compliant design system built for Ultimate Performance A
     <h3 className="text-lg font-semibold text-zinc-900 dark:text-white">
       Professional Typography
     </h3>
-    <p className="mt-3 text-sm text-zinc-600 dark:text-zinc-400">
+    <div className="mt-3 text-sm text-zinc-600 dark:text-zinc-400">
       Inter for all UI text (clean, modern, highly legible). Minimum 16px for body text. Clear hierarchy with consistent sizing scale.
-    </p>
+    </div>
   </div>
 
   <div className="group relative overflow-hidden rounded-xl border border-zinc-900/10 p-6 transition-all duration-200 hover:border-[#FFCB05] hover:shadow-lg dark:border-white/10 dark:hover:border-[#FFCB05]">
@@ -70,9 +78,9 @@ A professional, WCAG AA compliant design system built for Ultimate Performance A
     <h3 className="text-lg font-semibold text-zinc-900 dark:text-white">
       Semantic Clarity
     </h3>
-    <p className="mt-3 text-sm text-zinc-600 dark:text-zinc-400">
+    <div className="mt-3 text-sm text-zinc-600 dark:text-zinc-400">
       Traffic light system for status (Green=Success, Amber=Warning, Red=Error). Consistent, intuitive, universally understood.
-    </p>
+    </div>
   </div>
 
   <div className="group relative overflow-hidden rounded-xl border border-zinc-900/10 p-6 transition-all duration-200 hover:border-[#FFCB05] hover:shadow-lg dark:border-white/10 dark:hover:border-[#FFCB05]">
@@ -84,9 +92,9 @@ A professional, WCAG AA compliant design system built for Ultimate Performance A
     <h3 className="text-lg font-semibold text-zinc-900 dark:text-white">
       Data-Driven Design
     </h3>
-    <p className="mt-3 text-sm text-zinc-600 dark:text-zinc-400">
+    <div className="mt-3 text-sm text-zinc-600 dark:text-zinc-400">
       Built from research and best practices. Google Material Design, Apple HIG, WCAG 2.1 guidelines inform every decision.
-    </p>
+    </div>
   </div>
 
   <div className="group relative overflow-hidden rounded-xl border border-zinc-900/10 p-6 transition-all duration-200 hover:border-[#FFCB05] hover:shadow-lg dark:border-white/10 dark:hover:border-[#FFCB05]">
@@ -98,9 +106,9 @@ A professional, WCAG AA compliant design system built for Ultimate Performance A
     <h3 className="text-lg font-semibold text-zinc-900 dark:text-white">
       Responsive & Flexible
     </h3>
-    <p className="mt-3 text-sm text-zinc-600 dark:text-zinc-400">
+    <div className="mt-3 text-sm text-zinc-600 dark:text-zinc-400">
       Designed for all screen sizes and contexts. Works equally well on mobile, tablet, desktop, and large displays.
-    </p>
+    </div>
   </div>
 </div>
 
