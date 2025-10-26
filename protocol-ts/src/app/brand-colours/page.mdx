@@ -32,7 +32,7 @@ The core brand colours: Yellow, Black, and White with essential grays. These sho
     colors={[
       { name: 'Yellow 500', hex: '#FFCB05', description: 'Primary brand yellow' },
       { name: 'Yellow 400', hex: '#FBBF24', description: 'Lighter yellow' },
-      { name: 'Yellow 600', hex: '#D97706', description: 'Hover state' },
+      { name: 'Yellow 600', hex: '#E6B800', description: 'Hover state' },
     ]}
     columns={3}
   />
@@ -124,14 +124,13 @@ High-contrast colours specifically designed for buttons, links, and interactive 
         <ColorScale
           colors={[
             { name: 'CTA Yellow', hex: '#FFCB05', description: 'Primary CTA background' },
-            { name: 'CTA Hover', hex: '#D97706', description: 'CTA hover state' },
             { name: 'CTA Text', hex: '#171717', description: 'Text on yellow CTA' },
           ]}
-          columns={3}
+          columns={2}
         />
       </div>
       <div className="border-t border-zinc-200 pt-6 dark:border-zinc-800">
-        <button className="rounded-lg bg-[#FFCB05] px-8 py-4 font-bold text-[#171717] transition-colors hover:bg-[#D97706]">
+        <button className="rounded-lg bg-[#FFCB05] px-8 py-4 font-bold text-[#171717] transition-colors hover:bg-[#E6B800]">
           Get Started Today
         </button>
         <div className="mt-4 text-sm text-zinc-600 dark:text-zinc-400">
@@ -148,10 +147,9 @@ High-contrast colours specifically designed for buttons, links, and interactive 
         <ColorScale
           colors={[
             { name: 'Secondary CTA', hex: '#171717', description: 'Secondary button background' },
-            { name: 'Secondary Hover', hex: '#404040', description: 'Secondary hover state' },
             { name: 'Secondary Text', hex: '#FFFFFF', description: 'Text on dark CTA' },
           ]}
-          columns={3}
+          columns={2}
         />
       </div>
       <div className="border-t border-zinc-200 pt-6 dark:border-zinc-800">
@@ -160,6 +158,75 @@ High-contrast colours specifically designed for buttons, links, and interactive 
         </button>
         <div className="mt-4 text-sm text-zinc-600 dark:text-zinc-400">
           <strong>Usage:</strong> Secondary actions, alternative paths, less prominent CTAs.
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div>
+    <div className="mb-4 text-base font-bold text-zinc-900 dark:text-white">Secondary CTA - Green</div>
+    <div className="rounded-xl border border-zinc-200 bg-white p-8 dark:border-zinc-800 dark:bg-zinc-950">
+      <div className="mb-6">
+        <ColorScale
+          colors={[
+            { name: 'Green CTA', hex: '#16A34A', description: 'Success/confirmation button' },
+            { name: 'Green Text', hex: '#FFFFFF', description: 'Text on green CTA' },
+          ]}
+          columns={2}
+        />
+      </div>
+      <div className="border-t border-zinc-200 pt-6 dark:border-zinc-800">
+        <button className="rounded-lg bg-[#16A34A] px-8 py-4 font-bold text-white transition-colors hover:bg-[#15803D]">
+          Confirm Action
+        </button>
+        <div className="mt-4 text-sm text-zinc-600 dark:text-zinc-400">
+          <strong>Usage:</strong> Confirmations, success actions, positive CTAs like "Approve", "Confirm", "Save".
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div>
+    <div className="mb-4 text-base font-bold text-zinc-900 dark:text-white">Secondary CTA - Blue</div>
+    <div className="rounded-xl border border-zinc-200 bg-white p-8 dark:border-zinc-800 dark:bg-zinc-950">
+      <div className="mb-6">
+        <ColorScale
+          colors={[
+            { name: 'Blue CTA', hex: '#2563EB', description: 'Informational button' },
+            { name: 'Blue Text', hex: '#FFFFFF', description: 'Text on blue CTA' },
+          ]}
+          columns={2}
+        />
+      </div>
+      <div className="border-t border-zinc-200 pt-6 dark:border-zinc-800">
+        <button className="rounded-lg bg-[#2563EB] px-8 py-4 font-bold text-white transition-colors hover:bg-[#1D4ED8]">
+          Learn More
+        </button>
+        <div className="mt-4 text-sm text-zinc-600 dark:text-zinc-400">
+          <strong>Usage:</strong> Informational actions, documentation links, neutral CTAs like "Learn More", "View Details".
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div>
+    <div className="mb-4 text-base font-bold text-zinc-900 dark:text-white">Secondary CTA - Red</div>
+    <div className="rounded-xl border border-zinc-200 bg-white p-8 dark:border-zinc-800 dark:bg-zinc-950">
+      <div className="mb-6">
+        <ColorScale
+          colors={[
+            { name: 'Red CTA', hex: '#DC2626', description: 'Destructive/danger button' },
+            { name: 'Red Text', hex: '#FFFFFF', description: 'Text on red CTA' },
+          ]}
+          columns={2}
+        />
+      </div>
+      <div className="border-t border-zinc-200 pt-6 dark:border-zinc-800">
+        <button className="rounded-lg bg-[#DC2626] px-8 py-4 font-bold text-white transition-colors hover:bg-[#B91C1C]">
+          Delete Account
+        </button>
+        <div className="mt-4 text-sm text-zinc-600 dark:text-zinc-400">
+          <strong>Usage:</strong> Destructive actions, critical operations like "Delete", "Remove", "Cancel Subscription".
         </div>
       </div>
     </div>
@@ -261,7 +328,7 @@ High-contrast colours specifically designed for buttons, links, and interactive 
   <Button href="/black-scale" arrow="right">
     <>Explore Black Scale</>
   </Button>
-  <Button href="/colours" variant="outline">
-    <>View All Colours</>
+  <Button href="/gradients" variant="outline">
+    <>View Gradients</>
   </Button>
 </div>
