@@ -10,7 +10,7 @@ import '@/styles/tailwind.css'
 export const metadata: Metadata = {
   title: {
     template: '%s - UPA Design System',
-    default: 'UPA Design System v2.0',
+    default: 'UPA Design System',
   },
   description: 'A professional, WCAG AA compliant design system built for Ultimate Performance Academy. Every colour combination meets minimum 4.5:1 contrast ratios.',
 }
