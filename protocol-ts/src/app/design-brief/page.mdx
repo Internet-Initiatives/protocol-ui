@@ -5,8 +5,18 @@ import { DownloadButton } from '@/components/DownloadButton'
 export const metadata = {
   title: 'AI Design Brief',
   description:
-    'Complete UPA Design System specification in a single code block for AI and developer handoff.',
+    'Complete UPA Design System specification organized into copyable sections for AI and developer handoff.',
 }
+
+export const sections = [
+  { title: 'Brand Identity', id: 'brand-identity' },
+  { title: 'Colours', id: 'colours' },
+  { title: 'Typography', id: 'typography' },
+  { title: 'Spacing & Layout', id: 'spacing-layout' },
+  { title: 'Components', id: 'components' },
+  { title: 'Presentations', id: 'presentations' },
+  { title: 'Best Practices', id: 'best-practices' },
+]
 
 export const DESIGN_SYSTEM_CONTENT = `# UPA DESIGN SYSTEM - COMPLETE SPECIFICATION
 
@@ -130,7 +140,7 @@ Available Weights: 400, 500, 600, 700, 800, 900
 
 Type Scale (1.25 ratio - Major Third):
 - H1: 60px / 3.75rem, weight 900, line-height 1.2
-- H2: 48px / 3rem, weight 700, line-height 1.2
+- H2: 48px / 3.75rem, weight 700, line-height 1.2
 - H3: 36px / 2.25rem, weight 700, line-height 1.2
 - H4: 30px / 1.875rem, weight 600, line-height 1.2
 - H5: 24px / 1.5rem, weight 600, line-height 1.2
@@ -375,19 +385,225 @@ File Naming: UPA_[PresentationName]_[Date]_[Version].pptx
 
 # AI Design Brief
 
-Complete UPA Design System specification in a single code block. Copy and paste this to provide AI assistants or developers with all design information. {{ className: 'lead' }}
+Complete UPA Design System specification organized into copyable sections. Copy and paste to AI assistants or developers for consistent implementation. {{ className: 'lead' }}
 
----
-
-<div className="not-prose">
-  <pre className="overflow-x-auto rounded-xl border border-zinc-200 bg-zinc-50 p-6 text-xs leading-relaxed dark:border-zinc-800 dark:bg-zinc-900">
-    <code>{DESIGN_SYSTEM_CONTENT}</code>
-  </pre>
+<div className="not-prose my-8">
+  <DownloadButton content={DESIGN_SYSTEM_CONTENT} filename="upa-design-system.md" />
 </div>
 
 ---
 
-<div className="not-prose mt-8 flex gap-3">
+## Brand Identity {{ id: 'brand-identity' }}
+
+```
+Company: Ultimate Performance Academy (UPA)
+
+Mission Statement:
+Transform your business and become the man your family needs
+
+Brand Personality:
+- Premium and professional
+- Results-driven and action-oriented
+- Supportive but demanding
+- Masculine energy with family focus
+- High performance culture
+
+Target Audience:
+- Male entrepreneurs and business owners
+- Ages 30-55
+- Family-oriented
+- Growth-minded
+- Results-focused
+```
+
+---
+
+## Colours {{ id: 'colours' }}
+
+### Primary Brand Colors
+
+```
+Yellow 500: #FFCB05 (Primary accent, CTAs, highlights)
+Black 900: #171717 (Text, backgrounds, premium feel)
+White: #FFFFFF (Backgrounds, text on dark)
+```
+
+### Black Scale
+
+```
+Black 950: #0a0a0a
+Black 900: #171717
+Black 800: #262626
+Black 700: #404040
+Black 600: #525252
+Black 500: #737373
+Black 400: #a3a3a3
+Black 300: #d4d4d4
+Black 200: #e5e5e5
+Black 100: #f5f5f5
+Black 50: #fafafa
+```
+
+### Semantic Colors
+
+```
+Success (Green): #16a34a
+Warning (Amber): #d97706
+Error (Red): #dc2626
+Info (Blue): #2563eb
+```
+
+### Gradients
+
+```
+Gold: linear-gradient(135deg, #FFD700 0%, #FFA500 100%)
+Silver: linear-gradient(135deg, #C0C0C0 0%, #808080 100%)
+Bronze: linear-gradient(135deg, #CD7F32 0%, #8B4513 100%)
+Yellow Brand: linear-gradient(135deg, #FFCB05 0%, #FFD700 100%)
+Black to Yellow: linear-gradient(135deg, #171717 0%, #FFCB05 100%)
+```
+
+---
+
+## Typography {{ id: 'typography' }}
+
+```
+Font Family: Inter (Google Fonts)
+
+Type Scale:
+- H1: 60px, weight 900, line-height 1.2
+- H2: 48px, weight 700, line-height 1.2
+- H3: 36px, weight 700, line-height 1.2
+- Body: 18px, weight 400, line-height 1.6
+- Small: 14px, weight 400, line-height 1.5
+```
+
+---
+
+## Spacing & Layout {{ id: 'spacing-layout' }}
+
+### Spacing Scale
+
+```
+xs: 4px / 0.25rem
+sm: 8px / 0.5rem
+md: 16px / 1rem
+lg: 24px / 1.5rem
+xl: 32px / 2rem
+2xl: 48px / 3rem
+3xl: 64px / 4rem
+4xl: 96px / 6rem
+5xl: 128px / 8rem
+```
+
+### Border Radius
+
+```
+sm: 4px
+md: 8px
+lg: 12px
+xl: 16px
+2xl: 24px
+full: 9999px
+```
+
+### Shadows
+
+```
+sm: 0 1px 2px 0 rgb(0 0 0 / 0.05)
+md: 0 4px 6px -1px rgb(0 0 0 / 0.1)
+lg: 0 10px 15px -3px rgb(0 0 0 / 0.1)
+xl: 0 20px 25px -5px rgb(0 0 0 / 0.1)
+2xl: 0 25px 50px -12px rgb(0 0 0 / 0.25)
+```
+
+---
+
+## Components {{ id: 'components' }}
+
+### Buttons
+
+```css
+Primary Button:
+- Background: #FFCB05
+- Text: #171717
+- Font Weight: 700
+- Padding: 12px 24px
+- Border Radius: 8px
+- Hover: #D97706
+
+Secondary Button:
+- Background: Transparent
+- Border: 2px solid #d4d4d4
+- Text: #171717
+- Padding: 10px 22px
+```
+
+### Form Inputs
+
+```
+- Height: 44px minimum
+- Padding: 12px 16px
+- Border: 1px solid #d4d4d4
+- Border Radius: 8px
+- Font Size: 18px
+- Focus: 2px Yellow ring
+```
+
+### Status Badges
+
+```
+Success: Green 100 background, Green 800 text
+Warning: Amber 100 background, Amber 800 text
+Error: Red 100 background, Red 800 text
+Info: Blue 100 background, Blue 800 text
+```
+
+---
+
+## Presentations {{ id: 'presentations' }}
+
+```
+Slide Backgrounds:
+- Black (#171717) - Recommended
+- White (#FFFFFF) - Professional
+- Yellow (#FFCB05) - Impact slides only
+
+Typography:
+- Titles: 48px minimum
+- Body: 24-30px
+- Stats: 72px, Yellow
+- Max 6 bullets per slide
+
+Layouts:
+1. Title + Bullets
+2. Big Stat
+3. Two Column
+4. Quote Slide (Yellow)
+
+File Naming: UPA_[Name]_[Date]_[Version].pptx
+```
+
+---
+
+## Best Practices {{ id: 'best-practices' }}
+
+```
+1. Maintain 4.5:1 contrast minimum for all body text
+2. Use Inter font for all UI elements
+3. Never go below 18px for body text
+4. Line height 1.6 for body, 1.2 for headings
+5. Letter spacing -0.02em for large headings (48px+)
+6. Maximum line length 50-75 characters
+7. Always include icons with status colors
+8. Test all designs on mobile before publishing
+9. Yellow is for CTAs and accents ONLY
+10. NEVER use Yellow text on white backgrounds
+```
+
+---
+
+<div className="not-prose mt-12 flex gap-3">
   <DownloadButton content={DESIGN_SYSTEM_CONTENT} filename="upa-design-system.md" />
   <Button href="/" variant="outline">
     <>Back to Home</>

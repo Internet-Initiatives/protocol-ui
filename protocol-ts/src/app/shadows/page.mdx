@@ -1,0 +1,226 @@
+import { HeroPattern } from '@/components/HeroPattern'
+
+export const metadata = {
+  title: 'Shadows',
+  description:
+    'Shadow system for depth and elevation in the UPA Design System.',
+}
+
+<HeroPattern />
+
+# Shadows
+
+Our shadow system creates depth and visual hierarchy. Use shadows to elevate elements and establish spatial relationships. {{ className: 'lead' }}
+
+---
+
+## Shadow Scale {{ id: 'shadow-scale' }}
+
+Five shadow levels from subtle to dramatic elevation.
+
+<div className="not-prose mt-8 grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
+  <div>
+    <div className="mb-3 text-sm font-semibold text-zinc-900 dark:text-white">Small (sm)</div>
+    <div className="flex h-32 items-center justify-center rounded-xl bg-white shadow-sm dark:bg-zinc-900">
+      <div className="text-sm text-zinc-600 dark:text-zinc-400">shadow-sm</div>
+    </div>
+    <div className="mt-3 font-mono text-xs text-zinc-600 dark:text-zinc-400">
+      0 1px 2px 0 rgb(0 0 0 / 0.05)
+    </div>
+  </div>
+
+  <div>
+    <div className="mb-3 text-sm font-semibold text-zinc-900 dark:text-white">Medium (md)</div>
+    <div className="flex h-32 items-center justify-center rounded-xl bg-white shadow-md dark:bg-zinc-900">
+      <div className="text-sm text-zinc-600 dark:text-zinc-400">shadow-md</div>
+    </div>
+    <div className="mt-3 font-mono text-xs text-zinc-600 dark:text-zinc-400">
+      0 4px 6px -1px rgb(0 0 0 / 0.1)
+    </div>
+  </div>
+
+  <div>
+    <div className="mb-3 text-sm font-semibold text-zinc-900 dark:text-white">Large (lg)</div>
+    <div className="flex h-32 items-center justify-center rounded-xl bg-white shadow-lg dark:bg-zinc-900">
+      <div className="text-sm text-zinc-600 dark:text-zinc-400">shadow-lg</div>
+    </div>
+    <div className="mt-3 font-mono text-xs text-zinc-600 dark:text-zinc-400">
+      0 10px 15px -3px rgb(0 0 0 / 0.1)
+    </div>
+  </div>
+
+  <div>
+    <div className="mb-3 text-sm font-semibold text-zinc-900 dark:text-white">Extra Large (xl)</div>
+    <div className="flex h-32 items-center justify-center rounded-xl bg-white shadow-xl dark:bg-zinc-900">
+      <div className="text-sm text-zinc-600 dark:text-zinc-400">shadow-xl</div>
+    </div>
+    <div className="mt-3 font-mono text-xs text-zinc-600 dark:text-zinc-400">
+      0 20px 25px -5px rgb(0 0 0 / 0.1)
+    </div>
+  </div>
+
+  <div>
+    <div className="mb-3 text-sm font-semibold text-zinc-900 dark:text-white">2X Large (2xl)</div>
+    <div className="flex h-32 items-center justify-center rounded-xl bg-white shadow-2xl dark:bg-zinc-900">
+      <div className="text-sm text-zinc-600 dark:text-zinc-400">shadow-2xl</div>
+    </div>
+    <div className="mt-3 font-mono text-xs text-zinc-600 dark:text-zinc-400">
+      0 25px 50px -12px rgb(0 0 0 / 0.25)
+    </div>
+  </div>
+</div>
+
+---
+
+## Usage Guidelines {{ id: 'usage-guidelines' }}
+
+### When to Use Shadows
+
+Use shadows to create visual hierarchy and indicate interactivity:
+
+<div className="not-prose mt-6">
+  <div className="overflow-hidden rounded-xl border border-zinc-200 dark:border-zinc-800">
+    <div className="border-b border-zinc-200 bg-zinc-50 px-6 py-3 dark:border-zinc-800 dark:bg-zinc-900">
+      <div className="text-sm font-semibold text-zinc-900 dark:text-white">Shadow Usage</div>
+    </div>
+    <div className="divide-y divide-zinc-200 dark:divide-zinc-800">
+      <div className="px-6 py-4">
+        <div className="font-semibold text-zinc-900 dark:text-white">Small (sm)</div>
+        <div className="mt-1 text-sm text-zinc-600 dark:text-zinc-400">
+          Subtle elevation for inputs, small cards, and inline elements
+        </div>
+      </div>
+      <div className="px-6 py-4">
+        <div className="font-semibold text-zinc-900 dark:text-white">Medium (md)</div>
+        <div className="mt-1 text-sm text-zinc-600 dark:text-zinc-400">
+          Standard cards, dropdowns, and hoverable elements
+        </div>
+      </div>
+      <div className="px-6 py-4">
+        <div className="font-semibold text-zinc-900 dark:text-white">Large (lg)</div>
+        <div className="mt-1 text-sm text-zinc-600 dark:text-zinc-400">
+          Floating panels, navigation menus, and important cards
+        </div>
+      </div>
+      <div className="px-6 py-4">
+        <div className="font-semibold text-zinc-900 dark:text-white">Extra Large (xl)</div>
+        <div className="mt-1 text-sm text-zinc-600 dark:text-zinc-400">
+          Modals, dialogs, and overlays that need clear separation
+        </div>
+      </div>
+      <div className="px-6 py-4">
+        <div className="font-semibold text-zinc-900 dark:text-white">2X Large (2xl)</div>
+        <div className="mt-1 text-sm text-zinc-600 dark:text-zinc-400">
+          Maximum elevation for prominent popups and full-screen overlays
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+### Interactive Example
+
+<div className="not-prose mt-8">
+  <div className="rounded-xl bg-zinc-50 p-8 dark:bg-zinc-900">
+    <div className="grid gap-6 sm:grid-cols-2">
+      <div>
+        <div className="mb-3 text-sm font-semibold text-zinc-900 dark:text-white">Card with Hover Shadow</div>
+        <div className="cursor-pointer rounded-lg border border-zinc-200 bg-white p-6 shadow-sm transition-shadow hover:shadow-lg dark:border-zinc-800 dark:bg-zinc-950">
+          <div className="text-lg font-bold text-zinc-900 dark:text-white">Hover Me</div>
+          <div className="mt-2 text-sm text-zinc-600 dark:text-zinc-400">
+            Shadow increases on hover to indicate interactivity
+          </div>
+        </div>
+      </div>
+
+      <div>
+        <div className="mb-3 text-sm font-semibold text-zinc-900 dark:text-white">Button with Shadow</div>
+        <div className="rounded-lg border border-zinc-200 bg-white p-6 shadow-sm dark:border-zinc-800 dark:bg-zinc-950">
+          <button className="rounded-lg bg-[#FFCB05] px-6 py-3 font-bold text-[#171717] shadow-md transition-all hover:shadow-lg">
+            Click Me
+          </button>
+          <div className="mt-3 text-sm text-zinc-600 dark:text-zinc-400">
+            Buttons use shadow-md by default
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+---
+
+## Best Practices {{ id: 'best-practices' }}
+
+<div className="not-prose mt-6">
+  <div className="overflow-hidden rounded-xl border border-zinc-200 dark:border-zinc-800">
+    <div className="border-b border-zinc-200 bg-zinc-50 px-6 py-3 dark:border-zinc-800 dark:bg-zinc-900">
+      <div className="text-sm font-semibold text-zinc-900 dark:text-white">Shadow Guidelines</div>
+    </div>
+    <div className="bg-white px-6 py-6 dark:bg-zinc-950">
+      <div className="space-y-4 text-sm">
+        <div className="flex gap-3">
+          <span className="text-green-600 dark:text-green-400">✓</span>
+          <div>
+            <strong className="text-zinc-900 dark:text-white">Use shadows consistently:</strong>
+            <span className="text-zinc-600 dark:text-zinc-400"> Same elevation levels should have the same shadow</span>
+          </div>
+        </div>
+        <div className="flex gap-3">
+          <span className="text-green-600 dark:text-green-400">✓</span>
+          <div>
+            <strong className="text-zinc-900 dark:text-white">Increase on interaction:</strong>
+            <span className="text-zinc-600 dark:text-zinc-400"> Elevate elements on hover or focus</span>
+          </div>
+        </div>
+        <div className="flex gap-3">
+          <span className="text-green-600 dark:text-green-400">✓</span>
+          <div>
+            <strong className="text-zinc-900 dark:text-white">Respect hierarchy:</strong>
+            <span className="text-zinc-600 dark:text-zinc-400"> More important elements = larger shadows</span>
+          </div>
+        </div>
+        <div className="flex gap-3">
+          <span className="text-red-600 dark:text-red-400">✗</span>
+          <div>
+            <strong className="text-zinc-900 dark:text-white">Don't overuse large shadows:</strong>
+            <span className="text-zinc-600 dark:text-zinc-400"> Reserve xl and 2xl for special cases</span>
+          </div>
+        </div>
+        <div className="flex gap-3">
+          <span className="text-red-600 dark:text-red-400">✗</span>
+          <div>
+            <strong className="text-zinc-900 dark:text-white">Don't mix with heavy borders:</strong>
+            <span className="text-zinc-600 dark:text-zinc-400"> Shadows and thick borders compete visually</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+---
+
+## Code Reference {{ id: 'code-reference' }}
+
+### CSS Custom Properties
+
+```css
+:root {
+  --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+  --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1);
+  --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1);
+  --shadow-xl: 0 20px 25px -5px rgb(0 0 0 / 0.1);
+  --shadow-2xl: 0 25px 50px -12px rgb(0 0 0 / 0.25);
+}
+```
+
+### Tailwind CSS Classes
+
+```css
+.shadow-sm { box-shadow: 0 1px 2px 0 rgb(0 0 0 / 0.05); }
+.shadow-md { box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1); }
+.shadow-lg { box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1); }
+.shadow-xl { box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1); }
+.shadow-2xl { box-shadow: 0 25px 50px -12px rgb(0 0 0 / 0.25); }
+```
