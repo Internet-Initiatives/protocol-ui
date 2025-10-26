@@ -131,13 +131,16 @@ export function ColorScale({ colors, columns = 5 }: ColorScaleProps) {
     return luminance > 0.5 ? 'dark' : 'light'
   }
 
+  // Responsive grid classes based on columns
+  const getGridClass = () => {
+    if (columns <= 2) return 'grid-cols-1 sm:grid-cols-2'
+    if (columns === 3) return 'grid-cols-1 sm:grid-cols-2 lg:grid-cols-3'
+    if (columns === 4) return 'grid-cols-1 sm:grid-cols-2 lg:grid-cols-4'
+    return 'grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5'
+  }
+
   return (
-    <div
-      className="grid gap-3"
-      style={{
-        gridTemplateColumns: `repeat(${columns}, minmax(0, 1fr))`,
-      }}
-    >
+    <div className={`grid gap-3 ${getGridClass()}`}>
       {colors.map((color) => (
         <ColorSwatch
           key={color.hex}
