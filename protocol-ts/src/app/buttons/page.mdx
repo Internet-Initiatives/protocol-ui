@@ -6,6 +6,7 @@ export const metadata = {
 
 export const sections = [
   { title: 'Button Variants', id: 'button-variants' },
+  { title: 'Colored Button Variants', id: 'colored-buttons' },
   { title: 'Button Sizes', id: 'button-sizes' },
   { title: 'Button States', id: 'button-states' },
 ]
@@ -21,7 +22,7 @@ Button components with clear visual hierarchy, proper touch targets (minimum 44x
 ### Primary Button - Yellow
 
 <div className="not-prose mt-6 flex flex-wrap gap-4">
-  <button className="rounded-lg bg-[#FFCB05] px-6 py-3 font-semibold text-zinc-900 transition-all hover:bg-[#D97706] focus:outline-none focus:ring-2 focus:ring-[#FFCB05] focus:ring-offset-2">
+  <button className="rounded-lg bg-[#FFCB05] px-6 py-3 font-semibold text-zinc-900 transition-all hover:bg-[#E6B800] focus:outline-none focus:ring-2 focus:ring-[#FFCB05] focus:ring-offset-2">
     Primary Button
   </button>
 </div>
@@ -58,7 +59,33 @@ Use for tertiary actions, cancel buttons, and less prominent options.
 
 Use for navigation, minimal interfaces, and subtle actions.
 
-### Danger Button
+---
+
+## Colored Button Variants {{ id: 'colored-buttons' }}
+
+Use colored buttons for specific contexts and status-based actions.
+
+### Success Button - Green
+
+<div className="not-prose mt-6 flex flex-wrap gap-4">
+  <button className="rounded-lg bg-green-600 px-6 py-3 font-semibold text-white transition-all hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-green-600 focus:ring-offset-2">
+    Confirm Action
+  </button>
+</div>
+
+Use for confirmations, success actions, and positive CTAs like "Approve", "Confirm", "Save".
+
+### Info Button - Blue
+
+<div className="not-prose mt-6 flex flex-wrap gap-4">
+  <button className="rounded-lg bg-blue-600 px-6 py-3 font-semibold text-white transition-all hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-600 focus:ring-offset-2">
+    Learn More
+  </button>
+</div>
+
+Use for informational actions, links to documentation, and neutral CTAs like "Learn More", "View Details".
+
+### Danger Button - Red
 
 <div className="not-prose mt-6 flex flex-wrap gap-4">
   <button className="rounded-lg bg-red-600 px-6 py-3 font-semibold text-white transition-all hover:bg-red-700 focus:outline-none focus:ring-2 focus:ring-red-600 focus:ring-offset-2">
@@ -66,7 +93,7 @@ Use for navigation, minimal interfaces, and subtle actions.
   </button>
 </div>
 
-Use for destructive actions and critical operations.
+Use for destructive actions and critical operations like "Delete", "Remove", "Cancel Subscription".
 
 ---
 
@@ -117,8 +144,8 @@ Use for destructive actions and critical operations.
 ### Hover State
 
 <div className="not-prose mt-6">
-  <button className="rounded-lg bg-[#D97706] px-6 py-3 font-semibold text-zinc-900">
-    Hover State (Darker)
+  <button className="rounded-lg bg-[#E6B800] px-6 py-3 font-semibold text-zinc-900">
+    Hover State (Darker Yellow)
   </button>
 </div>
 
