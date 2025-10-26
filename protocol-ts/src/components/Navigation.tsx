@@ -264,7 +264,7 @@ export const navigation: Array<NavGroup> = [
     links: [
       { title: 'Accessibility', href: '/accessibility' },
       { title: 'Design Tokens', href: '/tokens' },
-      { title: 'Design Brief', href: '/design-brief' },
+      { title: 'AI Design Brief', href: '/design-brief' },
     ],
   },
 ]
