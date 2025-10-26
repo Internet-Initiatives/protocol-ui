@@ -28,9 +28,9 @@ A professional, WCAG AA compliant design system built for Ultimate Performance A
     <h3 className="text-lg font-semibold text-zinc-900 dark:text-white">
       Accessibility First
     </h3>
-    <p className="mt-3 text-sm text-zinc-600 dark:text-zinc-400">
+    <div className="mt-3 text-sm text-zinc-600 dark:text-zinc-400">
       All text meets WCAG AA standards (4.5:1 minimum). Traffic light system (red/amber/green) is readable for all users including those with colour blindness.
-    </p>
+    </div>
   </div>
 
   <div className="group relative overflow-hidden rounded-xl border border-zinc-900/10 p-6 transition-all duration-200 hover:border-[#FFCB05] hover:shadow-lg dark:border-white/10 dark:hover:border-[#FFCB05]">
@@ -42,9 +42,39 @@ A professional, WCAG AA compliant design system built for Ultimate Performance A
     <h3 className="text-lg font-semibold text-zinc-900 dark:text-white">
       Brand Consistency
     </h3>
-    <p className="mt-3 text-sm text-zinc-600 dark:text-zinc-400">
-      Yellow (#FFCB05) and Black are the core brand colours. Yellow is used strategically for highlights and calls-to-action, never for body text.
-    </p>
+    <div className="mt-3 text-sm text-zinc-600 dark:text-zinc-400">
+      <div className="mb-3 flex flex-wrap items-center gap-2">
+        <span>Primary brand colours:</span>
+        <button
+          onClick={() => {navigator.clipboard.writeText('#FFCB05')}}
+          className="inline-flex items-center gap-1.5 rounded-md px-2 py-1 text-xs font-medium transition-all hover:scale-105 hover:shadow-md focus:outline-none focus:ring-2 focus:ring-[#FFCB05] focus:ring-offset-2"
+          style={{backgroundColor: '#FFCB05', color: '#171717'}}
+          title="Click to copy #FFCB05"
+        >
+          <span className="h-3 w-3 rounded-full border border-zinc-900" style={{backgroundColor: '#FFCB05'}}></span>
+          #FFCB05
+        </button>
+        <button
+          onClick={() => {navigator.clipboard.writeText('#171717')}}
+          className="inline-flex items-center gap-1.5 rounded-md px-2 py-1 text-xs font-medium transition-all hover:scale-105 hover:shadow-md focus:outline-none focus:ring-2 focus:ring-zinc-900 focus:ring-offset-2"
+          style={{backgroundColor: '#171717', color: '#FFFFFF'}}
+          title="Click to copy #171717"
+        >
+          <span className="h-3 w-3 rounded-full border border-white" style={{backgroundColor: '#171717'}}></span>
+          #171717
+        </button>
+        <button
+          onClick={() => {navigator.clipboard.writeText('#FFFFFF')}}
+          className="inline-flex items-center gap-1.5 rounded-md border border-zinc-300 px-2 py-1 text-xs font-medium transition-all hover:scale-105 hover:shadow-md focus:outline-none focus:ring-2 focus:ring-zinc-900 focus:ring-offset-2 dark:border-zinc-600"
+          style={{backgroundColor: '#FFFFFF', color: '#171717'}}
+          title="Click to copy #FFFFFF"
+        >
+          <span className="h-3 w-3 rounded-full border border-zinc-300" style={{backgroundColor: '#FFFFFF'}}></span>
+          #FFFFFF
+        </button>
+      </div>
+      <div>Yellow is used strategically for highlights and calls-to-action, never for body text.</div>
+    </div>
   </div>
 
   <div className="group relative overflow-hidden rounded-xl border border-zinc-900/10 p-6 transition-all duration-200 hover:border-[#FFCB05] hover:shadow-lg dark:border-white/10 dark:hover:border-[#FFCB05]">
@@ -56,9 +86,9 @@ A professional, WCAG AA compliant design system built for Ultimate Performance A
     <h3 className="text-lg font-semibold text-zinc-900 dark:text-white">
       Professional Typography
     </h3>
-    <p className="mt-3 text-sm text-zinc-600 dark:text-zinc-400">
+    <div className="mt-3 text-sm text-zinc-600 dark:text-zinc-400">
       Inter for all UI text (clean, modern, highly legible). Minimum 16px for body text. Clear hierarchy with consistent sizing scale.
-    </p>
+    </div>
   </div>
 
   <div className="group relative overflow-hidden rounded-xl border border-zinc-900/10 p-6 transition-all duration-200 hover:border-[#FFCB05] hover:shadow-lg dark:border-white/10 dark:hover:border-[#FFCB05]">
@@ -70,9 +100,9 @@ A professional, WCAG AA compliant design system built for Ultimate Performance A
     <h3 className="text-lg font-semibold text-zinc-900 dark:text-white">
       Semantic Clarity
     </h3>
-    <p className="mt-3 text-sm text-zinc-600 dark:text-zinc-400">
+    <div className="mt-3 text-sm text-zinc-600 dark:text-zinc-400">
       Traffic light system for status (Green=Success, Amber=Warning, Red=Error). Consistent, intuitive, universally understood.
-    </p>
+    </div>
   </div>
 
   <div className="group relative overflow-hidden rounded-xl border border-zinc-900/10 p-6 transition-all duration-200 hover:border-[#FFCB05] hover:shadow-lg dark:border-white/10 dark:hover:border-[#FFCB05]">
@@ -84,9 +114,9 @@ A professional, WCAG AA compliant design system built for Ultimate Performance A
     <h3 className="text-lg font-semibold text-zinc-900 dark:text-white">
       Data-Driven Design
     </h3>
-    <p className="mt-3 text-sm text-zinc-600 dark:text-zinc-400">
+    <div className="mt-3 text-sm text-zinc-600 dark:text-zinc-400">
       Built from research and best practices. Google Material Design, Apple HIG, WCAG 2.1 guidelines inform every decision.
-    </p>
+    </div>
   </div>
 
   <div className="group relative overflow-hidden rounded-xl border border-zinc-900/10 p-6 transition-all duration-200 hover:border-[#FFCB05] hover:shadow-lg dark:border-white/10 dark:hover:border-[#FFCB05]">
@@ -98,9 +128,9 @@ A professional, WCAG AA compliant design system built for Ultimate Performance A
     <h3 className="text-lg font-semibold text-zinc-900 dark:text-white">
       Responsive & Flexible
     </h3>
-    <p className="mt-3 text-sm text-zinc-600 dark:text-zinc-400">
+    <div className="mt-3 text-sm text-zinc-600 dark:text-zinc-400">
       Designed for all screen sizes and contexts. Works equally well on mobile, tablet, desktop, and large displays.
-    </p>
+    </div>
   </div>
 </div>
 
