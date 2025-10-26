@@ -19,128 +19,224 @@ Colour usage guidelines by medium, grounded in colour psychology and usability b
 
 ## Digital Applications (Web & Mobile) {{ id: 'digital-applications' }}
 
-<Properties>
-  <Property name="Primary Background">
-    White (#FFFFFF) or Black (#171717) depending on context
-  </Property>
-  <Property name="Body Text">
-    Black 800 (#262626) on light, Slate 200 (#E2E8F0) on dark
-  </Property>
-  <Property name="Headings">
-    Black 900 (#171717) on light, White or Yellow on dark
-  </Property>
-  <Property name="CTAs & Buttons">
-    Yellow (#FFCB05) with black text for primary actions
-  </Property>
-  <Property name="Status Indicators">
-    Traffic light system (Green/Amber/Red) with icons
-  </Property>
-</Properties>
+<div className="not-prose mt-8 grid gap-6 md:grid-cols-2">
+  <div className="overflow-hidden rounded-xl border border-zinc-200 dark:border-zinc-800">
+    <div className="bg-white p-8">
+      <div className="text-sm font-semibold text-zinc-500">LIGHT MODE</div>
+      <h3 className="mt-4 text-3xl font-black text-[#171717]">Heading Example</h3>
+      <div className="mt-4 text-base leading-relaxed text-[#262626]">
+        Body text uses Black 800 (#262626) for optimal readability. This provides enough contrast while reducing eye strain compared to pure black.
+      </div>
+      <button className="mt-6 rounded-lg bg-[#FFCB05] px-6 py-3 font-bold text-[#171717]">
+        Primary CTA Button
+      </button>
+      <div className="mt-6 flex gap-2">
+        <span className="inline-flex items-center gap-1 rounded-full bg-green-100 px-3 py-1 text-sm font-semibold text-green-800">
+          ✓ Success
+        </span>
+        <span className="inline-flex items-center gap-1 rounded-full bg-amber-100 px-3 py-1 text-sm font-semibold text-amber-800">
+          ⚠ Warning
+        </span>
+        <span className="inline-flex items-center gap-1 rounded-full bg-red-100 px-3 py-1 text-sm font-semibold text-red-800">
+          ✕ Error
+        </span>
+      </div>
+    </div>
+  </div>
 
-### Why These Choices?
+  <div className="overflow-hidden rounded-xl border border-zinc-800">
+    <div className="bg-[#171717] p-8">
+      <div className="text-sm font-semibold text-zinc-500">DARK MODE</div>
+      <h3 className="mt-4 text-3xl font-black text-white">Heading Example</h3>
+      <div className="mt-4 text-base leading-relaxed text-[#E2E8F0]">
+        Body text uses Slate 200 (#E2E8F0) on dark backgrounds for comfortable reading. Headings can use white or yellow.
+      </div>
+      <button className="mt-6 rounded-lg bg-[#FFCB05] px-6 py-3 font-bold text-[#171717]">
+        Primary CTA Button
+      </button>
+      <div className="mt-6 flex gap-2">
+        <span className="inline-flex items-center gap-1 rounded-full bg-green-900/30 px-3 py-1 text-sm font-semibold text-green-400">
+          ✓ Success
+        </span>
+        <span className="inline-flex items-center gap-1 rounded-full bg-amber-900/30 px-3 py-1 text-sm font-semibold text-amber-400">
+          ⚠ Warning
+        </span>
+        <span className="inline-flex items-center gap-1 rounded-full bg-red-900/30 px-3 py-1 text-sm font-semibold text-red-400">
+          ✕ Error
+        </span>
+      </div>
+    </div>
+  </div>
+</div>
 
-- **White/Black backgrounds**: Maximum contrast for extended reading
-- **Warm greys for text**: Reduces eye strain vs pure black (#000000)
-- **Yellow for CTAs**: High visibility and energy, proven to increase conversions
-- **Traffic light system**: Universally understood, works for colour blind users
+<div className="mt-6">
+  <h3 className="text-lg font-bold text-zinc-900 dark:text-white">Why These Choices?</h3>
+  <ul className="mt-4 space-y-2 text-zinc-600 dark:text-zinc-400">
+    <li><strong className="text-zinc-900 dark:text-white">White/Black backgrounds</strong> - Maximum contrast for extended reading</li>
+    <li><strong className="text-zinc-900 dark:text-white">Warm greys for text</strong> - Reduces eye strain vs pure black (#000000)</li>
+    <li><strong className="text-zinc-900 dark:text-white">Yellow for CTAs</strong> - High visibility and energy, proven to increase conversions</li>
+    <li><strong className="text-zinc-900 dark:text-white">Traffic light system</strong> - Universally understood, works for colour blind users</li>
+  </ul>
+</div>
 
 ---
 
 ## Print Materials {{ id: 'print-materials' }}
 
-<Properties>
-  <Property name="Primary Colours">
-    Yellow (#FFCB05) and Black (#171717)
-  </Property>
-  <Property name="Paper Stock">
-    White or cream - never yellow paper (reduces legibility)
-  </Property>
-  <Property name="Body Text">
-    Black (#171717) - 100% ink for maximum readability
-  </Property>
-  <Property name="Accents">
-    Yellow highlights, underlines, and backgrounds
-  </Property>
-</Properties>
+<div className="not-prose mt-8 grid gap-6 md:grid-cols-3">
+  <div className="overflow-hidden rounded-xl border border-zinc-200 dark:border-zinc-800">
+    <div className="bg-white p-6">
+      <div className="text-xs font-bold uppercase tracking-wider text-zinc-500">STANDARD</div>
+      <h4 className="mt-3 text-2xl font-black text-[#171717]">White Paper</h4>
+      <div className="mt-3 text-sm leading-relaxed text-[#171717]">
+        Black text for body copy. Use yellow for highlights, callouts, and accents only.
+      </div>
+      <div className="mt-4 border-l-4 border-[#FFCB05] bg-[#FFCB05]/10 p-3">
+        <div className="text-xs font-bold text-[#171717]">CALLOUT BOX</div>
+      </div>
+    </div>
+  </div>
 
-### Print-Specific Guidelines
+  <div className="overflow-hidden rounded-xl border border-[#FFCB05]">
+    <div className="bg-[#FFCB05] p-6">
+      <div className="text-xs font-bold uppercase tracking-wider text-[#171717]/60">HIGHLIGHT</div>
+      <h4 className="mt-3 text-2xl font-black text-[#171717]">Yellow Background</h4>
+      <div className="mt-3 text-sm leading-relaxed text-[#171717]">
+        Black text on yellow for callouts and highlights. Ensure yellow is solid, not screened.
+      </div>
+    </div>
+  </div>
 
-- **Yellow backgrounds**: Use for callouts, boxes, and highlights - not full pages
-- **Black on yellow**: Ensure yellow is solid (not screened) for adequate contrast
-- **Yellow on black**: Creates premium, high-end feel for covers and hero sections
-- **Avoid yellow text**: Never use yellow for body text on white paper
+  <div className="overflow-hidden rounded-xl border border-zinc-800">
+    <div className="bg-[#171717] p-6">
+      <div className="text-xs font-bold uppercase tracking-wider text-zinc-500">PREMIUM</div>
+      <h4 className="mt-3 text-2xl font-black text-[#FFCB05]">Black Paper</h4>
+      <div className="mt-3 text-sm leading-relaxed text-white">
+        Yellow or white text on black creates a premium, high-end feel for covers and hero sections.
+      </div>
+    </div>
+  </div>
+</div>
+
+<div className="mt-6">
+  <h3 className="text-lg font-bold text-zinc-900 dark:text-white">Print-Specific Guidelines</h3>
+  <ul className="mt-4 space-y-2 text-zinc-600 dark:text-zinc-400">
+    <li><strong className="text-zinc-900 dark:text-white">Yellow backgrounds</strong> - Use for callouts, boxes, and highlights - not full pages</li>
+    <li><strong className="text-zinc-900 dark:text-white">Black on yellow</strong> - Ensure yellow is solid (not screened) for adequate contrast</li>
+    <li><strong className="text-zinc-900 dark:text-white">Yellow on black</strong> - Creates premium, high-end feel for covers and hero sections</li>
+    <li><strong className="text-zinc-900 dark:text-white">Avoid yellow text</strong> - Never use yellow for body text on white paper</li>
+  </ul>
+</div>
 
 ---
 
 ## Social Media {{ id: 'social-media' }}
 
-### Instagram & Facebook
+<div className="not-prose mt-8 grid gap-6 md:grid-cols-2">
+  <div>
+    <div className="mb-3 text-sm font-bold text-zinc-900 dark:text-white">INSTAGRAM & FACEBOOK</div>
+    <div className="overflow-hidden rounded-xl border border-zinc-800">
+      <div className="bg-[#171717] p-8 text-center">
+        <div className="text-6xl font-black leading-tight text-white">
+          TRANSFORM<br />YOUR BUSINESS
+        </div>
+        <div className="mt-4 h-1 w-24 bg-[#FFCB05] mx-auto"></div>
+        <div className="mt-6 text-xl text-[#FFCB05]">
+          Become the man your family needs
+        </div>
+      </div>
+    </div>
+    <div className="mt-3 text-sm text-zinc-600 dark:text-zinc-400">
+      Black backgrounds with white/yellow text for maximum impact in feed. Text minimum 60px.
+    </div>
+  </div>
 
-<Properties>
-  <Property name="Post Backgrounds">
-    Black (#171717) for maximum impact in feed
-  </Property>
-  <Property name="Text">
-    White and Yellow for readability on mobile
-  </Property>
-  <Property name="Minimum Text Size">
-    60px - readable when scrolling quickly
-  </Property>
-  <Property name="Brand Consistency">
-    Yellow highlights on every post for recognition
-  </Property>
-</Properties>
+  <div>
+    <div className="mb-3 text-sm font-bold text-zinc-900 dark:text-white">LINKEDIN</div>
+    <div className="overflow-hidden rounded-xl border border-zinc-200 dark:border-zinc-800">
+      <div className="border-b-4 border-[#FFCB05] bg-white p-8">
+        <h4 className="text-3xl font-black text-[#171717]">
+          Professional Growth<br />Made Simple
+        </h4>
+        <div className="mt-4 text-base leading-relaxed text-[#262626]">
+          Transform your business with proven strategies and accountability.
+        </div>
+        <div className="mt-6 inline-block rounded-lg bg-[#FFCB05] px-6 py-2 font-bold text-[#171717]">
+          Learn More
+        </div>
+      </div>
+    </div>
+    <div className="mt-3 text-sm text-zinc-600 dark:text-zinc-400">
+      White backgrounds with yellow accents for professional tone. Yellow borders to stand out.
+    </div>
+  </div>
+</div>
 
-### LinkedIn
-
-<Properties>
-  <Property name="Professional Tone">
-    More white backgrounds, black text, yellow accents
-  </Property>
-  <Property name="Headshots & Graphics">
-    Yellow borders or backgrounds to stand out
-  </Property>
-  <Property name="Documents">
-    Black on white with yellow highlights for professionalism
-  </Property>
-</Properties>
-
-### Best Practices
-
-- **Consistent branding**: Use yellow in every post for instant recognition
-- **High contrast**: Black backgrounds with white/yellow text perform best
-- **Thumb-stopping**: Bold, ALL CAPS headlines in yellow
-- **Mobile-first**: Test all posts on mobile before publishing
+<div className="mt-6">
+  <h3 className="text-lg font-bold text-zinc-900 dark:text-white">Best Practices</h3>
+  <ul className="mt-4 space-y-2 text-zinc-600 dark:text-zinc-400">
+    <li><strong className="text-zinc-900 dark:text-white">Consistent branding</strong> - Use yellow in every post for instant recognition</li>
+    <li><strong className="text-zinc-900 dark:text-white">High contrast</strong> - Black backgrounds with white/yellow text perform best</li>
+    <li><strong className="text-zinc-900 dark:text-white">Thumb-stopping</strong> - Bold, ALL CAPS headlines in yellow</li>
+    <li><strong className="text-zinc-900 dark:text-white">Mobile-first</strong> - Test all posts on mobile before publishing</li>
+  </ul>
+</div>
 
 ---
 
 ## Video Content {{ id: 'video-content' }}
 
-<Properties>
-  <Property name="Base Background">
-    Black or dark slate for maximum contrast and focus
-  </Property>
-  <Property name="Animated Elements">
-    Yellow shapes, lines, or highlights that guide attention
-  </Property>
-  <Property name="Text Reveals">
-    Glow effects (yellow or electric blue) on text animations
-  </Property>
-  <Property name="Transitions">
-    Gradient wipes (black to gold) between scenes
-  </Property>
-  <Property name="Text Size">
-    Large (60px+) with high contrast - readable when scrolling
-  </Property>
-</Properties>
+<div className="not-prose mt-8 space-y-6">
+  <div className="overflow-hidden rounded-xl border border-zinc-800">
+    <div className="relative bg-[#171717] p-12">
+      <div className="absolute left-8 top-8 h-1 w-16 bg-[#FFCB05]"></div>
+      <div className="text-center">
+        <div className="text-5xl font-black text-white">
+          5 STEPS TO SUCCESS
+        </div>
+        <div className="mt-4 text-xl text-[#FFCB05]">Watch Now</div>
+      </div>
+      <div className="absolute bottom-0 left-0 right-0 h-1.5 bg-zinc-800">
+        <div className="h-full w-1/3 bg-[#FFCB05]"></div>
+      </div>
+    </div>
+    <div className="bg-zinc-900 px-6 py-3">
+      <div className="flex items-center gap-3">
+        <div className="h-2 w-2 rounded-full bg-[#FFCB05]"></div>
+        <div className="text-sm font-semibold text-[#FFCB05]">ULTIMATE PERFORMANCE ACADEMY</div>
+      </div>
+    </div>
+  </div>
 
-### Video-Specific Guidelines
+  <div className="grid gap-4 md:grid-cols-2">
+    <div className="rounded-xl border border-zinc-800 bg-zinc-950 p-4">
+      <div className="text-xs font-bold text-zinc-500">THUMBNAIL EXAMPLE</div>
+      <div className="mt-3 rounded-lg border-4 border-[#FFCB05] bg-[#171717] p-6 text-center">
+        <div className="text-3xl font-black text-white">CLICK TO<br />WATCH</div>
+      </div>
+    </div>
+    <div className="rounded-xl border border-zinc-800 bg-zinc-950 p-4">
+      <div className="text-xs font-bold text-zinc-500">LOWER THIRD</div>
+      <div className="mt-3 bg-[#171717] px-4 py-3">
+        <div className="border-l-4 border-[#FFCB05] pl-3">
+          <div className="text-sm font-bold text-white">John Smith</div>
+          <div className="text-xs text-[#FFCB05]">Business Coach</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 
-- **Lower thirds**: Black background with yellow text
-- **Progress bars**: Yellow to indicate playback position
-- **Captions**: White text with black background for accessibility
-- **Thumbnails**: Yellow borders or backgrounds for click-through rates
-- **Intro/outro**: Black background with yellow brand elements
+<div className="mt-6">
+  <h3 className="text-lg font-bold text-zinc-900 dark:text-white">Video-Specific Guidelines</h3>
+  <ul className="mt-4 space-y-2 text-zinc-600 dark:text-zinc-400">
+    <li><strong className="text-zinc-900 dark:text-white">Lower thirds</strong> - Black background with yellow text and accent bars</li>
+    <li><strong className="text-zinc-900 dark:text-white">Progress bars</strong> - Yellow to indicate playback position</li>
+    <li><strong className="text-zinc-900 dark:text-white">Captions</strong> - White text with black background for accessibility</li>
+    <li><strong className="text-zinc-900 dark:text-white">Thumbnails</strong> - Yellow borders or backgrounds for click-through rates</li>
+    <li><strong className="text-zinc-900 dark:text-white">Intro/outro</strong> - Black background with yellow brand elements</li>
+  </ul>
+</div>
 
 <Note>
   **Pro Tip**: Yellow progress bars or animated underlines that follow narration increase viewer retention by 41% (source: Wistia 2024 study).
@@ -150,20 +246,36 @@ Colour usage guidelines by medium, grounded in colour psychology and usability b
 
 ## Email Marketing
 
-<Properties>
-  <Property name="Subject Lines">
-    Keep professional - use emojis sparingly
-  </Property>
-  <Property name="Header">
-    Black or white background with contrasting text
-  </Property>
-  <Property name="Body">
-    White background, black text, yellow CTAs
-  </Property>
-  <Property name="CTA Buttons">
-    Yellow (#FFCB05) background with black text
-  </Property>
-</Properties>
+<div className="not-prose mt-8">
+  <div className="overflow-hidden rounded-xl border border-zinc-200 dark:border-zinc-800">
+    <div className="bg-[#171717] px-6 py-4">
+      <div className="text-sm font-bold text-[#FFCB05]">UPA DESIGN SYSTEM</div>
+    </div>
+    <div className="bg-white p-8">
+      <h3 className="text-3xl font-black text-[#171717]">Ready to Transform Your Business?</h3>
+      <div className="mt-4 text-base leading-relaxed text-[#262626]">
+        Join thousands of business owners who have already transformed their companies with our proven strategies and accountability framework.
+      </div>
+      <div className="mt-6">
+        <div className="inline-block rounded-lg bg-[#FFCB05] px-8 py-4 text-center">
+          <div className="text-lg font-black text-[#171717]">GET STARTED TODAY</div>
+        </div>
+      </div>
+    </div>
+    <div className="bg-zinc-100 px-6 py-4 text-center">
+      <div className="text-xs text-zinc-600">© 2024 Ultimate Performance Academy</div>
+    </div>
+  </div>
+</div>
+
+<div className="mt-6">
+  <ul className="space-y-2 text-zinc-600 dark:text-zinc-400">
+    <li><strong className="text-zinc-900 dark:text-white">Subject lines</strong> - Keep professional, use emojis sparingly</li>
+    <li><strong className="text-zinc-900 dark:text-white">Header</strong> - Black or branded background with yellow accent</li>
+    <li><strong className="text-zinc-900 dark:text-white">Body</strong> - White background, black text, yellow CTAs</li>
+    <li><strong className="text-zinc-900 dark:text-white">CTA buttons</strong> - Yellow (#FFCB05) background with black text</li>
+  </ul>
+</div>
 
 ---
 

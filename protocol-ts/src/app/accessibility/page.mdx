@@ -99,81 +99,181 @@ Every element in the UPA Design System has been designed and tested for accessib
 
 ## Colour Contrast Ratios {{ id: 'colour-contrast' }}
 
-All colour combinations have been tested and verified:
+All colour combinations have been tested and verified for WCAG AA compliance (4.5:1 minimum for body text):
 
-### Text Contrast (WCAG AA: 4.5:1 minimum)
+<div className="not-prose mt-8 grid gap-6 md:grid-cols-2">
+  <div className="overflow-hidden rounded-xl border border-zinc-200 dark:border-zinc-800">
+    <div className="bg-white p-8">
+      <div className="text-sm font-semibold text-zinc-500">PASSES AAA</div>
+      <div className="mt-4 text-4xl font-black text-[#171717]">
+        Black 900 on White
+      </div>
+      <div className="mt-2 text-lg text-[#171717]">
+        Body text example with excellent readability
+      </div>
+      <div className="mt-6 rounded-lg bg-zinc-100 px-4 py-3">
+        <div className="text-sm font-bold text-zinc-900">Contrast: 21:1</div>
+        <div className="text-xs text-zinc-600">Exceeds WCAG AAA (7:1)</div>
+      </div>
+    </div>
+  </div>
 
-<Properties>
-  <Property name="Black on White">
-    21:1 - Exceeds WCAG AAA (7:1)
-  </Property>
-  <Property name="Black 800 on White">
-    15.3:1 - Exceeds WCAG AAA
-  </Property>
-  <Property name="Success Green 600">
-    4.54:1 - Meets WCAG AA
-  </Property>
-  <Property name="Warning Amber 600">
-    4.54:1 - Meets WCAG AA
-  </Property>
-  <Property name="Error Red 600">
-    4.52:1 - Meets WCAG AA
-  </Property>
-  <Property name="Info Blue 600">
-    4.56:1 - Meets WCAG AA
-  </Property>
-</Properties>
+  <div className="overflow-hidden rounded-xl border border-zinc-200 dark:border-zinc-800">
+    <div className="bg-white p-8">
+      <div className="text-sm font-semibold text-zinc-500">PASSES AAA</div>
+      <div className="mt-4 text-4xl font-black text-[#262626]">
+        Black 800 on White
+      </div>
+      <div className="mt-2 text-lg text-[#262626]">
+        Softer black reduces eye strain for extended reading
+      </div>
+      <div className="mt-6 rounded-lg bg-zinc-100 px-4 py-3">
+        <div className="text-sm font-bold text-zinc-900">Contrast: 15.3:1</div>
+        <div className="text-xs text-zinc-600">Exceeds WCAG AAA (7:1)</div>
+      </div>
+    </div>
+  </div>
+</div>
 
-### Why Yellow Can't Be Body Text
+<div className="not-prose mt-6">
+  <h3 className="text-lg font-bold text-zinc-900 dark:text-white">Semantic Colours (WCAG AA: 4.5:1 minimum)</h3>
+  <div className="mt-4 grid gap-4 md:grid-cols-2 lg:grid-cols-4">
+    <div className="rounded-xl border border-zinc-200 p-4 dark:border-zinc-800">
+      <div className="flex items-center gap-2">
+        <div className="h-10 w-10 rounded-lg bg-green-600"></div>
+        <div className="text-sm font-bold text-green-600">Success</div>
+      </div>
+      <div className="mt-3 text-sm text-zinc-600 dark:text-zinc-400">
+        Green 600<br />
+        <strong className="text-zinc-900 dark:text-white">4.54:1</strong> - Passes AA
+      </div>
+    </div>
 
-Yellow (#FFCB05) on white background: **1.98:1 contrast** - Fails WCAG at all levels.
+    <div className="rounded-xl border border-zinc-200 p-4 dark:border-zinc-800">
+      <div className="flex items-center gap-2">
+        <div className="h-10 w-10 rounded-lg bg-amber-600"></div>
+        <div className="text-sm font-bold text-amber-600">Warning</div>
+      </div>
+      <div className="mt-3 text-sm text-zinc-600 dark:text-zinc-400">
+        Amber 600<br />
+        <strong className="text-zinc-900 dark:text-white">4.54:1</strong> - Passes AA
+      </div>
+    </div>
 
-This is why yellow is ONLY used for:
-- Backgrounds (with dark text on top)
-- Buttons and CTAs
-- Accents and highlights
-- Decorative elements
+    <div className="rounded-xl border border-zinc-200 p-4 dark:border-zinc-800">
+      <div className="flex items-center gap-2">
+        <div className="h-10 w-10 rounded-lg bg-red-600"></div>
+        <div className="text-sm font-bold text-red-600">Error</div>
+      </div>
+      <div className="mt-3 text-sm text-zinc-600 dark:text-zinc-400">
+        Red 600<br />
+        <strong className="text-zinc-900 dark:text-white">4.52:1</strong> - Passes AA
+      </div>
+    </div>
 
-**Never** for body text or small text on light backgrounds.
+    <div className="rounded-xl border border-zinc-200 p-4 dark:border-zinc-800">
+      <div className="flex items-center gap-2">
+        <div className="h-10 w-10 rounded-lg bg-blue-600"></div>
+        <div className="text-sm font-bold text-blue-600">Info</div>
+      </div>
+      <div className="mt-3 text-sm text-zinc-600 dark:text-zinc-400">
+        Blue 600<br />
+        <strong className="text-zinc-900 dark:text-white">4.56:1</strong> - Passes AA
+      </div>
+    </div>
+  </div>
+</div>
+
+<div className="not-prose mt-8 rounded-xl border-2 border-red-200 bg-red-50 p-6 dark:border-red-900 dark:bg-red-950">
+  <h3 className="text-lg font-bold text-red-900 dark:text-red-200">Why Yellow Can't Be Body Text</h3>
+  <div className="mt-3 bg-white p-4 rounded-lg">
+    <div className="text-base" style={{color: '#FFCB05'}}>
+      This yellow text on white background is VERY difficult to read
+    </div>
+    <div className="mt-3 text-sm text-zinc-600">
+      Yellow (#FFCB05) on white: <strong className="text-red-600">1.98:1 contrast</strong> - Fails WCAG at all levels
+    </div>
+  </div>
+  <div className="mt-4 text-sm text-zinc-700 dark:text-zinc-300">
+    <strong>Yellow is ONLY used for:</strong>
+    <ul className="mt-2 ml-4 space-y-1 list-disc">
+      <li>Backgrounds (with dark text on top)</li>
+      <li>Buttons and CTAs</li>
+      <li>Accents and highlights</li>
+      <li>Decorative elements</li>
+    </ul>
+    <div className="mt-3 font-bold">Never for body text or small text on light backgrounds.</div>
+  </div>
+</div>
 
 ---
 
 ## Colour Blindness Considerations {{ id: 'colour-blindness' }}
 
-### Traffic Light System
+Our semantic colour system (Green/Amber/Red) works for all types of colour vision deficiency because we never rely on colour alone:
 
-Our semantic colour system (Green/Amber/Red) works for all types of colour vision deficiency:
-
-<div className="not-prose mt-6 space-y-4">
-  <div className="rounded-lg border border-zinc-200 p-4 dark:border-zinc-700">
-    <h4 className="font-semibold text-zinc-900 dark:text-white">Protanopia (Red-Blind)</h4>
-    <p className="mt-2 text-sm text-zinc-600 dark:text-zinc-400">
-      Our reds and greens are carefully selected to have sufficient luminance difference. Icons and text labels ensure meaning is conveyed beyond colour alone.
-    </p>
+<div className="not-prose mt-8">
+  <div className="rounded-xl border border-zinc-200 bg-white p-6 dark:border-zinc-800 dark:bg-zinc-900">
+    <div className="mb-4 text-sm font-bold text-zinc-900 dark:text-white">NORMAL VISION</div>
+    <div className="flex flex-wrap gap-3">
+      <span className="inline-flex items-center gap-2 rounded-full bg-green-100 px-4 py-2 font-semibold text-green-800">
+        <svg className="h-4 w-4" fill="currentColor" viewBox="0 0 20 20">
+          <path fillRule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" clipRule="evenodd" />
+        </svg>
+        Success
+      </span>
+      <span className="inline-flex items-center gap-2 rounded-full bg-amber-100 px-4 py-2 font-semibold text-amber-800">
+        <svg className="h-4 w-4" fill="currentColor" viewBox="0 0 20 20">
+          <path fillRule="evenodd" d="M8.485 2.495c.673-1.167 2.357-1.167 3.03 0l6.28 10.875c.673 1.167-.17 2.625-1.516 2.625H3.72c-1.347 0-2.189-1.458-1.515-2.625L8.485 2.495zM10 5a.75.75 0 01.75.75v3.5a.75.75 0 01-1.5 0v-3.5A.75.75 0 0110 5zm0 9a1 1 0 100-2 1 1 0 000 2z" clipRule="evenodd" />
+        </svg>
+        Warning
+      </span>
+      <span className="inline-flex items-center gap-2 rounded-full bg-red-100 px-4 py-2 font-semibold text-red-800">
+        <svg className="h-4 w-4" fill="currentColor" viewBox="0 0 20 20">
+          <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM8.28 7.22a.75.75 0 00-1.06 1.06L8.94 10l-1.72 1.72a.75.75 0 101.06 1.06L10 11.06l1.72 1.72a.75.75 0 101.06-1.06L11.06 10l1.72-1.72a.75.75 0 00-1.06-1.06L10 8.94 8.28 7.22z" clipRule="evenodd" />
+        </svg>
+        Error
+      </span>
+    </div>
   </div>
 
-  <div className="rounded-lg border border-zinc-200 p-4 dark:border-zinc-700">
-    <h4 className="font-semibold text-zinc-900 dark:text-white">Deuteranopia (Green-Blind)</h4>
-    <p className="mt-2 text-sm text-zinc-600 dark:text-zinc-400">
-      Most common form of colour blindness. Our green (#16A34A) and red (#DC2626) are distinguishable by brightness even without hue perception.
-    </p>
-  </div>
+  <div className="mt-6 grid gap-4 md:grid-cols-3">
+    <div className="rounded-xl border border-zinc-200 p-4 dark:border-zinc-800">
+      <h4 className="font-bold text-zinc-900 dark:text-white">Protanopia</h4>
+      <div className="text-xs text-zinc-500 dark:text-zinc-400">Red-Blind</div>
+      <div className="mt-3 text-sm text-zinc-600 dark:text-zinc-400">
+        Icons and text labels ensure meaning is conveyed beyond colour. Sufficient luminance difference between red/green.
+      </div>
+    </div>
 
-  <div className="rounded-lg border border-zinc-200 p-4 dark:border-zinc-700">
-    <h4 className="font-semibold text-zinc-900 dark:text-white">Tritanopia (Blue-Blind)</h4>
-    <p className="mt-2 text-sm text-zinc-600 dark:text-zinc-400">
-      Our blue information colour is used sparingly and always paired with icons or text to convey meaning.
-    </p>
+    <div className="rounded-xl border border-zinc-200 p-4 dark:border-zinc-800">
+      <h4 className="font-bold text-zinc-900 dark:text-white">Deuteranopia</h4>
+      <div className="text-xs text-zinc-500 dark:text-zinc-400">Green-Blind (Most Common)</div>
+      <div className="mt-3 text-sm text-zinc-600 dark:text-zinc-400">
+        Green and red are distinguishable by brightness. Icons provide additional meaning cues.
+      </div>
+    </div>
+
+    <div className="rounded-xl border border-zinc-200 p-4 dark:border-zinc-800">
+      <h4 className="font-bold text-zinc-900 dark:text-white">Tritanopia</h4>
+      <div className="text-xs text-zinc-500 dark:text-zinc-400">Blue-Blind</div>
+      <div className="mt-3 text-sm text-zinc-600 dark:text-zinc-400">
+        Blue used sparingly, always paired with icons or text to convey meaning clearly.
+      </div>
+    </div>
   </div>
 </div>
 
-### Design Patterns for Colour Blind Users
-
-1. **Never rely on colour alone**: Always include icons, text labels, or patterns
-2. **Use the traffic light system**: Universally recognized and tested pattern
-3. **Sufficient contrast**: All colours have adequate luminance difference
-4. **Text labels**: "Success", "Warning", "Error" labels in addition to colour
-5. **Icons**: Checkmark (success), warning triangle, X (error)
+<div className="mt-6">
+  <h3 className="text-lg font-bold text-zinc-900 dark:text-white">Design Patterns for Colour Blind Users</h3>
+  <ul className="mt-4 space-y-2 text-zinc-600 dark:text-zinc-400">
+    <li><strong className="text-zinc-900 dark:text-white">Never rely on colour alone</strong> - Always include icons, text labels, or patterns</li>
+    <li><strong className="text-zinc-900 dark:text-white">Use the traffic light system</strong> - Universally recognized and tested pattern</li>
+    <li><strong className="text-zinc-900 dark:text-white">Sufficient contrast</strong> - All colours have adequate luminance difference</li>
+    <li><strong className="text-zinc-900 dark:text-white">Text labels</strong> - "Success", "Warning", "Error" labels in addition to colour</li>
+    <li><strong className="text-zinc-900 dark:text-white">Icons</strong> - Checkmark (success), warning triangle, X (error)</li>
+  </ul>
+</div>
 
 ---
 
