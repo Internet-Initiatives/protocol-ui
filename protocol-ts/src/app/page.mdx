@@ -39,39 +39,60 @@ This design system provides a comprehensive set of colours, components, and guid
 ## Design Principles {{ id: 'design-principles' }}
 
 <div className="not-prose mt-6 grid grid-cols-1 gap-6 sm:grid-cols-2">
-  <div className="relative overflow-hidden rounded-xl border border-zinc-900/10 p-6 dark:border-white/10">
+  <div className="group relative overflow-hidden rounded-xl border border-zinc-900/10 p-6 transition-all duration-200 hover:border-[#FFCB05] hover:shadow-lg dark:border-white/10 dark:hover:border-[#FFCB05]">
+    <div className="mb-4 inline-flex h-12 w-12 items-center justify-center rounded-lg bg-zinc-100 dark:bg-zinc-800">
+      <svg className="h-6 w-6 text-[#FFCB05]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
+      </svg>
+    </div>
     <h3 className="text-base font-semibold text-zinc-900 dark:text-white">
       Accessibility First
     </h3>
-    <p className="mt-2 text-sm text-zinc-600 dark:text-zinc-400">
+    <div className="mt-2 text-sm text-zinc-600 dark:text-zinc-400">
       All text meets WCAG AA standards (4.5:1 minimum). Traffic light system is readable for all users including those with colour blindness.
-    </p>
+    </div>
   </div>
 
-  <div className="relative overflow-hidden rounded-xl border border-zinc-900/10 p-6 dark:border-white/10">
+  <div className="group relative overflow-hidden rounded-xl border border-zinc-900/10 p-6 transition-all duration-200 hover:border-[#FFCB05] hover:shadow-lg dark:border-white/10 dark:hover:border-[#FFCB05]">
+    <div className="mb-4 inline-flex h-12 w-12 items-center justify-center rounded-lg bg-zinc-100 dark:bg-zinc-800">
+      <svg className="h-6 w-6 text-[#FFCB05]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.486 8.485M7 17h.01" />
+      </svg>
+    </div>
     <h3 className="text-base font-semibold text-zinc-900 dark:text-white">
       Brand Consistency
     </h3>
-    <p className="mt-2 text-sm text-zinc-600 dark:text-zinc-400">
+    <div className="mt-2 text-sm text-zinc-600 dark:text-zinc-400">
       Yellow (#FFCB05) and Black are the primary brand colours. Yellow is used strategically for highlights and calls-to-action, never for body text.
-    </p>
+    </div>
   </div>
 
-  <div className="relative overflow-hidden rounded-xl border border-zinc-900/10 p-6 dark:border-white/10">
+  <div className="group relative overflow-hidden rounded-xl border border-zinc-900/10 p-6 transition-all duration-200 hover:border-[#FFCB05] hover:shadow-lg dark:border-white/10 dark:hover:border-[#FFCB05]">
+    <div className="mb-4 inline-flex h-12 w-12 items-center justify-center rounded-lg bg-zinc-100 dark:bg-zinc-800">
+      <svg className="h-6 w-6 text-[#FFCB05]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+      </svg>
+    </div>
     <h3 className="text-base font-semibold text-zinc-900 dark:text-white">
       Professional Typography
     </h3>
-    <p className="mt-2 text-sm text-zinc-600 dark:text-zinc-400">
+    <div className="mt-2 text-sm text-zinc-600 dark:text-zinc-400">
       Inter for all UI text (clean, modern, highly legible). Minimum 16px for body text. Clear hierarchy with consistent sizing scale.
-    </p>
+    </div>
   </div>
 
-  <div className="relative overflow-hidden rounded-xl border border-zinc-900/10 p-6 dark:border-white/10">
+  <div className="group relative overflow-hidden rounded-xl border border-zinc-900/10 p-6 transition-all duration-200 hover:border-[#FFCB05] hover:shadow-lg dark:border-white/10 dark:hover:border-[#FFCB05]">
+    <div className="mb-4 inline-flex h-12 w-12 items-center justify-center rounded-lg bg-zinc-100 dark:bg-zinc-800">
+      <svg className="h-6 w-6 text-[#FFCB05]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+      </svg>
+    </div>
     <h3 className="text-base font-semibold text-zinc-900 dark:text-white">
       Semantic Clarity
     </h3>
-    <p className="mt-2 text-sm text-zinc-600 dark:text-zinc-400">
+    <div className="mt-2 text-sm text-zinc-600 dark:text-zinc-400">
       Traffic light system for status (Green=Success, Amber=Warning, Red=Error). Consistent, intuitive, universally understood.
-    </p>
+    </div>
   </div>
 </div>
