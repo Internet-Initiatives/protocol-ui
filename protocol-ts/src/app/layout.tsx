@@ -10,7 +10,7 @@ import '@/styles/tailwind.css'
 export const metadata: Metadata = {
   title: {
     template: '%s - UPA Design System',
-    default: 'UPA Design System v2.0 - Professional & Accessible',
+    default: 'UPA Design System v2.0',
   },
   description: 'A professional, WCAG AA compliant design system built for Ultimate Performance Academy. Every colour combination meets minimum 4.5:1 contrast ratios.',
 }
@@ -31,7 +31,7 @@ export default async function RootLayout({
 
   return (
     <html lang="en" className="h-full" suppressHydrationWarning>
-      <body className="flex min-h-full bg-white antialiased dark:bg-zinc-900">
+      <body className="flex min-h-full bg-white antialiased dark:bg-[#0a0a0a]">
         <Providers>
           <div className="w-full">
             <Layout allSections={allSections}>{children}</Layout>
