@@ -237,7 +237,6 @@ export const navigation: Array<NavGroup> = [
     title: 'Foundation',
     links: [
       { title: 'Introduction', href: '/introduction' },
-      { title: 'Colours', href: '/colours' },
       { title: 'Brand Colours', href: '/brand-colours' },
       { title: 'Black Scale', href: '/black-scale' },
       { title: 'Gradients', href: '/gradients' },
