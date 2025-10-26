@@ -118,33 +118,57 @@ High-contrast colours specifically designed for buttons, links, and interactive 
 
 ### Primary CTA
 
-<div className="not-prose mt-6">
-  <ColorScale
-    colors={[
-      { name: 'CTA Yellow', hex: '#FFCB05', description: 'Primary CTA background' },
-      { name: 'CTA Hover', hex: '#D97706', description: 'CTA hover state' },
-      { name: 'CTA Text', hex: '#171717', description: 'Text on yellow CTA' },
-    ]}
-    columns={3}
-  />
+<div className="not-prose mt-6 grid gap-6 md:grid-cols-2">
+  <div>
+    <div className="text-sm font-semibold text-zinc-900 dark:text-white mb-3">Colors</div>
+    <ColorScale
+      colors={[
+        { name: 'CTA Yellow', hex: '#FFCB05', description: 'Primary CTA background' },
+        { name: 'CTA Hover', hex: '#D97706', description: 'CTA hover state' },
+        { name: 'CTA Text', hex: '#171717', description: 'Text on yellow CTA' },
+      ]}
+      columns={3}
+    />
+  </div>
+  <div>
+    <div className="text-sm font-semibold text-zinc-900 dark:text-white mb-3">Example</div>
+    <div className="rounded-xl border border-zinc-200 bg-white p-8 dark:border-zinc-800 dark:bg-zinc-950">
+      <button className="rounded-lg bg-[#FFCB05] px-8 py-4 font-bold text-[#171717] transition-colors hover:bg-[#D97706]">
+        Get Started Today
+      </button>
+      <div className="mt-4 text-sm text-zinc-600 dark:text-zinc-400">
+        <strong>Usage:</strong> Primary action buttons, key CTAs, conversion-focused elements.
+      </div>
+    </div>
+  </div>
 </div>
-
-**Usage:** Primary action buttons, key CTAs, conversion-focused elements.
 
 ### Secondary CTA
 
-<div className="not-prose mt-6">
-  <ColorScale
-    colors={[
-      { name: 'Secondary CTA', hex: '#171717', description: 'Secondary button background' },
-      { name: 'Secondary Hover', hex: '#404040', description: 'Secondary hover state' },
-      { name: 'Secondary Text', hex: '#FFFFFF', description: 'Text on dark CTA' },
-    ]}
-    columns={3}
-  />
+<div className="not-prose mt-6 grid gap-6 md:grid-cols-2">
+  <div>
+    <div className="text-sm font-semibold text-zinc-900 dark:text-white mb-3">Colors</div>
+    <ColorScale
+      colors={[
+        { name: 'Secondary CTA', hex: '#171717', description: 'Secondary button background' },
+        { name: 'Secondary Hover', hex: '#404040', description: 'Secondary hover state' },
+        { name: 'Secondary Text', hex: '#FFFFFF', description: 'Text on dark CTA' },
+      ]}
+      columns={3}
+    />
+  </div>
+  <div>
+    <div className="text-sm font-semibold text-zinc-900 dark:text-white mb-3">Example</div>
+    <div className="rounded-xl border border-zinc-200 bg-white p-8 dark:border-zinc-800 dark:bg-zinc-950">
+      <button className="rounded-lg bg-[#171717] px-8 py-4 font-bold text-white transition-colors hover:bg-[#404040]">
+        Learn More
+      </button>
+      <div className="mt-4 text-sm text-zinc-600 dark:text-zinc-400">
+        <strong>Usage:</strong> Secondary actions, alternative paths, less prominent CTAs.
+      </div>
+    </div>
+  </div>
 </div>
-
-**Usage:** Secondary actions, alternative paths, less prominent CTAs.
 
 ### Link Colours
 
@@ -173,20 +197,67 @@ High-contrast colours specifically designed for buttons, links, and interactive 
 
 ### Accessibility Guidelines
 
-<Properties>
-  <Property name="Yellow on White">
-    ❌ NEVER - Fails WCAG (1.98:1 contrast)
-  </Property>
-  <Property name="Yellow on Black">
-    ✅ EXCELLENT - Exceeds WCAG AAA (18:1 contrast)
-  </Property>
-  <Property name="Black on White">
-    ✅ EXCELLENT - Exceeds WCAG AAA (21:1 contrast)
-  </Property>
-  <Property name="Black on Yellow">
-    ✅ GOOD - Exceeds WCAG AAA (10:1 contrast)
-  </Property>
-</Properties>
+<div className="not-prose mt-6 grid gap-4 md:grid-cols-2">
+  <div className="rounded-xl border-2 border-red-200 bg-red-50 p-6 dark:border-red-900 dark:bg-red-950">
+    <div className="mb-3 flex items-center gap-2">
+      <span className="text-2xl">❌</span>
+      <span className="font-bold text-red-900 dark:text-red-200">NEVER USE</span>
+    </div>
+    <div className="rounded-lg bg-white p-4">
+      <div className="text-lg font-bold" style={{color: '#FFCB05'}}>
+        Yellow on White
+      </div>
+    </div>
+    <div className="mt-3 text-sm text-red-900 dark:text-red-200">
+      Fails WCAG at all levels (1.98:1 contrast)
+    </div>
+  </div>
+
+  <div className="rounded-xl border-2 border-green-200 bg-green-50 p-6 dark:border-green-900 dark:bg-green-950">
+    <div className="mb-3 flex items-center gap-2">
+      <span className="text-2xl">✅</span>
+      <span className="font-bold text-green-900 dark:text-green-200">EXCELLENT</span>
+    </div>
+    <div className="rounded-lg bg-[#171717] p-4">
+      <div className="text-lg font-bold text-[#FFCB05]">
+        Yellow on Black
+      </div>
+    </div>
+    <div className="mt-3 text-sm text-green-900 dark:text-green-200">
+      Exceeds WCAG AAA (18:1 contrast)
+    </div>
+  </div>
+
+  <div className="rounded-xl border-2 border-green-200 bg-green-50 p-6 dark:border-green-900 dark:bg-green-950">
+    <div className="mb-3 flex items-center gap-2">
+      <span className="text-2xl">✅</span>
+      <span className="font-bold text-green-900 dark:text-green-200">EXCELLENT</span>
+    </div>
+    <div className="rounded-lg bg-white p-4">
+      <div className="text-lg font-bold text-[#171717]">
+        Black on White
+      </div>
+    </div>
+    <div className="mt-3 text-sm text-green-900 dark:text-green-200">
+      Exceeds WCAG AAA (21:1 contrast)
+    </div>
+  </div>
+
+  <div className="rounded-xl border-2 border-green-200 bg-green-50 p-6 dark:border-green-900 dark:bg-green-950">
+    <div className="mb-3 flex items-center gap-2">
+      <span className="text-2xl">✅</span>
+      <span className="font-bold text-green-900 dark:text-green-200">EXCELLENT</span>
+    </div>
+    <div className="rounded-lg bg-[#FFCB05] p-4">
+      <div className="text-lg font-bold text-[#171717]">
+        Black on Yellow
+      </div>
+    </div>
+    <div className="mt-3 text-sm text-green-900 dark:text-green-200">
+      Exceeds WCAG AAA (10:1 contrast)
+    </div>
+  </div>
+</div>
 
 ---
 
