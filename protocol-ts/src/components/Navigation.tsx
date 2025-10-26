@@ -241,6 +241,9 @@ export const navigation: Array<NavGroup> = [
       { title: 'Black Scale', href: '/black-scale' },
       { title: 'Gradients', href: '/gradients' },
       { title: 'Typography', href: '/typography' },
+      { title: 'Shadows', href: '/shadows' },
+      { title: 'Spacing', href: '/spacing' },
+      { title: 'Border Radius', href: '/border-radius' },
     ],
   },
   {
