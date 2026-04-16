@@ -1,0 +1,17 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "protocol-ts",
+      "runtimeExecutable": "npm",
+      "runtimeArgs": ["run", "dev", "--prefix", "protocol-ts", "--", "-p", "3000"],
+      "port": 3000
+    },
+    {
+      "name": "protocol-js",
+      "runtimeExecutable": "npm",
+      "runtimeArgs": ["run", "dev", "--prefix", "protocol-js", "--", "-p", "3001"],
+      "port": 3001
+    }
+  ]
+}
