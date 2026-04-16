@@ -3,7 +3,10 @@
     "allow": [
       "Bash(tree:*)",
       "Bash(xargs ls:*)",
-      "Bash(npm run dev:*)"
+      "Bash(npm run dev:*)",
+      "Bash(mkdir -p ~/GitHub/Internet-Initiatives/tailwind-plus/.claude)",
+      "Bash(touch ~/GitHub/Internet-Initiatives/tailwind-plus/.claude/.gitkeep)",
+      "Read(//Users/chrisholloway/GitHub/Internet-Initiatives/tailwind-plus/**)"
     ]
   }
 }
