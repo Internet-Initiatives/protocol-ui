@@ -31,7 +31,7 @@ export function ColorChip({ hex, label, border = false }: ColorChipProps) {
   }
 
   const luminance = getLuminance(hex)
-  const textColor = luminance > 0.5 ? '#171717' : '#FFFFFF'
+  const textColor = luminance > 0.5 ? '#18181b' : '#FFFFFF'
   const borderColor = luminance > 0.5 ? '#E5E5E5' : '#FFFFFF'
 
   return (

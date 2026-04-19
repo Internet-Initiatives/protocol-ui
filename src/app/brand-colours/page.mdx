@@ -31,7 +31,7 @@ The core brand colours: Yellow, Black, and White. These should be used most freq
   <ColorScale
     colors={[
       { name: 'Yellow 500', hex: '#FFCB05', description: 'Primary brand yellow' },
-      { name: 'Black 900', hex: '#171717', description: 'Primary brand black' },
+      { name: 'Black 900', hex: '#18181b', description: 'Primary brand black' },
       { name: 'Pure White', hex: '#FFFFFF', description: 'Backgrounds' },
     ]}
     columns={3}
@@ -45,7 +45,7 @@ The core brand colours: Yellow, Black, and White. These should be used most freq
 <div className="not-prose mt-6">
   <ColorScale
     colors={[
-      { name: 'Yellow 400', hex: '#FBBF24', description: 'Lighter yellow' },
+      { name: 'Yellow 400', hex: '#FFD633', description: 'Lighter yellow (true tint of brand yellow)' },
       { name: 'Yellow 600', hex: '#E6B800', description: 'Hover state' },
       { name: 'Pure Black', hex: '#000000', description: 'Maximum contrast' },
     ]}
@@ -53,22 +53,7 @@ The core brand colours: Yellow, Black, and White. These should be used most freq
   />
 </div>
 
-### Essential Grays
-
-<div className="not-prose mt-6">
-  <ColorScale
-    colors={[
-      { name: 'Gray 100', hex: '#F5F5F5', description: 'Light backgrounds' },
-      { name: 'Gray 200', hex: '#E5E5E5', description: 'Borders' },
-      { name: 'Gray 500', hex: '#737373', description: 'Secondary text' },
-      { name: 'Gray 600', hex: '#525252', description: 'Muted text' },
-      { name: 'Gray 800', hex: '#262626', description: 'Body text' },
-    ]}
-    columns={5}
-  />
-</div>
-
-**Usage:** Text hierarchy, borders, subtle backgrounds, disabled states.
+**Greys:** see the full Black Scale below for all neutral values used across text, borders, and backgrounds.
 
 ---
 
@@ -88,7 +73,7 @@ A complete neutral black scale from near-white (50) to deep black (1000). This i
       { name: 'Black 600', hex: '#525252' },
       { name: 'Black 700', hex: '#404040' },
       { name: 'Black 800', hex: '#262626' },
-      { name: 'Black 900', hex: '#171717', description: 'Brand black' },
+      { name: 'Black 900', hex: '#18181b', description: 'Brand black' },
       { name: 'Black 950', hex: '#0F0F0F' },
       { name: 'Black 1000', hex: '#000000', description: 'Pure black' },
     ]}
@@ -97,7 +82,7 @@ A complete neutral black scale from near-white (50) to deep black (1000). This i
 </div>
 
 <Note>
-  **Black 900 (#171717)** is the official UPA brand black. Use this for brand applications, marketing materials, and primary text. Pure black (#000000) can be used for maximum contrast in certain UI contexts.
+  **Black 900 (#18181b)** is the official UPA brand black. Use this for brand applications, marketing materials, and primary text. Pure black (#000000) can be used for maximum contrast in certain UI contexts.
 </Note>
 
 ---
@@ -140,10 +125,10 @@ Supporting colours for status indicators and semantic meaning. Use sparingly to 
 <div className="not-prose mt-6">
   <ColorScale
     colors={[
-      { name: 'Success', hex: '#16A34A', description: 'Green - 4.5:1 contrast', contrastRatio: '4.5:1' },
-      { name: 'Warning', hex: '#EA580C', description: 'Orange - 4.5:1 contrast', contrastRatio: '4.5:1' },
-      { name: 'Error', hex: '#DC2626', description: 'Red - 4.5:1 contrast', contrastRatio: '4.5:1' },
-      { name: 'Info', hex: '#2563EB', description: 'Blue - 4.5:1 contrast', contrastRatio: '4.5:1' },
+      { name: 'Success', hex: '#15803D', description: 'Green - 4.66:1 on white', contrastRatio: '4.66:1' },
+      { name: 'Warning', hex: '#C2410C', description: 'Orange - 4.85:1 on white', contrastRatio: '4.85:1' },
+      { name: 'Error', hex: '#DC2626', description: 'Red - 4.83:1 on white', contrastRatio: '4.83:1' },
+      { name: 'Info', hex: '#2563EB', description: 'Blue - 5.17:1 on white', contrastRatio: '5.17:1' },
     ]}
     columns={4}
   />
@@ -181,13 +166,13 @@ High-contrast colours specifically designed for buttons, links, and interactive 
         <ColorScale
           colors={[
             { name: 'CTA Yellow', hex: '#FFCB05', description: 'Primary CTA background' },
-            { name: 'CTA Text', hex: '#171717', description: 'Text on yellow CTA' },
+            { name: 'CTA Text', hex: '#18181b', description: 'Text on yellow CTA' },
           ]}
           columns={2}
         />
       </div>
       <div className="border-t border-zinc-200 pt-6 dark:border-zinc-800">
-        <button className="rounded-lg bg-[#FFCB05] px-8 py-4 font-bold text-[#171717] transition-colors hover:bg-[#E6B800]">
+        <button className="rounded-lg bg-[#FFCB05] px-8 py-4 font-bold text-[#18181b] transition-colors hover:bg-[#E6B800]">
           Get Started Today
         </button>
         <div className="mt-4 text-sm text-zinc-600 dark:text-zinc-400">
@@ -203,14 +188,14 @@ High-contrast colours specifically designed for buttons, links, and interactive 
       <div className="mb-6">
         <ColorScale
           colors={[
-            { name: 'Secondary CTA', hex: '#171717', description: 'Secondary button background' },
+            { name: 'Secondary CTA', hex: '#18181b', description: 'Secondary button background' },
             { name: 'Secondary Text', hex: '#FFFFFF', description: 'Text on dark CTA' },
           ]}
           columns={2}
         />
       </div>
       <div className="border-t border-zinc-200 pt-6 dark:border-zinc-800">
-        <button className="rounded-lg bg-[#171717] px-8 py-4 font-bold text-white transition-colors hover:bg-[#404040]">
+        <button className="rounded-lg bg-[#18181b] px-8 py-4 font-bold text-white transition-colors hover:bg-[#404040]">
           Learn More
         </button>
         <div className="mt-4 text-sm text-zinc-600 dark:text-zinc-400">
@@ -295,7 +280,7 @@ High-contrast colours specifically designed for buttons, links, and interactive 
 <div className="not-prose mt-6">
   <ColorScale
     colors={[
-      { name: 'Link Default', hex: '#171717', description: 'Default link color' },
+      { name: 'Link Default', hex: '#18181b', description: 'Default link color' },
       { name: 'Link Hover', hex: '#FFCB05', description: 'Link hover/active' },
       { name: 'Link Visited', hex: '#525252', description: 'Visited links (optional)' },
     ]}
@@ -311,7 +296,7 @@ High-contrast colours specifically designed for buttons, links, and interactive 
 
 ### Brand Colour Hierarchy
 
-1. **Primary:** Yellow (#FFCB05), Black (#171717), White (#FFFFFF)
+1. **Primary:** Yellow (#FFCB05), Black (#18181b), White (#FFFFFF)
 2. **Secondary:** Grays (100-900), Traffic Light colours
 3. **CTA:** Yellow + Black combinations for maximum impact
 
@@ -338,7 +323,7 @@ High-contrast colours specifically designed for buttons, links, and interactive 
       <span className="text-2xl">✅</span>
       <span className="font-bold text-green-900 dark:text-green-200">EXCELLENT</span>
     </div>
-    <div className="rounded-lg bg-[#171717] p-4">
+    <div className="rounded-lg bg-[#18181b] p-4">
       <div className="text-lg font-bold text-[#FFCB05]">
         Yellow on Black
       </div>
@@ -354,7 +339,7 @@ High-contrast colours specifically designed for buttons, links, and interactive 
       <span className="font-bold text-green-900 dark:text-green-200">EXCELLENT</span>
     </div>
     <div className="rounded-lg bg-white p-4">
-      <div className="text-lg font-bold text-[#171717]">
+      <div className="text-lg font-bold text-[#18181b]">
         Black on White
       </div>
     </div>
@@ -369,7 +354,7 @@ High-contrast colours specifically designed for buttons, links, and interactive 
       <span className="font-bold text-green-900 dark:text-green-200">EXCELLENT</span>
     </div>
     <div className="rounded-lg bg-[#FFCB05] p-4">
-      <div className="text-lg font-bold text-[#171717]">
+      <div className="text-lg font-bold text-[#18181b]">
         Black on Yellow
       </div>
     </div>
