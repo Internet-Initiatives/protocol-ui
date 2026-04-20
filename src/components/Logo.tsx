@@ -1,19 +1,19 @@
 import Image from 'next/image'
-import logoBlack from '@/images/upa-logo-black.svg'
-import logoYellow from '@/images/upa-logo-yellow.svg'
+import symbolBlack from '@/images/upa-symbol-black.svg'
+import symbolYellow from '@/images/upa-symbol-yellow.svg'
 
 export function Logo(props: React.ComponentPropsWithoutRef<'div'>) {
   return (
     <div {...props}>
       <Image
-        src={logoBlack}
-        alt="UPA Design System"
+        src={symbolBlack}
+        alt="Ultimate Performance Academy"
         className="block h-full w-auto dark:hidden"
         priority
       />
       <Image
-        src={logoYellow}
-        alt="UPA Design System"
+        src={symbolYellow}
+        alt="Ultimate Performance Academy"
         className="hidden h-full w-auto dark:block"
         priority
       />

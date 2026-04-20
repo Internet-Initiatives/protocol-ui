@@ -1,6 +1,6 @@
 import glob from 'fast-glob'
 import { type Metadata } from 'next'
-import { Inter } from 'next/font/google'
+import { Inter, Bebas_Neue, JetBrains_Mono } from 'next/font/google'
 
 import { Providers } from '@/app/providers'
 import { Layout } from '@/components/Layout'
@@ -12,6 +12,20 @@ const inter = Inter({
   subsets: ['latin'],
   weight: ['400', '500', '600', '700', '800', '900'],
   variable: '--font-inter',
+  display: 'swap',
+})
+
+const bebasNeue = Bebas_Neue({
+  subsets: ['latin'],
+  weight: ['400'],
+  variable: '--font-bebas',
+  display: 'swap',
+})
+
+const jetbrainsMono = JetBrains_Mono({
+  subsets: ['latin'],
+  weight: ['400', '500', '700'],
+  variable: '--font-jetbrains',
   display: 'swap',
 })
 
@@ -38,7 +52,7 @@ export default async function RootLayout({
   let allSections = Object.fromEntries(allSectionsEntries)
 
   return (
-    <html lang="en" className={`h-full ${inter.variable}`} suppressHydrationWarning>
+    <html lang="en" className={`h-full ${inter.variable} ${bebasNeue.variable} ${jetbrainsMono.variable}`} suppressHydrationWarning>
       <body className="flex min-h-full bg-white font-sans antialiased dark:bg-[#0a0a0a]" suppressHydrationWarning>
         <Providers>
           <div className="w-full">
