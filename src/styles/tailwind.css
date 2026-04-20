@@ -4,14 +4,15 @@
 @custom-variant dark (&:where(.dark, .dark *));
 
 @theme {
+  --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
   --text-2xs: 0.75rem;
   --text-2xs--line-height: 1.25rem;
   --text-xs: 0.8125rem;
   --text-xs--line-height: 1.5rem;
   --text-sm: 0.875rem;
   --text-sm--line-height: 1.5rem;
-  --text-base: 1.125rem;
-  --text-base--line-height: 1.75rem;
+  --text-base: 1rem;
+  --text-base--line-height: 1.6rem;
   --text-lg: 1.125rem;
   --text-lg--line-height: 1.75rem;
   --text-xl: 1.25rem;

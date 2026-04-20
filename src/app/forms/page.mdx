@@ -1,3 +1,5 @@
+import { HeroPattern } from '@/components/HeroPattern'
+
 export const metadata = {
   title: 'Forms',
   description:
@@ -9,6 +11,8 @@ export const sections = [
   { title: 'Validation States', id: 'validation-states' },
   { title: 'Form Best Practices', id: 'form-best-practices' },
 ]
+
+<HeroPattern />
 
 # Forms
 
@@ -30,7 +34,7 @@ Form components with clear labels, validation states, and accessible interaction
     className="mt-2 block w-full rounded-lg border border-zinc-300 px-4 py-2 focus:border-[#facc15] focus:outline-none focus:ring-2 focus:ring-[#facc15]/20 dark:border-zinc-700 dark:bg-zinc-900"
     placeholder="you@example.com"
   />
-  <div className="mt-1 text-sm text-zinc-600 dark:text-zinc-400">We'll never share your email.</div>
+  <div className="mt-1 text-base text-zinc-600 dark:text-zinc-400">We'll never share your email.</div>
 </div>
 
 ### Textarea

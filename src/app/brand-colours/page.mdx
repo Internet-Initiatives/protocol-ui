@@ -2,35 +2,30 @@ import { ColorScale } from '@/components/ColorSwatch'
 import { HeroPattern } from '@/components/HeroPattern'
 
 export const metadata = {
-  title: 'Brand Colours',
-  description:
-    'Primary, secondary, and CTA colours for the UPA brand. Click any colour to copy the hex code.',
+ title: 'Brand Colours',
+ description:
+ 'Primary, secondary, and CTA colours for the UPA brand. Click any colour to copy the hex code.',
 }
 
 export const sections = [
-  { title: 'Primary Colours', id: 'primary-colours' },
-  { title: 'Yellow Scale', id: 'yellow-scale' },
-  { title: 'Black Scale', id: 'black-scale' },
-  { title: 'Warm Greys', id: 'warm-greys' },
-  { title: 'Cool Slate Scale', id: 'cool-slate-scale' },
-  { title: 'Success', id: 'success' },
-  { title: 'Warning', id: 'warning' },
-  { title: 'Error', id: 'error' },
-  { title: 'Info', id: 'info' },
-  { title: 'Lighter Variants', id: 'lighter-variants' },
-  { title: 'Primary CTA', id: 'primary-cta' },
-  { title: 'Secondary CTA - Black', id: 'secondary-cta-black' },
-  { title: 'Secondary CTA - Green', id: 'secondary-cta-green' },
-  { title: 'Secondary CTA - Blue', id: 'secondary-cta-blue' },
-  { title: 'Secondary CTA - Red', id: 'secondary-cta-red' },
-  { title: 'Link Colours', id: 'link-colours' },
+ { title: 'Primary Colours', id: 'primary-colours' },
+ { title: 'Yellow Scale', id: 'yellow-scale' },
+ { title: 'Black Scale', id: 'black-scale' },
+ { title: 'Cool Slate Scale', id: 'cool-slate-scale' },
+ { title: 'Success', id: 'success' },
+ { title: 'Warning', id: 'warning' },
+ { title: 'Error', id: 'error' },
+ { title: 'Info', id: 'info' },
+ { title: 'Lighter Variants', id: 'lighter-variants' },
+ { title: 'Primary CTA', id: 'primary-cta' },
+ { title: 'Quick Reference', id: 'quick-reference' },
 ]
 
 <HeroPattern />
 
 # Brand Colours
 
-Primary, secondary, and CTA colours for the UPA brand. Click any colour to copy the hex code. {{ className: 'lead' }}
+Built on the Tailwind CSS palette and meeting WCAG 2.1 AA contrast standards throughout, the Ultimate Performance Academy colour system covers the brand triad, full tonal scales, semantic status colours, call-to-action pairings and accessibility guidance. Click any swatch to copy its hex. {{ className: 'lead' }}
 
 ---
 
@@ -39,14 +34,14 @@ Primary, secondary, and CTA colours for the UPA brand. Click any colour to copy 
 The core brand colours: Yellow, Black, and White. These should be used most frequently across all brand applications.
 
 <div className="not-prose mt-6">
-  <ColorScale
-    colors={[
-      { name: 'Yellow 400', hex: '#facc15', description: 'Primary brand yellow' },
-      { name: 'Black 950', hex: '#09090b', description: 'Primary brand black' },
-      { name: 'Pure White', hex: '#FFFFFF', description: 'Backgrounds' },
-    ]}
-    columns={3}
-  />
+ <ColorScale
+ colors={[
+ { name: 'Yellow 400', hex: '#facc15', description: 'Primary brand yellow' },
+ { name: 'Black 950', hex: '#09090b', description: 'Primary brand black' },
+ { name: 'Pure White', hex: '#FFFFFF', description: 'Backgrounds' },
+ ]}
+ columns={3}
+ />
 </div>
 
 ---
@@ -56,25 +51,25 @@ The core brand colours: Yellow, Black, and White. These should be used most freq
 The full Tailwind yellow scale from lightest tint (50) to deepest shade (900). Yellow 400 is the UPA primary brand yellow.
 
 <div className="not-prose mt-6">
-  <ColorScale
-    colors={[
-      { name: 'Yellow 50', hex: '#fefce8' },
-      { name: 'Yellow 100', hex: '#fef9c3' },
-      { name: 'Yellow 200', hex: '#fef08a' },
-      { name: 'Yellow 300', hex: '#fde047' },
-      { name: 'Yellow 400', hex: '#facc15' },
-      { name: 'Yellow 500', hex: '#eab308' },
-      { name: 'Yellow 600', hex: '#ca8a04' },
-      { name: 'Yellow 700', hex: '#a16207' },
-      { name: 'Yellow 800', hex: '#854d0e' },
-      { name: 'Yellow 900', hex: '#713f12' },
-    ]}
-    columns={5}
-  />
+ <ColorScale
+ colors={[
+ { name: 'Yellow 50', hex: '#fefce8' },
+ { name: 'Yellow 100', hex: '#fef9c3' },
+ { name: 'Yellow 200', hex: '#fef08a' },
+ { name: 'Yellow 300', hex: '#fde047' },
+ { name: 'Yellow 400', hex: '#facc15' },
+ { name: 'Yellow 500', hex: '#eab308' },
+ { name: 'Yellow 600', hex: '#ca8a04' },
+ { name: 'Yellow 700', hex: '#a16207' },
+ { name: 'Yellow 800', hex: '#854d0e' },
+ { name: 'Yellow 900', hex: '#713f12' },
+ ]}
+ columns={5}
+ />
 </div>
 
 <Note>
-  Yellow (#facc15) is for backgrounds, buttons, and accents — never body text on white (1.53:1 fails WCAG). Pair with dark text (#09090b) or use as an accent on dark backgrounds for maximum impact.
+ Yellow (#facc15) is for backgrounds, buttons and accents. Never use it for body text on white (1.53:1 fails WCAG). Pair with dark text (#09090b) or use as an accent on dark backgrounds for maximum impact.
 </Note>
 
 ---
@@ -84,196 +79,168 @@ The full Tailwind yellow scale from lightest tint (50) to deepest shade (900). Y
 A complete neutral black scale from near-white (50) to deep black (1000). This is your primary scale for text, UI elements, and backgrounds.
 
 <div className="not-prose mt-6">
-  <ColorScale
-    colors={[
-      { name: 'Black 50', hex: '#FAFAFA' },
-      { name: 'Black 100', hex: '#F5F5F5' },
-      { name: 'Black 200', hex: '#E5E5E5' },
-      { name: 'Black 300', hex: '#D4D4D4' },
-      { name: 'Black 400', hex: '#A3A3A3' },
-      { name: 'Black 500', hex: '#737373' },
-      { name: 'Black 600', hex: '#525252' },
-      { name: 'Black 700', hex: '#404040' },
-      { name: 'Black 800', hex: '#262626' },
-      { name: 'Black 900', hex: '#18181b' },
-      { name: 'Black 950', hex: '#09090b' },
-      { name: 'Black 1000', hex: '#000000' },
-    ]}
-    columns={5}
-  />
+ <ColorScale
+ colors={[
+ { name: 'Black 50', hex: '#FAFAFA' },
+ { name: 'Black 100', hex: '#F5F5F5' },
+ { name: 'Black 200', hex: '#E5E5E5' },
+ { name: 'Black 300', hex: '#D4D4D4' },
+ { name: 'Black 400', hex: '#A3A3A3' },
+ { name: 'Black 500', hex: '#737373' },
+ { name: 'Black 600', hex: '#525252' },
+ { name: 'Black 700', hex: '#404040' },
+ { name: 'Black 800', hex: '#262626' },
+ { name: 'Black 900', hex: '#18181b' },
+ { name: 'Black 950', hex: '#09090b' },
+ { name: 'Black 1000', hex: '#000000' },
+ ]}
+ columns={5}
+ />
 </div>
 
 <Note>
-  **Black 950 (#09090b)** is the official UPA brand black. Use this for brand applications, marketing materials, and primary text. Pure black (#000000) can be used for maximum contrast in certain UI contexts.
-</Note>
-
----
-
-## Warm Greys {{ id: 'warm-greys' }}
-
-The Tailwind neutral warm grey scale (50–900) for text, borders, and subtle backgrounds in both light and dark modes.
-
-<div className="not-prose mt-6">
-  <ColorScale
-    colors={[
-      { name: 'Neutral 50', hex: '#FAFAF9' },
-      { name: 'Neutral 100', hex: '#F5F5F4' },
-      { name: 'Neutral 200', hex: '#E7E5E4' },
-      { name: 'Neutral 300', hex: '#D6D3D1' },
-      { name: 'Neutral 400', hex: '#A8A29E' },
-      { name: 'Neutral 500', hex: '#78716C' },
-      { name: 'Neutral 600', hex: '#57534E' },
-      { name: 'Neutral 700', hex: '#44403C' },
-      { name: 'Neutral 800', hex: '#292524' },
-      { name: 'Neutral 900', hex: '#1C1917' },
-    ]}
-    columns={5}
-  />
-</div>
-
-<Note>
-  Pair lighter steps (50–300) with dark text. Steps 500 and above are AA-safe for body text on white. Use 700–900 for strong emphasis in dark UI.
+ **Black 950 (#09090b)** is the official UPA brand black. Use this for brand applications, marketing materials, and primary text. Pure black (#000000) can be used for maximum contrast in certain UI contexts.
 </Note>
 
 ---
 
 ## Cool Slate Scale {{ id: 'cool-slate-scale' }}
 
-A cool, blue-tinted grey scale (50–950) designed for dark mode interfaces. Not brown — a professional slate grey.
+A cool, blue-tinted grey scale (50 to 950) designed for dark mode interfaces. Not brown, a professional slate grey.
 
 <div className="not-prose mt-6">
-  <ColorScale
-    colors={[
-      { name: 'Slate 50', hex: '#F8FAFC' },
-      { name: 'Slate 100', hex: '#F1F5F9' },
-      { name: 'Slate 200', hex: '#E2E8F0' },
-      { name: 'Slate 300', hex: '#CBD5E1' },
-      { name: 'Slate 400', hex: '#94A3B8' },
-      { name: 'Slate 500', hex: '#64748B' },
-      { name: 'Slate 600', hex: '#475569' },
-      { name: 'Slate 700', hex: '#334155' },
-      { name: 'Slate 800', hex: '#1E293B' },
-      { name: 'Slate 900', hex: '#0F172A' },
-      { name: 'Slate 950', hex: '#020617' },
-    ]}
-    columns={5}
-  />
+ <ColorScale
+ colors={[
+ { name: 'Slate 50', hex: '#F8FAFC' },
+ { name: 'Slate 100', hex: '#F1F5F9' },
+ { name: 'Slate 200', hex: '#E2E8F0' },
+ { name: 'Slate 300', hex: '#CBD5E1' },
+ { name: 'Slate 400', hex: '#94A3B8' },
+ { name: 'Slate 500', hex: '#64748B' },
+ { name: 'Slate 600', hex: '#475569' },
+ { name: 'Slate 700', hex: '#334155' },
+ { name: 'Slate 800', hex: '#1E293B' },
+ { name: 'Slate 900', hex: '#0F172A' },
+ { name: 'Slate 950', hex: '#020617' },
+ ]}
+ columns={5}
+ />
 </div>
 
 <Note>
-  Use Slate 800–950 for dark mode backgrounds. Slate 50–400 work well for text and UI on those backgrounds. The cool tone reduces eye strain over extended use.
+ Use Slate 800 to 950 for dark mode backgrounds. Slate 50 to 400 work well for text and UI on those backgrounds. The cool tone reduces eye strain over extended use.
 </Note>
 
 ---
 
 ## Success - Green {{ id: 'success' }}
 
-The full success green scale (50–900) for completed actions, confirmed states, and positive feedback.
+The full success green scale (50 to 900) for completed actions, confirmed states, and positive feedback.
 
 <div className="not-prose mt-6">
-  <ColorScale
-    colors={[
-      { name: 'Success 50', hex: '#F0FDF4' },
-      { name: 'Success 100', hex: '#DCFCE7' },
-      { name: 'Success 200', hex: '#BBF7D0' },
-      { name: 'Success 300', hex: '#86EFAC' },
-      { name: 'Success 400', hex: '#4ADE80' },
-      { name: 'Success 500', hex: '#22C55E' },
-      { name: 'Success 600', hex: '#16A34A' },
-      { name: 'Success 700', hex: '#15803D' },
-      { name: 'Success 800', hex: '#166534' },
-      { name: 'Success 900', hex: '#14532D' },
-    ]}
-    columns={5}
-  />
+ <ColorScale
+ colors={[
+ { name: 'Success 50', hex: '#F0FDF4' },
+ { name: 'Success 100', hex: '#DCFCE7' },
+ { name: 'Success 200', hex: '#BBF7D0' },
+ { name: 'Success 300', hex: '#86EFAC' },
+ { name: 'Success 400', hex: '#4ADE80' },
+ { name: 'Success 500', hex: '#22C55E' },
+ { name: 'Success 600', hex: '#16A34A' },
+ { name: 'Success 700', hex: '#15803D' },
+ { name: 'Success 800', hex: '#166534' },
+ { name: 'Success 900', hex: '#14532D' },
+ ]}
+ columns={5}
+ />
 </div>
 
 <Note>
-  Success 700 is AA-safe for text and primary buttons on white (5.02:1). Use 50–100 for subtle success backgrounds paired with Success 800 text.
+ Success 700 is AA-safe for text and primary buttons on white (5.02:1). Use 50 to 100 for subtle success backgrounds paired with Success 800 text.
 </Note>
 
 ---
 
 ## Warning - Orange {{ id: 'warning' }}
 
-The full warning orange scale (50–900) for cautionary states, pending actions, and items requiring attention.
+The full warning orange scale (50 to 900) for cautionary states, pending actions, and items requiring attention.
 
 <div className="not-prose mt-6">
-  <ColorScale
-    colors={[
-      { name: 'Warning 50', hex: '#FFF7ED' },
-      { name: 'Warning 100', hex: '#FFEDD5' },
-      { name: 'Warning 200', hex: '#FED7AA' },
-      { name: 'Warning 300', hex: '#FDBA74' },
-      { name: 'Warning 400', hex: '#FB923C' },
-      { name: 'Warning 500', hex: '#F97316' },
-      { name: 'Warning 600', hex: '#EA580C' },
-      { name: 'Warning 700', hex: '#C2410C' },
-      { name: 'Warning 800', hex: '#9A3412' },
-      { name: 'Warning 900', hex: '#7C2D12' },
-    ]}
-    columns={5}
-  />
+ <ColorScale
+ colors={[
+ { name: 'Warning 50', hex: '#FFF7ED' },
+ { name: 'Warning 100', hex: '#FFEDD5' },
+ { name: 'Warning 200', hex: '#FED7AA' },
+ { name: 'Warning 300', hex: '#FDBA74' },
+ { name: 'Warning 400', hex: '#FB923C' },
+ { name: 'Warning 500', hex: '#F97316' },
+ { name: 'Warning 600', hex: '#EA580C' },
+ { name: 'Warning 700', hex: '#C2410C' },
+ { name: 'Warning 800', hex: '#9A3412' },
+ { name: 'Warning 900', hex: '#7C2D12' },
+ ]}
+ columns={5}
+ />
 </div>
 
 <Note>
-  Warning 700 is AA-safe for text and primary warning buttons on white (5.18:1). Use 50–100 for subtle warning backgrounds paired with Warning 800 text.
+ Warning 700 is AA-safe for text and primary warning buttons on white (5.18:1). Use 50 to 100 for subtle warning backgrounds paired with Warning 800 text.
 </Note>
 
 ---
 
 ## Error - Red {{ id: 'error' }}
 
-The full error red scale (50–900) for errors, destructive actions, and critical alerts.
+The full error red scale (50 to 900) for errors, destructive actions, and critical alerts.
 
 <div className="not-prose mt-6">
-  <ColorScale
-    colors={[
-      { name: 'Error 50', hex: '#FEF2F2' },
-      { name: 'Error 100', hex: '#FEE2E2' },
-      { name: 'Error 200', hex: '#FECACA' },
-      { name: 'Error 300', hex: '#FCA5A5' },
-      { name: 'Error 400', hex: '#F87171' },
-      { name: 'Error 500', hex: '#EF4444' },
-      { name: 'Error 600', hex: '#DC2626' },
-      { name: 'Error 700', hex: '#B91C1C' },
-      { name: 'Error 800', hex: '#991B1B' },
-      { name: 'Error 900', hex: '#7F1D1D' },
-    ]}
-    columns={5}
-  />
+ <ColorScale
+ colors={[
+ { name: 'Error 50', hex: '#FEF2F2' },
+ { name: 'Error 100', hex: '#FEE2E2' },
+ { name: 'Error 200', hex: '#FECACA' },
+ { name: 'Error 300', hex: '#FCA5A5' },
+ { name: 'Error 400', hex: '#F87171' },
+ { name: 'Error 500', hex: '#EF4444' },
+ { name: 'Error 600', hex: '#DC2626' },
+ { name: 'Error 700', hex: '#B91C1C' },
+ { name: 'Error 800', hex: '#991B1B' },
+ { name: 'Error 900', hex: '#7F1D1D' },
+ ]}
+ columns={5}
+ />
 </div>
 
 <Note>
-  Error 600 is AA-safe for text and buttons on white (4.83:1). Use 50–100 for subtle error backgrounds paired with Error 800 text.
+ Error 600 is AA-safe for text and buttons on white (4.83:1). Use 50 to 100 for subtle error backgrounds paired with Error 800 text.
 </Note>
 
 ---
 
 ## Info - Blue {{ id: 'info' }}
 
-The full info blue scale (50–900) for informational messages, links, and neutral system feedback.
+The full info blue scale (50 to 900) for informational messages, links, and neutral system feedback.
 
 <div className="not-prose mt-6">
-  <ColorScale
-    colors={[
-      { name: 'Info 50', hex: '#EFF6FF' },
-      { name: 'Info 100', hex: '#DBEAFE' },
-      { name: 'Info 200', hex: '#BFDBFE' },
-      { name: 'Info 300', hex: '#93C5FD' },
-      { name: 'Info 400', hex: '#60A5FA' },
-      { name: 'Info 500', hex: '#3B82F6' },
-      { name: 'Info 600', hex: '#2563EB' },
-      { name: 'Info 700', hex: '#1D4ED8' },
-      { name: 'Info 800', hex: '#1E40AF' },
-      { name: 'Info 900', hex: '#1E3A8A' },
-    ]}
-    columns={5}
-  />
+ <ColorScale
+ colors={[
+ { name: 'Info 50', hex: '#EFF6FF' },
+ { name: 'Info 100', hex: '#DBEAFE' },
+ { name: 'Info 200', hex: '#BFDBFE' },
+ { name: 'Info 300', hex: '#93C5FD' },
+ { name: 'Info 400', hex: '#60A5FA' },
+ { name: 'Info 500', hex: '#3B82F6' },
+ { name: 'Info 600', hex: '#2563EB' },
+ { name: 'Info 700', hex: '#1D4ED8' },
+ { name: 'Info 800', hex: '#1E40AF' },
+ { name: 'Info 900', hex: '#1E3A8A' },
+ ]}
+ columns={5}
+ />
 </div>
 
 <Note>
-  Info 600 is AA-safe for text and buttons on white (5.17:1). Use 50–100 for informational backgrounds paired with Info 800 text.
+ Info 600 is AA-safe for text and buttons on white (5.17:1). Use 50 to 100 for informational backgrounds paired with Info 800 text.
 </Note>
 
 ---
@@ -283,19 +250,19 @@ The full info blue scale (50–900) for informational messages, links, and neutr
 Soft tints for alert bodies, subtle status indicators, and background highlights.
 
 <div className="not-prose mt-6">
-  <ColorScale
-    colors={[
-      { name: 'Success Light', hex: '#DCFCE7', description: 'Success backgrounds' },
-      { name: 'Warning Light', hex: '#FFEDD5', description: 'Warning backgrounds' },
-      { name: 'Error Light', hex: '#FEE2E2', description: 'Error backgrounds' },
-      { name: 'Info Light', hex: '#DBEAFE', description: 'Info backgrounds' },
-    ]}
-    columns={4}
-  />
+ <ColorScale
+ colors={[
+ { name: 'Success Light', hex: '#DCFCE7', description: 'Success backgrounds' },
+ { name: 'Warning Light', hex: '#FFEDD5', description: 'Warning backgrounds' },
+ { name: 'Error Light', hex: '#FEE2E2', description: 'Error backgrounds' },
+ { name: 'Info Light', hex: '#DBEAFE', description: 'Info backgrounds' },
+ ]}
+ columns={4}
+ />
 </div>
 
 <Note>
-  Pair each light background with its matching 800 text colour for AA-compliant alert components. Always include an icon to convey meaning beyond colour.
+ Pair each light background with its matching 800 text colour for AA-compliant alert components. Always include an icon to convey meaning beyond colour.
 </Note>
 
 ---
@@ -305,23 +272,23 @@ Soft tints for alert bodies, subtle status indicators, and background highlights
 Primary action buttons, key CTAs, conversion-focused elements.
 
 <div className="not-prose mt-6">
-  <ColorScale
-    colors={[
-      { name: 'CTA Yellow', hex: '#facc15' },
-      { name: 'CTA Text', hex: '#09090b' },
-    ]}
-    columns={2}
-  />
+ <ColorScale
+ colors={[
+ { name: 'CTA Yellow', hex: '#facc15' },
+ { name: 'CTA Text', hex: '#09090b' },
+ ]}
+ columns={2}
+ />
 </div>
 
 <div className="not-prose mt-6">
-  <button className="rounded-lg bg-[#facc15] px-8 py-4 font-bold text-[#09090b] transition-colors hover:bg-[#eab308]">
-    Get Started Today
-  </button>
+ <button className="rounded-lg bg-[#facc15] px-8 py-4 font-bold text-[#09090b] transition-colors hover:bg-[#eab308]">
+ Get Started Today
+ </button>
 </div>
 
 <Note>
-  The primary brand CTA. High-contrast yellow with dark text. Hover darkens to Yellow 500 (#eab308).
+ The primary brand CTA. High-contrast yellow with dark text. Hover darkens to Yellow 500 (#eab308).
 </Note>
 
 ---
@@ -331,23 +298,23 @@ Primary action buttons, key CTAs, conversion-focused elements.
 Secondary actions, alternative paths, less prominent CTAs.
 
 <div className="not-prose mt-6">
-  <ColorScale
-    colors={[
-      { name: 'Secondary CTA', hex: '#09090b' },
-      { name: 'Secondary Text', hex: '#FFFFFF' },
-    ]}
-    columns={2}
-  />
+ <ColorScale
+ colors={[
+ { name: 'Secondary CTA', hex: '#09090b' },
+ { name: 'Secondary Text', hex: '#FFFFFF' },
+ ]}
+ columns={2}
+ />
 </div>
 
 <div className="not-prose mt-6">
-  <button className="rounded-lg bg-[#09090b] px-8 py-4 font-bold text-white transition-colors hover:bg-[#404040]">
-    Learn More
-  </button>
+ <button className="rounded-lg bg-[#09090b] px-8 py-4 font-bold text-white transition-colors hover:bg-[#404040]">
+ Learn More
+ </button>
 </div>
 
 <Note>
-  Use when yellow would be too aggressive. Hover lightens to Black 700 (#404040) for clear feedback.
+ Use when yellow would be too aggressive. Hover lightens to Black 700 (#404040) for clear feedback.
 </Note>
 
 ---
@@ -357,23 +324,23 @@ Secondary actions, alternative paths, less prominent CTAs.
 Confirmations, success actions, positive CTAs like "Approve", "Confirm", "Save".
 
 <div className="not-prose mt-6">
-  <ColorScale
-    colors={[
-      { name: 'Green CTA', hex: '#15803D' },
-      { name: 'Green Text', hex: '#FFFFFF' },
-    ]}
-    columns={2}
-  />
+ <ColorScale
+ colors={[
+ { name: 'Green CTA', hex: '#15803D' },
+ { name: 'Green Text', hex: '#FFFFFF' },
+ ]}
+ columns={2}
+ />
 </div>
 
 <div className="not-prose mt-6">
-  <button className="rounded-lg bg-[#15803D] px-8 py-4 font-bold text-white transition-colors hover:bg-[#166534]">
-    Confirm Action
-  </button>
+ <button className="rounded-lg bg-[#15803D] px-8 py-4 font-bold text-white transition-colors hover:bg-[#166534]">
+ Confirm Action
+ </button>
 </div>
 
 <Note>
-  Success 700 passes WCAG AA on white (5.02:1). Hover deepens to Success 800 (#166534).
+ Success 700 passes WCAG AA on white (5.02:1). Hover deepens to Success 800 (#166534).
 </Note>
 
 ---
@@ -383,23 +350,23 @@ Confirmations, success actions, positive CTAs like "Approve", "Confirm", "Save".
 Informational actions, documentation links, neutral CTAs like "Learn More", "View Details".
 
 <div className="not-prose mt-6">
-  <ColorScale
-    colors={[
-      { name: 'Blue CTA', hex: '#2563EB' },
-      { name: 'Blue Text', hex: '#FFFFFF' },
-    ]}
-    columns={2}
-  />
+ <ColorScale
+ colors={[
+ { name: 'Blue CTA', hex: '#2563EB' },
+ { name: 'Blue Text', hex: '#FFFFFF' },
+ ]}
+ columns={2}
+ />
 </div>
 
 <div className="not-prose mt-6">
-  <button className="rounded-lg bg-[#2563EB] px-8 py-4 font-bold text-white transition-colors hover:bg-[#1D4ED8]">
-    Learn More
-  </button>
+ <button className="rounded-lg bg-[#2563EB] px-8 py-4 font-bold text-white transition-colors hover:bg-[#1D4ED8]">
+ Learn More
+ </button>
 </div>
 
 <Note>
-  Info 600 passes WCAG AA on white (5.17:1). Hover deepens to Info 700 (#1D4ED8).
+ Info 600 passes WCAG AA on white (5.17:1). Hover deepens to Info 700 (#1D4ED8).
 </Note>
 
 ---
@@ -409,23 +376,23 @@ Informational actions, documentation links, neutral CTAs like "Learn More", "Vie
 Destructive actions, critical operations like "Delete", "Remove", "Cancel Subscription".
 
 <div className="not-prose mt-6">
-  <ColorScale
-    colors={[
-      { name: 'Red CTA', hex: '#DC2626' },
-      { name: 'Red Text', hex: '#FFFFFF' },
-    ]}
-    columns={2}
-  />
+ <ColorScale
+ colors={[
+ { name: 'Red CTA', hex: '#DC2626' },
+ { name: 'Red Text', hex: '#FFFFFF' },
+ ]}
+ columns={2}
+ />
 </div>
 
 <div className="not-prose mt-6">
-  <button className="rounded-lg bg-[#DC2626] px-8 py-4 font-bold text-white transition-colors hover:bg-[#B91C1C]">
-    Delete Account
-  </button>
+ <button className="rounded-lg bg-[#DC2626] px-8 py-4 font-bold text-white transition-colors hover:bg-[#B91C1C]">
+ Delete Account
+ </button>
 </div>
 
 <Note>
-  Error 600 passes WCAG AA on white (4.83:1). Hover deepens to Error 700 (#B91C1C). Reserve for truly destructive actions.
+ Error 600 passes WCAG AA on white (4.83:1). Hover deepens to Error 700 (#B91C1C). Reserve for truly destructive actions.
 </Note>
 
 ---
@@ -435,23 +402,23 @@ Destructive actions, critical operations like "Delete", "Remove", "Cancel Subscr
 Text links, navigation, and inline actions. Black by default, yellow on hover.
 
 <div className="not-prose mt-6">
-  <ColorScale
-    colors={[
-      { name: 'Link Default', hex: '#09090b' },
-      { name: 'Link Hover', hex: '#facc15' },
-      { name: 'Link Visited', hex: '#525252' },
-    ]}
-    columns={3}
-  />
+ <ColorScale
+ colors={[
+ { name: 'Link Default', hex: '#09090b' },
+ { name: 'Link Hover', hex: '#facc15' },
+ { name: 'Link Visited', hex: '#525252' },
+ ]}
+ columns={3}
+ />
 </div>
 
 <Note>
-  Default links use brand black for strong contrast. Yellow on hover signals interactivity without disrupting reading flow. Visited state optional.
+ Default links use brand black for strong contrast. Yellow on hover signals interactivity without disrupting reading flow. Visited state optional.
 </Note>
 
 ---
 
-## Quick Reference
+## Quick Reference {{ id: 'quick-reference' }}
 
 ### Brand Colour Hierarchy
 
@@ -462,74 +429,74 @@ Text links, navigation, and inline actions. Black by default, yellow on hover.
 ### Accessibility Guidelines
 
 <div className="not-prose mt-6 grid gap-4 md:grid-cols-2">
-  <div className="rounded-xl border-2 border-red-200 bg-red-50 p-6 dark:border-red-900 dark:bg-red-950">
-    <div className="mb-3 flex items-center gap-2">
-      <span className="text-2xl">❌</span>
-      <span className="font-bold text-red-900 dark:text-red-200">NEVER USE</span>
-    </div>
-    <div className="rounded-lg bg-white p-4">
-      <div className="text-lg font-bold" style={{color: '#facc15'}}>
-        Yellow on White
-      </div>
-    </div>
-    <div className="mt-3 text-sm text-red-900 dark:text-red-200">
-      Fails WCAG at all levels (1.53:1 contrast)
-    </div>
-  </div>
+ <div className="rounded-xl border-2 border-red-200 bg-red-50 p-6 dark:border-red-900 dark:bg-red-950">
+ <div className="mb-3 flex items-center gap-2">
+ <span className="text-2xl">❌</span>
+ <span className="font-bold text-red-900 dark:text-red-200">NEVER USE</span>
+ </div>
+ <div className="rounded-lg bg-white p-4">
+ <div className="text-lg font-bold" style={{color: '#facc15'}}>
+ Yellow on White
+ </div>
+ </div>
+ <div className="mt-3 text-sm text-red-900 dark:text-red-200">
+ Fails WCAG at all levels (1.53:1 contrast)
+ </div>
+ </div>
 
-  <div className="rounded-xl border-2 border-green-200 bg-green-50 p-6 dark:border-green-900 dark:bg-green-950">
-    <div className="mb-3 flex items-center gap-2">
-      <span className="text-2xl">✅</span>
-      <span className="font-bold text-green-900 dark:text-green-200">EXCELLENT</span>
-    </div>
-    <div className="rounded-lg bg-[#09090b] p-4">
-      <div className="text-lg font-bold text-[#facc15]">
-        Yellow on Black
-      </div>
-    </div>
-    <div className="mt-3 text-sm text-green-900 dark:text-green-200">
-      Exceeds WCAG AAA (11.57:1 contrast)
-    </div>
-  </div>
+ <div className="rounded-xl border-2 border-green-200 bg-green-50 p-6 dark:border-green-900 dark:bg-green-950">
+ <div className="mb-3 flex items-center gap-2">
+ <span className="text-2xl">✅</span>
+ <span className="font-bold text-green-900 dark:text-green-200">EXCELLENT</span>
+ </div>
+ <div className="rounded-lg bg-[#09090b] p-4">
+ <div className="text-lg font-bold text-[#facc15]">
+ Yellow on Black
+ </div>
+ </div>
+ <div className="mt-3 text-sm text-green-900 dark:text-green-200">
+ Exceeds WCAG AAA (11.57:1 contrast)
+ </div>
+ </div>
 
-  <div className="rounded-xl border-2 border-green-200 bg-green-50 p-6 dark:border-green-900 dark:bg-green-950">
-    <div className="mb-3 flex items-center gap-2">
-      <span className="text-2xl">✅</span>
-      <span className="font-bold text-green-900 dark:text-green-200">EXCELLENT</span>
-    </div>
-    <div className="rounded-lg bg-white p-4">
-      <div className="text-lg font-bold text-[#09090b]">
-        Black on White
-      </div>
-    </div>
-    <div className="mt-3 text-sm text-green-900 dark:text-green-200">
-      Exceeds WCAG AAA (17.72:1 contrast)
-    </div>
-  </div>
+ <div className="rounded-xl border-2 border-green-200 bg-green-50 p-6 dark:border-green-900 dark:bg-green-950">
+ <div className="mb-3 flex items-center gap-2">
+ <span className="text-2xl">✅</span>
+ <span className="font-bold text-green-900 dark:text-green-200">EXCELLENT</span>
+ </div>
+ <div className="rounded-lg bg-white p-4">
+ <div className="text-lg font-bold text-[#09090b]">
+ Black on White
+ </div>
+ </div>
+ <div className="mt-3 text-sm text-green-900 dark:text-green-200">
+ Exceeds WCAG AAA (17.72:1 contrast)
+ </div>
+ </div>
 
-  <div className="rounded-xl border-2 border-green-200 bg-green-50 p-6 dark:border-green-900 dark:bg-green-950">
-    <div className="mb-3 flex items-center gap-2">
-      <span className="text-2xl">✅</span>
-      <span className="font-bold text-green-900 dark:text-green-200">EXCELLENT</span>
-    </div>
-    <div className="rounded-lg bg-[#facc15] p-4">
-      <div className="text-lg font-bold text-[#09090b]">
-        Black on Yellow
-      </div>
-    </div>
-    <div className="mt-3 text-sm text-green-900 dark:text-green-200">
-      Exceeds WCAG AAA (11.57:1 contrast)
-    </div>
-  </div>
+ <div className="rounded-xl border-2 border-green-200 bg-green-50 p-6 dark:border-green-900 dark:bg-green-950">
+ <div className="mb-3 flex items-center gap-2">
+ <span className="text-2xl">✅</span>
+ <span className="font-bold text-green-900 dark:text-green-200">EXCELLENT</span>
+ </div>
+ <div className="rounded-lg bg-[#facc15] p-4">
+ <div className="text-lg font-bold text-[#09090b]">
+ Black on Yellow
+ </div>
+ </div>
+ <div className="mt-3 text-sm text-green-900 dark:text-green-200">
+ Exceeds WCAG AAA (11.57:1 contrast)
+ </div>
+ </div>
 </div>
 
 ---
 
 <div className="not-prose mt-12 flex gap-3">
-  <Button href="/gradients" arrow="right">
-    <>Explore Gradients</>
-  </Button>
-  <Button href="/typography" variant="outline">
-    <>View Typography</>
-  </Button>
+ <Button href="/gradients" arrow="right">
+ <>Explore Gradients</>
+ </Button>
+ <Button href="/typography" variant="outline">
+ <>View Typography</>
+ </Button>
 </div>

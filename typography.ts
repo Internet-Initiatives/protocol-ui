@@ -45,8 +45,8 @@ export default {
 
           // Base
           color: 'var(--tw-prose-body)',
-          fontSize: theme('fontSize.sm')[0],
-          lineHeight: theme('lineHeight.7'),
+          fontSize: '1rem',
+          lineHeight: '1.6',
 
           // Text
           p: {
@@ -171,28 +171,53 @@ export default {
             content: 'close-quote',
           },
 
-          // Headings
+          // Page chrome capped at 2.5rem on H1, stepped down from there
           h1: {
             color: 'var(--tw-prose-headings)',
-            fontWeight: '700',
-            fontSize: theme('fontSize.2xl')[0],
-            ...theme('fontSize.2xl')[1],
-            marginBottom: theme('spacing.2'),
+            fontWeight: '800',
+            fontSize: '2.5rem',
+            lineHeight: '1.2',
+            letterSpacing: '-0.02em',
+            marginBottom: theme('spacing.4'),
           },
           h2: {
             color: 'var(--tw-prose-headings)',
-            fontWeight: '600',
-            fontSize: theme('fontSize.lg')[0],
-            ...theme('fontSize.lg')[1],
+            fontWeight: '700',
+            fontSize: '2rem',
+            lineHeight: '1.25',
             marginTop: theme('spacing.16'),
-            marginBottom: theme('spacing.2'),
+            marginBottom: theme('spacing.4'),
           },
           h3: {
             color: 'var(--tw-prose-headings)',
-            fontSize: theme('fontSize.base')[0],
-            ...theme('fontSize.base')[1],
             fontWeight: '600',
+            fontSize: '1.5rem',
+            lineHeight: '1.3',
             marginTop: theme('spacing.10'),
+            marginBottom: theme('spacing.3'),
+          },
+          h4: {
+            color: 'var(--tw-prose-headings)',
+            fontWeight: '600',
+            fontSize: '1.25rem',
+            lineHeight: '1.4',
+            marginTop: theme('spacing.8'),
+            marginBottom: theme('spacing.3'),
+          },
+          h5: {
+            color: 'var(--tw-prose-headings)',
+            fontWeight: '600',
+            fontSize: '1rem',
+            lineHeight: '1.5',
+            marginTop: theme('spacing.6'),
+            marginBottom: theme('spacing.2'),
+          },
+          h6: {
+            color: 'var(--tw-prose-headings)',
+            fontWeight: '500',
+            fontSize: '0.875rem',
+            lineHeight: '1.5',
+            marginTop: theme('spacing.6'),
             marginBottom: theme('spacing.2'),
           },
 

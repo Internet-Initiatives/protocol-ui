@@ -1,3 +1,5 @@
+import { HeroPattern } from '@/components/HeroPattern'
+
 export const metadata = {
   title: 'Usage Guidelines',
   description:
@@ -8,8 +10,9 @@ export const sections = [
   { title: 'Digital Applications', id: 'digital-applications' },
   { title: 'Print Materials', id: 'print-materials' },
   { title: 'Social Media', id: 'social-media' },
-  { title: 'Video Content', id: 'video-content' },
 ]
+
+<HeroPattern />
 
 # Usage Guidelines by Medium
 
@@ -149,7 +152,7 @@ Colour usage guidelines by medium, grounded in colour psychology and usability b
         </div>
       </div>
     </div>
-    <div className="mt-3 text-sm text-zinc-600 dark:text-zinc-400">
+    <div className="mt-3 text-base text-zinc-600 dark:text-zinc-400">
       Black backgrounds with white/yellow text for maximum impact in feed. Text minimum 60px.
     </div>
   </div>
@@ -169,7 +172,7 @@ Colour usage guidelines by medium, grounded in colour psychology and usability b
         </div>
       </div>
     </div>
-    <div className="mt-3 text-sm text-zinc-600 dark:text-zinc-400">
+    <div className="mt-3 text-base text-zinc-600 dark:text-zinc-400">
       White backgrounds with yellow accents for professional tone. Yellow borders to stand out.
     </div>
   </div>
@@ -184,66 +187,6 @@ Colour usage guidelines by medium, grounded in colour psychology and usability b
     <li><strong className="text-zinc-900 dark:text-white">Mobile-first</strong> - Test all posts on mobile before publishing</li>
   </ul>
 </div>
-
----
-
-## Video Content {{ id: 'video-content' }}
-
-<div className="not-prose mt-8 space-y-6">
-  <div className="overflow-hidden rounded-xl border border-zinc-800">
-    <div className="relative bg-[#09090b] p-12">
-      <div className="absolute left-8 top-8 h-1 w-16 bg-[#facc15]"></div>
-      <div className="text-center">
-        <div className="text-5xl font-black text-white">
-          5 STEPS TO SUCCESS
-        </div>
-        <div className="mt-4 text-xl text-[#facc15]">Watch Now</div>
-      </div>
-      <div className="absolute bottom-0 left-0 right-0 h-1.5 bg-zinc-800">
-        <div className="h-full w-1/3 bg-[#facc15]"></div>
-      </div>
-    </div>
-    <div className="bg-zinc-900 px-6 py-3">
-      <div className="flex items-center gap-3">
-        <div className="h-2 w-2 rounded-full bg-[#facc15]"></div>
-        <div className="text-sm font-semibold text-[#facc15]">ULTIMATE PERFORMANCE ACADEMY</div>
-      </div>
-    </div>
-  </div>
-
-  <div className="grid gap-4 md:grid-cols-2">
-    <div className="rounded-xl border border-zinc-800 bg-zinc-950 p-4">
-      <div className="text-xs font-bold text-zinc-500">THUMBNAIL EXAMPLE</div>
-      <div className="mt-3 rounded-lg border-4 border-[#facc15] bg-[#09090b] p-6 text-center">
-        <div className="text-3xl font-black text-white">CLICK TO<br />WATCH</div>
-      </div>
-    </div>
-    <div className="rounded-xl border border-zinc-800 bg-zinc-950 p-4">
-      <div className="text-xs font-bold text-zinc-500">LOWER THIRD</div>
-      <div className="mt-3 bg-[#09090b] px-4 py-3">
-        <div className="border-l-4 border-[#facc15] pl-3">
-          <div className="text-sm font-bold text-white">John Smith</div>
-          <div className="text-xs text-[#facc15]">Business Coach</div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-
-<div className="mt-6">
-  <h3 className="text-lg font-bold text-zinc-900 dark:text-white">Video-Specific Guidelines</h3>
-  <ul className="mt-4 space-y-2 text-zinc-600 dark:text-zinc-400">
-    <li><strong className="text-zinc-900 dark:text-white">Lower thirds</strong> - Black background with yellow text and accent bars</li>
-    <li><strong className="text-zinc-900 dark:text-white">Progress bars</strong> - Yellow to indicate playback position</li>
-    <li><strong className="text-zinc-900 dark:text-white">Captions</strong> - White text with black background for accessibility</li>
-    <li><strong className="text-zinc-900 dark:text-white">Thumbnails</strong> - Yellow borders or backgrounds for click-through rates</li>
-    <li><strong className="text-zinc-900 dark:text-white">Intro/outro</strong> - Black background with yellow brand elements</li>
-  </ul>
-</div>
-
-<Note>
-  **Pro Tip**: Yellow progress bars or animated underlines that follow narration increase viewer retention by 41% (source: Wistia 2024 study).
-</Note>
 
 ---
 

@@ -1,11 +1,19 @@
 import glob from 'fast-glob'
 import { type Metadata } from 'next'
+import { Inter } from 'next/font/google'
 
 import { Providers } from '@/app/providers'
 import { Layout } from '@/components/Layout'
 import { type Section } from '@/components/SectionProvider'
 
 import '@/styles/tailwind.css'
+
+const inter = Inter({
+  subsets: ['latin'],
+  weight: ['400', '500', '600', '700', '800', '900'],
+  variable: '--font-inter',
+  display: 'swap',
+})
 
 export const metadata: Metadata = {
   title: {
@@ -30,8 +38,8 @@ export default async function RootLayout({
   let allSections = Object.fromEntries(allSectionsEntries)
 
   return (
-    <html lang="en" className="h-full" suppressHydrationWarning>
-      <body className="flex min-h-full bg-white antialiased dark:bg-[#0a0a0a]" suppressHydrationWarning>
+    <html lang="en" className={`h-full ${inter.variable}`} suppressHydrationWarning>
+      <body className="flex min-h-full bg-white font-sans antialiased dark:bg-[#0a0a0a]" suppressHydrationWarning>
         <Providers>
           <div className="w-full">
             <Layout allSections={allSections}>{children}</Layout>
