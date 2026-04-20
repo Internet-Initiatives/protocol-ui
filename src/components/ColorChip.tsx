@@ -31,13 +31,13 @@ export function ColorChip({ hex, label, border = false }: ColorChipProps) {
   }
 
   const luminance = getLuminance(hex)
-  const textColor = luminance > 0.5 ? '#18181b' : '#FFFFFF'
+  const textColor = luminance > 0.5 ? '#09090b' : '#FFFFFF'
   const borderColor = luminance > 0.5 ? '#E5E5E5' : '#FFFFFF'
 
   return (
     <button
       onClick={handleClick}
-      className="inline-flex items-center gap-1.5 rounded-md px-2 py-1 text-xs font-medium transition-all hover:scale-105 hover:shadow-md focus:outline-none focus:ring-2 focus:ring-[#FFCB05] focus:ring-offset-2"
+      className="inline-flex items-center gap-1.5 rounded-md px-2 py-1 text-xs font-medium transition-all hover:scale-105 hover:shadow-md focus:outline-none focus:ring-2 focus:ring-[#facc15] focus:ring-offset-2"
       style={{
         backgroundColor: hex,
         color: textColor,

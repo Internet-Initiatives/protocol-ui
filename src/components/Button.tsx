@@ -16,14 +16,14 @@ function ArrowIcon(props: React.ComponentPropsWithoutRef<'svg'>) {
 
 const variantStyles = {
   primary:
-    'rounded-full bg-zinc-900 py-1 px-3 text-white hover:bg-zinc-700 dark:bg-[#FFCB05]/10 dark:text-[#FFCB05] dark:ring-1 dark:ring-inset dark:ring-[#FFCB05]/20 dark:hover:bg-[#FFCB05]/10 dark:hover:text-[#FDE047] dark:hover:ring-[#FDE047]',
+    'rounded-full bg-zinc-900 py-1 px-3 text-white hover:bg-zinc-700 dark:bg-[#facc15]/10 dark:text-[#facc15] dark:ring-1 dark:ring-inset dark:ring-[#facc15]/20 dark:hover:bg-[#facc15]/10 dark:hover:text-[#FDE047] dark:hover:ring-[#FDE047]',
   secondary:
     'rounded-full bg-zinc-100 py-1 px-3 text-zinc-900 hover:bg-zinc-200 dark:bg-zinc-800/40 dark:text-zinc-400 dark:ring-1 dark:ring-inset dark:ring-zinc-800 dark:hover:bg-zinc-800 dark:hover:text-zinc-300',
   filled:
-    'rounded-full bg-zinc-900 py-1 px-3 text-white hover:bg-zinc-700 dark:bg-[#FFCB05] dark:text-zinc-900 dark:hover:bg-[#FDE047]',
+    'rounded-full bg-zinc-900 py-1 px-3 text-white hover:bg-zinc-700 dark:bg-[#facc15] dark:text-zinc-900 dark:hover:bg-[#FDE047]',
   outline:
     'rounded-full py-1 px-3 text-zinc-700 ring-1 ring-inset ring-zinc-900/10 hover:bg-zinc-900/2.5 hover:text-zinc-900 dark:text-zinc-400 dark:ring-white/10 dark:hover:bg-white/5 dark:hover:text-white',
-  text: 'text-zinc-900 hover:text-[#FFCB05] dark:text-[#FFCB05] dark:hover:text-[#FDE047]',
+  text: 'text-zinc-900 hover:text-[#facc15] dark:text-[#facc15] dark:hover:text-[#FDE047]',
 }
 
 type ButtonProps = {

@@ -32,25 +32,24 @@ export function ColorSwatch({
     }
   }
 
-  // Check if color is white or very light (needs border)
-  const isLightColor = () => {
+  const swatchLuminance = (() => {
     const rgb = parseInt(hex.slice(1), 16)
     const r = (rgb >> 16) & 0xff
     const g = (rgb >> 8) & 0xff
     const b = (rgb >> 0) & 0xff
-    const luminance = (0.299 * r + 0.587 * g + 0.114 * b) / 255
-    return luminance > 0.95 // Very light colors get border
-  }
+    return (0.299 * r + 0.587 * g + 0.114 * b) / 255
+  })()
+  const borderColor =
+    swatchLuminance > 0.5 ? 'rgba(0,0,0,0.12)' : 'rgba(255,255,255,0.18)'
 
   return (
     <button
       onClick={copyToClipboard}
       className={clsx(
-        'group relative overflow-hidden rounded-lg transition-all duration-200 hover:scale-105 hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-zinc-900 dark:focus:ring-white',
-        isLightColor() && 'border border-zinc-200 dark:border-zinc-700',
+        'group relative overflow-hidden rounded-lg border transition-all duration-200 hover:scale-105 hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-zinc-900 dark:focus:ring-white',
         className,
       )}
-      style={{ backgroundColor: hex }}
+      style={{ backgroundColor: hex, borderColor }}
       aria-label={`Copy ${name} color code ${hex}`}
     >
       <div className="p-4">
@@ -132,14 +131,19 @@ interface ColorScaleProps {
 }
 
 export function ColorScale({ colors, columns = 5 }: ColorScaleProps) {
-  // Determine text color based on luminance
+  // Pick text colour by WCAG contrast — whichever of black/white has higher
+  // contrast against the swatch wins. Crossover is at L ≈ 0.179.
   const getTextColor = (hex: string): 'light' | 'dark' => {
     const rgb = parseInt(hex.slice(1), 16)
-    const r = (rgb >> 16) & 0xff
-    const g = (rgb >> 8) & 0xff
-    const b = (rgb >> 0) & 0xff
-    const luminance = (0.299 * r + 0.587 * g + 0.114 * b) / 255
-    return luminance > 0.5 ? 'dark' : 'light'
+    const toLinear = (c: number) => {
+      const s = c / 255
+      return s <= 0.03928 ? s / 12.92 : Math.pow((s + 0.055) / 1.055, 2.4)
+    }
+    const r = toLinear((rgb >> 16) & 0xff)
+    const g = toLinear((rgb >> 8) & 0xff)
+    const b = toLinear((rgb >> 0) & 0xff)
+    const L = 0.2126 * r + 0.7152 * g + 0.0722 * b
+    return L > 0.179 ? 'dark' : 'light'
   }
 
   // Responsive grid classes based on columns

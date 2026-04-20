@@ -24,12 +24,12 @@ Complete CSS custom properties ready for implementation in your applications. {{
 ```css
 :root {
   /* Primary Brand Colours */
-  --color-yellow-500: #FFCB05;  /* Base brand yellow */
-  --color-yellow-600: #E6B800;  /* Hover state */
-  --color-yellow-700: #B45309;  /* Active state */
+  --color-yellow-400: #facc15;  /* Base brand yellow */
+  --color-yellow-500: #eab308;  /* Hover state */
+  --color-yellow-600: #ca8a04;  /* Active state */
 
-  --color-black-900: #18181b;   /* Brand black */
-  --color-black-950: #0F0F0F;   /* Deep black */
+  --color-black-900: #18181b;   /* Tailwind zinc-900 reference */
+  --color-black-950: #09090b;   /* Brand black */
   --color-black-1000: #000000;  /* Pure black */
 }
 ```
@@ -40,23 +40,23 @@ Complete CSS custom properties ready for implementation in your applications. {{
 :root {
   /* Success - Green */
   --color-success-500: #22C55E;
-  --color-success-600: #16A34A;  /* 4.5:1 contrast */
-  --color-success-700: #15803D;  /* 7:1 contrast */
+  --color-success-600: #16A34A;  /* 3.30:1 contrast */
+  --color-success-700: #15803D;  /* 5.02:1 contrast */
 
   /* Warning - Orange */
   --color-warning-500: #F97316;
-  --color-warning-600: #EA580C;  /* 4.5:1 contrast */
-  --color-warning-700: #C2410C;  /* 7:1 contrast */
+  --color-warning-600: #EA580C;  /* 3.56:1 contrast */
+  --color-warning-700: #C2410C;  /* 5.18:1 contrast */
 
   /* Error - Red */
   --color-error-500: #EF4444;
-  --color-error-600: #DC2626;    /* 4.5:1 contrast */
-  --color-error-700: #B91C1C;    /* 7:1 contrast */
+  --color-error-600: #DC2626;    /* 4.83:1 contrast */
+  --color-error-700: #B91C1C;    /* 6.47:1 contrast */
 
   /* Info - Blue */
   --color-info-500: #3B82F6;
-  --color-info-600: #2563EB;     /* 4.5:1 contrast */
-  --color-info-700: #1D4ED8;     /* 7:1 contrast */
+  --color-info-600: #2563EB;     /* 5.17:1 contrast */
+  --color-info-700: #1D4ED8;     /* 6.70:1 contrast */
 }
 ```
 
@@ -188,14 +188,14 @@ Here's a complete, production-ready CSS file with all tokens:
 ```css
 :root {
   /* === BRAND COLOURS === */
-  --color-yellow-500: #FFCB05;
-  --color-yellow-600: #E6B800;
-  --color-yellow-700: #B45309;
-  --color-black-900: #18181b;
+  --color-yellow-400: #facc15;
+  --color-yellow-500: #eab308;
+  --color-yellow-600: #ca8a04;
+  --color-black-950: #09090b;
 
   /* === SEMANTIC COLOURS === */
-  --color-success-600: #16A34A;
-  --color-warning-600: #EA580C;
+  --color-success-700: #15803d;
+  --color-warning-700: #c2410c;
   --color-error-600: #DC2626;
   --color-info-600: #2563EB;
 
@@ -231,8 +231,8 @@ Here's a complete, production-ready CSS file with all tokens:
 
 ```css
 .button-primary {
-  background-color: var(--color-yellow-500);
-  color: var(--color-black-900);
+  background-color: var(--color-yellow-400);
+  color: var(--color-black-950);
   font-family: var(--font-primary);
   font-weight: var(--font-weight-semibold);
   padding: var(--space-3) var(--space-6);
@@ -241,7 +241,7 @@ Here's a complete, production-ready CSS file with all tokens:
 }
 
 .button-primary:hover {
-  background-color: var(--color-yellow-600);
+  background-color: var(--color-yellow-500);
 }
 ```
 
@@ -255,12 +255,12 @@ module.exports = {
     extend: {
       colors: {
         yellow: {
-          500: '#FFCB05',
-          600: '#E6B800',
+          500: '#facc15',
+          600: '#eab308',
           700: '#B45309',
         },
         black: {
-          900: '#18181b',
+          950: '#09090b',
         },
       },
       fontFamily: {
