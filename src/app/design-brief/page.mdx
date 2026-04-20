@@ -1,0 +1,634 @@
+import { HeroPattern } from '@/components/HeroPattern'
+import { Button } from '@/components/Button'
+import { DownloadButton } from '@/components/DownloadButton'
+
+export const metadata = {
+  title: 'AI Design Brief',
+  description:
+    'Complete UPA Design System specification organised into copyable sections for AI and developer handoff.',
+}
+
+export const sections = [
+  { title: 'Brand Identity', id: 'brand-identity' },
+  { title: 'Colours', id: 'colours' },
+  { title: 'Typography', id: 'typography' },
+  { title: 'Spacing and Layout', id: 'spacing-layout' },
+  { title: 'Components', id: 'components' },
+  { title: 'Accessibility', id: 'accessibility' },
+  { title: 'Best Practices', id: 'best-practices' },
+]
+
+export const DESIGN_SYSTEM_CONTENT = `# UPA Design System - Complete Specification
+
+## Brand Identity
+
+Company: Ultimate Performance Academy (UPA)
+
+Mission Statement:
+Transform your business and become the man your family needs.
+
+Brand Personality:
+- Premium and professional
+- Results-driven and action-oriented
+- Supportive but demanding
+- Masculine energy with family focus
+- High performance culture
+
+Target Audience:
+- Male entrepreneurs and business owners
+- Ages 30 to 55
+- Family-oriented
+- Growth-minded
+- Results-focused
+
+---
+
+## Primary Brand Colours
+
+Yellow 400: #facc15 (Primary accent, CTAs, highlights)
+Black 950: #09090b (Text, backgrounds, premium feel)
+White: #FFFFFF (Backgrounds, text on dark)
+
+---
+
+## Yellow Scale (Tailwind yellow)
+
+Yellow 50: #fefce8
+Yellow 100: #fef9c3
+Yellow 200: #fef08a
+Yellow 300: #fde047
+Yellow 400: #facc15 (Brand primary)
+Yellow 500: #eab308 (Hover)
+Yellow 600: #ca8a04 (Active)
+Yellow 700: #a16207
+Yellow 800: #854d0e
+Yellow 900: #713f12
+
+---
+
+## Black Scale (Tailwind zinc)
+
+Black 50: #fafafa
+Black 100: #f5f5f5
+Black 200: #e5e5e5
+Black 300: #d4d4d4
+Black 400: #a3a3a3
+Black 500: #737373
+Black 600: #525252
+Black 700: #404040
+Black 800: #262626
+Black 900: #18181b
+Black 950: #09090b (Brand primary)
+Black 1000: #000000
+
+---
+
+## Cool Slate Scale (Dark mode)
+
+Slate 50: #F8FAFC
+Slate 100: #F1F5F9
+Slate 200: #E2E8F0 (Dark mode body text)
+Slate 300: #CBD5E1
+Slate 400: #94A3B8
+Slate 500: #64748B
+Slate 600: #475569
+Slate 700: #334155
+Slate 800: #1E293B
+Slate 900: #0F172A
+Slate 950: #020617
+
+---
+
+## Semantic Colours (Traffic Light System)
+
+Success - Green:
+- Success 50: #F0FDF4
+- Success 100: #DCFCE7
+- Success 700: #15803D (Main, 5.02:1 on white, AA pass)
+- Success 800: #166534
+- Success 900: #14532D
+
+Warning - Orange:
+- Warning 50: #FFF7ED
+- Warning 100: #FFEDD5
+- Warning 700: #C2410C (Main, 5.18:1 on white, AA pass)
+- Warning 800: #9A3412
+- Warning 900: #7C2D12
+
+Error - Red:
+- Error 50: #FEF2F2
+- Error 100: #FEE2E2
+- Error 600: #DC2626 (Main, 4.83:1 on white, AA pass)
+- Error 800: #991B1B
+- Error 900: #7F1D1D
+
+Info - Blue:
+- Info 50: #EFF6FF
+- Info 100: #DBEAFE
+- Info 600: #2563EB (Main, 5.17:1 on white, AA pass)
+- Info 800: #1E40AF
+- Info 900: #1E3A8A
+
+---
+
+## Critical Colour Rules
+
+NEVER USE:
+- Yellow (#facc15) on white for body text (1.53:1 fails WCAG at all levels)
+- Yellow on light grey or pastel backgrounds
+- Yellow as the primary text colour in long-form content
+
+ALWAYS USE:
+- Yellow (#facc15) for CTA buttons, accents, highlights and backgrounds (with dark text)
+- Black 950 (#09090b) text on yellow backgrounds
+- Zinc 900 (#18181b) for body text on white
+- White (#FFFFFF) text on black backgrounds
+
+WCAG AA Compliance:
+- Body text: Minimum 4.5:1 contrast
+- Large text (24px or above): Minimum 3:1 contrast
+- UI components and graphic objects: Minimum 3:1 contrast
+
+---
+
+## Gradients
+
+Brand Gradients:
+- Yellow Brand: linear-gradient(135deg, #facc15 0%, #FDE047 100%)
+- Black to Yellow: linear-gradient(135deg, #09090b 0%, #facc15 100%)
+
+Metallic Gradients (Logo variants):
+- Gold Linear: linear-gradient(135deg, #9E9300 0%, #867E01 50%, #E3D302 100%)
+- Gold Radial: radial-gradient(circle, #E3D302 0%, #867E01 60%, #5C6100 100%)
+- Silver Linear 1: linear-gradient(135deg, #C0C0C0 0%, #808080 100%)
+- Silver Linear 2: linear-gradient(135deg, #E8E8E8 0%, #A8A8A8 50%, #808080 100%)
+
+Data Visualisation Gradients:
+- Cyan to Purple: linear-gradient(135deg, #22D3EE 0%, #A855F7 100%)
+- Blue to Purple: linear-gradient(135deg, #3B82F6 0%, #8B5CF6 100%)
+- Red to Orange: linear-gradient(135deg, #EF4444 0%, #F97316 100%)
+- Green to Blue: linear-gradient(135deg, #10B981 0%, #3B82F6 100%)
+
+---
+
+## Typography
+
+Font Family: Inter (Google Fonts, loaded via next/font)
+Fallback Stack: ui-sans-serif, system-ui, sans-serif
+Available Weights: 400, 500, 600, 700, 800, 900
+
+Type Scale (strict 8px-divisible):
+- Display: 72px / 4.5rem, weight 900 Black, line-height 1.1, letter-spacing -0.03em (Logo wordmark only)
+- Hero Headline: 64px / 4rem, weight 800 Extrabold, line-height 1.1, letter-spacing -0.02em
+- Marketing Headline: 56px / 3.5rem, weight 800 Extrabold, line-height 1.15, letter-spacing -0.02em
+- Feature Heading: 48px / 3rem, weight 800 Extrabold, line-height 1.2, letter-spacing -0.02em
+- Page Title H1: 40px / 2.5rem, weight 800 Extrabold, line-height 1.2, letter-spacing -0.015em
+- Section Heading H2: 32px / 2rem, weight 800 Extrabold, line-height 1.25
+- Card Heading H3: 24px / 1.5rem, weight 800 Extrabold, line-height 1.3
+- Body: 16px / 1rem, weight 400 Regular, line-height 1.6
+- Small: 14px / 0.875rem, weight 400 Regular, line-height 1.5 (metadata only)
+
+Font Weight Usage:
+- 400 Regular: Body text, paragraphs
+- 500 Medium: UI labels, subheadlines
+- 600 Semibold: Secondary headings, form labels
+- 700 Bold: Inline emphasis
+- 800 Extrabold: All H1 through H6 page headings
+- 900 Black: Logo wordmark only, never for page copy
+
+Typography Best Practices:
+- Minimum 16px for body copy
+- 14px floor for supporting labels and metadata
+- Line-height 1.6 for body text
+- Line-height 1.1 to 1.3 for headings, tightening as size grows
+- Maximum line length 50 to 75 characters
+- Paragraph spacing 1.5em
+- Letter-spacing -0.02em for headings 48px and above
+- Never use Yellow for body text
+
+---
+
+## Spacing Scale (8px grid)
+
+- 1: 4px / 0.25rem
+- 2: 8px / 0.5rem
+- 3: 12px / 0.75rem
+- 4: 16px / 1rem
+- 5: 20px / 1.25rem
+- 6: 24px / 1.5rem
+- 8: 32px / 2rem
+- 10: 40px / 2.5rem
+- 12: 48px / 3rem
+- 16: 64px / 4rem
+- 20: 80px / 5rem
+- 24: 96px / 6rem
+
+---
+
+## Border Radius
+
+- sm: 4px / 0.25rem (Inline elements, tags)
+- md: 8px / 0.5rem (Inputs, buttons, cards)
+- lg: 12px / 0.75rem (Primary cards, panels)
+- xl: 16px / 1rem (Feature cards, modals)
+- 2xl: 24px / 1.5rem (Hero cards, marketing blocks)
+- full: 9999px (Pills, avatars)
+
+---
+
+## Shadows
+
+Light Mode:
+- sm: 0 1px 2px 0 rgb(0 0 0 / 0.05)
+- md: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1)
+- lg: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1)
+- xl: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1)
+- 2xl: 0 25px 50px -12px rgb(0 0 0 / 0.25)
+
+Dark Mode: combine a 1px white ring at 10 percent opacity with a soft white glow of the same shape.
+
+---
+
+## Colour Usage Rules
+
+Light Mode:
+- Background: White (#FFFFFF)
+- Body Text: Zinc 900 (#18181b)
+- Headings: Black 950 (#09090b)
+- CTAs: Yellow 400 (#facc15) with Black 950 text
+- Borders: Black 200 (#e5e5e5) or Black 300 (#d4d4d4)
+
+Dark Mode:
+- Background: Black 950 (#09090b)
+- Body Text: Slate 200 (#E2E8F0)
+- Headings: White (#FFFFFF) or Yellow 400 (#facc15)
+- CTAs: Yellow 400 (#facc15) with Black 950 text
+- Borders: Black 700 (#404040) or Black 800 (#262626)
+
+---
+
+## Accessibility (WCAG 2.1 AA)
+
+- Body text contrast: minimum 4.5:1
+- Large text (24px or 19px bold): minimum 3:1
+- UI and graphic contrast: minimum 3:1
+- Touch targets: minimum 44 by 44 pixels
+- Focus rings: 2px, clearly visible in both themes
+- Never rely on colour alone: always pair with icons, labels or patterns
+
+---
+
+## Button Styles
+
+Primary:
+- Background: Yellow 400 (#facc15)
+- Text: Black 950 (#09090b)
+- Font weight: 700 Bold
+- Padding: 12px 24px
+- Border radius: 8px
+- Hover: Yellow 500 (#eab308)
+
+Secondary:
+- Background: Transparent
+- Text: Black 950 (#09090b) in light, White in dark
+- Border: 2px solid Black 300 in light, Black 700 in dark
+- Font weight: 600 Semibold
+- Padding: 10px 22px
+- Border radius: 8px
+- Hover: Black 100 in light, Black 800 in dark
+
+---
+
+## Form Inputs
+
+- Height: minimum 44px
+- Padding: 12px 16px
+- Border: 1px solid Black 300 (#d4d4d4)
+- Border radius: 8px
+- Font size: 16px (body default)
+- Focus: 2px Yellow 400 ring
+- Error state: Error 600 border, Error 100 background
+- Success state: Success 700 border, Success 100 background
+
+---
+
+## Status Badges
+
+- Success: Success 100 background, Success 800 text, check icon
+- Warning: Warning 100 background, Warning 800 text, triangle icon
+- Error: Error 100 background, Error 800 text, cross icon
+- Info: Info 100 background, Info 800 text, info icon
+
+---
+
+## Cards
+
+- Background: White in light, Black 950 in dark
+- Border: 1px Black 200 in light, Black 700 in dark
+- Border radius: 12px
+- Padding: 24px
+- Shadow: shadow-md on hover
+
+---
+
+## Usage by Medium
+
+Digital (Web and Mobile):
+- White or Black 950 backgrounds
+- Yellow CTAs for maximum conversion
+- Traffic light system for status with icons
+- Zinc 900 body text to reduce eye strain
+
+Print:
+- White or cream paper, never yellow paper
+- Black 950 ink for body text
+- Yellow backgrounds for callouts and highlights only
+- Yellow on Black 950 for premium covers
+
+Social Media:
+- Instagram and Facebook: Black 950 backgrounds, white or yellow headline type at 48px or larger
+- LinkedIn: white backgrounds, yellow accents, professional tone
+- Always include a yellow element for brand recognition
+
+Video:
+- Black 950 backgrounds for maximum contrast
+- Yellow progress bars and lower thirds
+- White captions on Black 950 for accessibility
+- Yellow borders or backgrounds on thumbnails
+
+Email:
+- White backgrounds, Zinc 900 body text, Yellow 400 CTAs
+- Black 950 header with Yellow 400 accent bar
+- Professional subject lines, emojis used sparingly
+
+---
+
+## Best Practices
+
+1. Maintain 4.5:1 contrast minimum for body text
+2. Use Inter for every UI and content element
+3. Never drop below 16px for body copy
+4. Line-height 1.6 for body, 1.1 to 1.3 for headings
+5. Letter-spacing -0.02em for headings 48px and above
+6. Maximum line length 50 to 75 characters
+7. Always include icons with status colours
+8. Test every design on mobile before publishing
+9. Yellow is for CTAs, accents and highlights only, never body text
+10. Never use Yellow text on white backgrounds
+`
+
+<HeroPattern />
+
+# AI Design Brief
+
+Complete UPA Design System specification organised into copyable sections. Copy and paste into AI assistants or share with developers for consistent implementation across every surface. {{ className: 'lead' }}
+
+<div className="not-prose my-8">
+  <DownloadButton content={DESIGN_SYSTEM_CONTENT} filename="upa-design-system.md" />
+</div>
+
+---
+
+## Brand Identity {{ id: 'brand-identity' }}
+
+```txt
+Company: Ultimate Performance Academy (UPA)
+
+Mission Statement:
+Transform your business and become the man your family needs.
+
+Brand Personality:
+- Premium and professional
+- Results-driven and action-oriented
+- Supportive but demanding
+- Masculine energy with family focus
+- High performance culture
+
+Target Audience:
+- Male entrepreneurs and business owners
+- Ages 30 to 55
+- Family-oriented
+- Growth-minded
+- Results-focused
+```
+
+---
+
+## Colours {{ id: 'colours' }}
+
+### Primary Brand Colours
+
+```css
+Yellow 400: #facc15  /* Primary accent, CTAs, highlights */
+Black 950:  #09090b  /* Text, backgrounds, premium feel */
+White:      #FFFFFF  /* Backgrounds, text on dark */
+```
+
+### Yellow Scale
+
+```css
+Yellow 50:  #fefce8
+Yellow 100: #fef9c3
+Yellow 200: #fef08a
+Yellow 300: #fde047
+Yellow 400: #facc15  /* Brand primary */
+Yellow 500: #eab308  /* Hover */
+Yellow 600: #ca8a04  /* Active */
+Yellow 700: #a16207
+Yellow 800: #854d0e
+Yellow 900: #713f12
+```
+
+### Black Scale
+
+```css
+Black 50:   #fafafa
+Black 100:  #f5f5f5
+Black 200:  #e5e5e5
+Black 300:  #d4d4d4
+Black 400:  #a3a3a3
+Black 500:  #737373
+Black 600:  #525252
+Black 700:  #404040
+Black 800:  #262626
+Black 900:  #18181b
+Black 950:  #09090b  /* Brand primary */
+Black 1000: #000000
+```
+
+### Semantic Colours
+
+```css
+Success 700: #15803D  /* AA on white, 5.02:1 */
+Warning 700: #C2410C  /* AA on white, 5.18:1 */
+Error 600:   #DC2626  /* AA on white, 4.83:1 */
+Info 600:    #2563EB  /* AA on white, 5.17:1 */
+```
+
+### Gradients
+
+```css
+Yellow Brand:     linear-gradient(135deg, #facc15 0%, #FDE047 100%)
+Black to Yellow:  linear-gradient(135deg, #09090b 0%, #facc15 100%)
+Gold Linear:      linear-gradient(135deg, #9E9300 0%, #867E01 50%, #E3D302 100%)
+Silver Linear:    linear-gradient(135deg, #C0C0C0 0%, #808080 100%)
+```
+
+---
+
+## Typography {{ id: 'typography' }}
+
+```css
+Font Family: Inter (Google Fonts, loaded via next/font)
+Fallback:    ui-sans-serif, system-ui, sans-serif
+Weights:     400, 500, 600, 700, 800, 900
+
+Type Scale (strict 8px-divisible):
+Display:           72px, weight 900, line-height 1.1,  letter-spacing -0.03em  /* Logo only */
+Hero Headline:     64px, weight 800, line-height 1.1,  letter-spacing -0.02em
+Marketing Headline: 56px, weight 800, line-height 1.15, letter-spacing -0.02em
+Feature Heading:   48px, weight 800, line-height 1.2,  letter-spacing -0.02em
+Page Title H1:     40px, weight 800, line-height 1.2,  letter-spacing -0.015em
+Section Heading H2: 32px, weight 800, line-height 1.25
+Card Heading H3:   24px, weight 800, line-height 1.3
+Body:              16px, weight 400, line-height 1.6
+Small:             14px, weight 400, line-height 1.5   /* Metadata only */
+```
+
+---
+
+## Spacing and Layout {{ id: 'spacing-layout' }}
+
+### Spacing Scale (8px grid)
+
+```css
+1:  4px
+2:  8px
+3:  12px
+4:  16px
+5:  20px
+6:  24px
+8:  32px
+10: 40px
+12: 48px
+16: 64px
+20: 80px
+24: 96px
+```
+
+### Border Radius
+
+```css
+sm:   4px    /* Inline elements, tags */
+md:   8px    /* Inputs, buttons, small cards */
+lg:   12px   /* Primary cards, panels */
+xl:   16px   /* Feature cards, modals */
+2xl:  24px   /* Hero cards, marketing blocks */
+full: 9999px /* Pills, avatars */
+```
+
+### Shadows
+
+```css
+sm:  0 1px 2px 0 rgb(0 0 0 / 0.05)
+md:  0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1)
+lg:  0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1)
+xl:  0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1)
+2xl: 0 25px 50px -12px rgb(0 0 0 / 0.25)
+```
+
+---
+
+## Components {{ id: 'components' }}
+
+### Buttons
+
+```css
+Primary:
+- Background: #facc15
+- Text:       #09090b
+- Weight:     700
+- Padding:    12px 24px
+- Radius:     8px
+- Hover:      #eab308
+
+Secondary:
+- Background: transparent
+- Text:       #09090b (light) / #FFFFFF (dark)
+- Border:     2px solid #d4d4d4 (light) / #404040 (dark)
+- Weight:     600
+- Padding:    10px 22px
+- Radius:     8px
+- Hover:      #f5f5f5 (light) / #262626 (dark)
+```
+
+### Form Inputs
+
+```css
+- Height:        44px minimum
+- Padding:       12px 16px
+- Border:        1px solid #d4d4d4
+- Radius:        8px
+- Font size:     16px
+- Focus:         2px Yellow 400 ring
+- Error state:   #DC2626 border, #FEE2E2 background
+- Success state: #15803D border, #DCFCE7 background
+```
+
+### Status Badges
+
+```css
+Success: #DCFCE7 background, #166534 text, check icon
+Warning: #FFEDD5 background, #9A3412 text, triangle icon
+Error:   #FEE2E2 background, #991B1B text, cross icon
+Info:    #DBEAFE background, #1E40AF text, info icon
+```
+
+### Cards
+
+```css
+- Background: #FFFFFF (light) / #09090b (dark)
+- Border:     1px #e5e5e5 (light) / #404040 (dark)
+- Radius:     12px
+- Padding:    24px
+- Shadow:     shadow-md on hover
+```
+
+---
+
+## Accessibility {{ id: 'accessibility' }}
+
+```txt
+- Body text contrast: minimum 4.5:1
+- Large text (24px or 19px bold): minimum 3:1
+- UI and graphic contrast: minimum 3:1
+- Touch targets: minimum 44 by 44 pixels
+- Focus rings: 2px, clearly visible in both themes
+- Never rely on colour alone, always pair with icons, labels or patterns
+```
+
+---
+
+## Best Practices {{ id: 'best-practices' }}
+
+```txt
+1.  Maintain 4.5:1 contrast minimum for body text
+2.  Use Inter for every UI and content element
+3.  Never drop below 16px for body copy
+4.  Line-height 1.6 for body, 1.1 to 1.3 for headings
+5.  Letter-spacing -0.02em for headings 48px and above
+6.  Maximum line length 50 to 75 characters
+7.  Always include icons with status colours
+8.  Test every design on mobile before publishing
+9.  Yellow is for CTAs, accents and highlights only, never body text
+10. Never use Yellow text on white backgrounds
+```
+
+---
+
+<div className="not-prose mt-12 flex gap-3">
+  <DownloadButton content={DESIGN_SYSTEM_CONTENT} filename="upa-design-system.md" />
+  <Button href="/" variant="outline">
+    <>Back to Home</>
+  </Button>
+</div>

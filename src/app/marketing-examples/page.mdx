@@ -1,0 +1,125 @@
+import { HeroPattern } from '@/components/HeroPattern'
+
+export const metadata = {
+  title: 'Marketing Examples',
+  description:
+    'Marketing examples using the UPA brand colours with maximum impact.',
+}
+
+export const sections = [
+  { title: 'Black Backgrounds', id: 'black-backgrounds' },
+  { title: 'White Backgrounds', id: 'white-backgrounds' },
+  { title: 'All Caps Typography', id: 'all-caps-typography' },
+]
+
+<HeroPattern />
+
+# Marketing Examples
+
+Demonstration layouts showing how the UPA brand colours, typography and highlight patterns combine for maximum impact. Copy is illustrative. {{ className: 'lead' }}
+
+---
+
+## Black Backgrounds with Yellow Highlights {{ id: 'black-backgrounds' }}
+
+The signature UPA combination. Black backgrounds with yellow highlights create maximum impact and energy.
+
+<div className="not-prose mt-8">
+  <div className="rounded-2xl bg-[#09090b] px-16 py-16 text-center">
+    <h2 className="text-3xl font-black uppercase leading-tight text-white">
+      TRANSFORM YOUR BUSINESS AND BECOME THE{' '}
+      <span className="text-[#facc15]">MAN YOUR FAMILY NEEDS</span>
+    </h2>
+    <div className="mx-auto mt-6 max-w-xl text-base leading-relaxed text-zinc-300">
+      Ultimate Performance Academy helps driven entrepreneurs build the physique, mindset and business they deserve.
+    </div>
+    <div className="mt-8">
+      <button className="rounded-lg bg-[#facc15] px-8 py-4 text-base font-bold uppercase text-[#09090b] transition-all hover:bg-[#eab308]">
+        Start Your Transformation
+      </button>
+    </div>
+  </div>
+</div>
+
+### Key Features
+
+- **High contrast**: White and yellow text on black (17.72:1 and 11.57:1 respectively)
+- **Emotional impact**: Yellow highlights the key emotional hook
+- **Clear CTA**: Yellow button stands out against black background
+- **Brand consistency**: Signature UPA look and feel
+
+---
+
+## White Backgrounds (Yellow as Accent Only) {{ id: 'white-backgrounds' }}
+
+On white backgrounds, yellow is used sparingly as an accent. Black dominates for readability. Highlights use a tight line-height so the yellow sits close to the text.
+
+<div className="not-prose mt-8">
+  <div className="rounded-2xl border-2 border-zinc-200 bg-white p-12 dark:border-zinc-700 dark:bg-[#09090b]">
+    <h2 className="text-4xl font-black leading-tight text-[#09090b] dark:text-white" style={{lineHeight: '1.15'}}>
+      Driven Entrepreneurs{' '}
+      <span className="bg-[#facc15] px-2 text-[#09090b]">Train Their Body</span>{' '}
+      To Build A Business That Lasts.
+    </h2>
+    <div className="mt-6 text-lg leading-relaxed text-zinc-700 dark:text-zinc-300">
+      Most business programs ignore your health. Most fitness programs ignore your business. UPA integrates both because you cannot sustain success in one without the other.
+    </div>
+    <div className="mt-8 flex flex-wrap gap-4">
+      <button className="rounded-lg bg-[#09090b] px-6 py-3 font-semibold text-white dark:bg-white dark:text-[#09090b]">
+        Learn More
+      </button>
+      <button className="rounded-lg bg-[#facc15] px-6 py-3 font-semibold text-[#09090b]">
+        Get Started
+      </button>
+    </div>
+  </div>
+</div>
+
+### Best Practices for White Backgrounds
+
+- **Black for body text**: Maximum readability (17.72:1 contrast)
+- **Yellow for accents**: Highlights, badges, important CTAs
+- **Never yellow body text**: Fails WCAG contrast requirements
+- **Use yellow sparingly**: Strategic emphasis only
+
+---
+
+## All Caps Typography {{ id: 'all-caps-typography' }}
+
+ALL CAPS with tight line-height creates powerful, commanding headlines. Keep the headline as a single paragraph with punctuation carrying the rhythm, not separate stacked lines.
+
+<div className="not-prose mt-8">
+  <div className="rounded-2xl bg-[#09090b] px-16 py-16 text-center">
+    <h1 className="text-6xl font-black uppercase leading-[0.95] tracking-tight text-white">
+      STOP WAITING. <span className="text-[#facc15]">START BUILDING.</span> BECOME UNSTOPPABLE.
+    </h1>
+  </div>
+</div>
+
+<Note>
+  Use ALL CAPS sparingly. Great for hero sections and impactful statements. Never for body text or long-form content. Keep related statements in one paragraph with punctuation, not broken into separate stacked headings.
+</Note>
+
+---
+
+<div className="not-prose mt-8">
+  <div className="rounded-2xl bg-[#09090b] px-16 py-16 text-center">
+    <h2 className="text-5xl font-black leading-tight text-white">
+      Become The Man. <span className="text-[#facc15]">Construct The Kingdom.</span> Equip The Kingdom.
+    </h2>
+    <div className="mx-auto mt-6 max-w-xl text-xl leading-relaxed text-zinc-300">
+      A proven system that transforms entrepreneurs into high-performers who dominate in business and life.
+    </div>
+  </div>
+</div>
+
+---
+
+<div className="not-prose mt-12 flex gap-3">
+  <Button href="/usage-guidelines" arrow="right">
+    <>View Usage Guidelines</>
+  </Button>
+  <Button href="/accessibility" variant="outline">
+    <>Explore Accessibility</>
+  </Button>
+</div>

@@ -1,0 +1,191 @@
+import { HeroPattern } from '@/components/HeroPattern'
+
+export const metadata = {
+  title: 'Typography',
+  description:
+    'Inter on a strict 8px-divisible scale. Professional, highly readable and optimised for screens.',
+}
+
+export const sections = [
+  { title: 'Font Face', id: 'font-face' },
+  { title: 'Type Scale', id: 'type-scale' },
+  { title: 'In Context', id: 'in-context' },
+  { title: 'Rhythm', id: 'rhythm' },
+  { title: 'Accessibility', id: 'accessibility' },
+]
+
+<HeroPattern />
+
+# Typography
+
+Built on Inter and a strict 8px-divisible scale from 16 to 72, the Ultimate Performance Academy typography system uses six weights from 400 to 900. Black 900 is reserved for the logo wordmark. All sizes meet WCAG 2.1 AA readability standards. {{ className: 'lead' }}
+
+---
+
+## Font Face {{ id: 'font-face' }}
+
+Inter is the system-wide UI typeface. Clean, modern and optimised for screens. It carries body copy, headings, buttons and labels across the entire product.
+
+<div className="not-prose mt-6">
+  <div className="font-black text-zinc-950 dark:text-white" style={{fontSize: '4.5rem', lineHeight: '1.1', letterSpacing: '-0.03em'}}>Inter</div>
+  <div className="mt-6 text-2xl font-normal text-zinc-700 dark:text-zinc-300">
+    The quick brown fox jumps over the lazy dog
+  </div>
+</div>
+
+<Properties>
+  <Property name="Weights loaded">
+    400 Regular, 500 Medium, 600 Semibold, 700 Bold, 800 Extrabold, 900 Black
+  </Property>
+  <Property name="Fallback stack">
+    ui-sans-serif, system-ui, sans-serif
+  </Property>
+  <Property name="Primary use">
+    UI, body copy, headings, labels, buttons
+  </Property>
+  <Property name="Display weight">
+    Black 900, reserved for the logo wordmark only
+  </Property>
+</Properties>
+
+<Note>
+  Inter is loaded through next/font with weights 400 through 900. All UI and body copy stays in Inter. Black 900 is reserved for the logo wordmark.
+</Note>
+
+---
+
+## Type Scale {{ id: 'type-scale' }}
+
+A strict 8px-divisible ladder. Body sits at 16px. Headings step up in 8-pixel intervals to 64px, with 72px reserved for the display wordmark.
+
+<div className="not-prose mt-6 space-y-10">
+  <div>
+    <div className="font-black text-zinc-950 dark:text-white" style={{fontSize: '4.5rem', lineHeight: '1.1', letterSpacing: '-0.03em'}}>Display Headline</div>
+    <div className="mt-2 text-base text-zinc-600 dark:text-zinc-400">72px, Black 900, line-height 1.1, letter-spacing -0.03em. Logo wordmark only.</div>
+  </div>
+
+  <div>
+    <div className="font-extrabold text-zinc-950 dark:text-white" style={{fontSize: '4rem', lineHeight: '1.1', letterSpacing: '-0.02em'}}>Hero Headline</div>
+    <div className="mt-2 text-base text-zinc-600 dark:text-zinc-400">64px, Extrabold 800, line-height 1.1, letter-spacing -0.02em. Marketing hero headlines.</div>
+  </div>
+
+  <div>
+    <div className="font-extrabold text-zinc-950 dark:text-white" style={{fontSize: '3.5rem', lineHeight: '1.15', letterSpacing: '-0.02em'}}>Marketing Headline</div>
+    <div className="mt-2 text-base text-zinc-600 dark:text-zinc-400">56px, Extrabold 800, line-height 1.15, letter-spacing -0.02em. Landing page section headers.</div>
+  </div>
+
+  <div>
+    <div className="font-extrabold text-zinc-950 dark:text-white" style={{fontSize: '3rem', lineHeight: '1.2', letterSpacing: '-0.02em'}}>Feature Heading</div>
+    <div className="mt-2 text-base text-zinc-600 dark:text-zinc-400">48px, Extrabold 800, line-height 1.2, letter-spacing -0.02em. Primary feature blocks.</div>
+  </div>
+
+  <div>
+    <div className="font-extrabold text-zinc-950 dark:text-white" style={{fontSize: '2.5rem', lineHeight: '1.2', letterSpacing: '-0.015em'}}>Page Title H1</div>
+    <div className="mt-2 text-base text-zinc-600 dark:text-zinc-400">40px, Extrabold 800, line-height 1.2, letter-spacing -0.015em. Default in-app page titles.</div>
+  </div>
+
+  <div>
+    <div className="font-extrabold text-zinc-950 dark:text-white" style={{fontSize: '2rem', lineHeight: '1.25'}}>Section Heading H2</div>
+    <div className="mt-2 text-base text-zinc-600 dark:text-zinc-400">32px, Extrabold 800, line-height 1.25. Section titles within a page.</div>
+  </div>
+
+  <div>
+    <div className="font-extrabold text-zinc-950 dark:text-white" style={{fontSize: '1.5rem', lineHeight: '1.3'}}>Card Heading H3</div>
+    <div className="mt-2 text-base text-zinc-600 dark:text-zinc-400">24px, Extrabold 800, line-height 1.3. Card titles, subsection labels, modal headers.</div>
+  </div>
+
+  <div>
+    <div className="text-zinc-950 dark:text-slate-200" style={{fontSize: '1rem', lineHeight: '1.6'}}>Body text sits at sixteen pixels with a line-height of 1.6 for comfortable long-form reading.</div>
+    <div className="mt-2 text-base text-zinc-600 dark:text-zinc-400">16px, Regular 400, line-height 1.6. Default paragraph copy. Medium 500 for UI labels.</div>
+  </div>
+</div>
+
+<Note>
+  Display 900 is reserved for the logo wordmark. All other headings use Extrabold 800. Body text uses Regular 400 for paragraphs and Medium 500 for UI labels. Never drop below 16px for body copy.
+</Note>
+
+---
+
+## In Context {{ id: 'in-context' }}
+
+How the scale composes on a real page. Page title, subheadline and body together, with the vertical rhythm the system produces.
+
+<div className="not-prose mt-6">
+  <div className="font-extrabold text-zinc-950 dark:text-white" style={{fontSize: '2.5rem', lineHeight: '1.2', letterSpacing: '-0.015em'}}>
+    Build The Business You Deserve
+  </div>
+  <div className="mt-4 font-medium text-zinc-600 dark:text-zinc-400" style={{fontSize: '1.25rem', lineHeight: '1.5'}}>
+    A supporting subheadline in Inter Medium at 20px. Sits directly beneath the page title, carries the hook forward and leads the reader into the body copy.
+  </div>
+  <div className="mt-6 text-zinc-900 dark:text-slate-200" style={{fontSize: '1rem', lineHeight: '1.6'}}>
+    Body paragraphs run at 16px with a line-height of 1.6. Long-form copy gets generous leading so the eye can land cleanly on each line. Paragraph spacing is 1.5em so ideas stay separated without breaking the flow of the argument.
+  </div>
+  <div className="mt-6 text-zinc-900 dark:text-slate-200" style={{fontSize: '1rem', lineHeight: '1.6'}}>
+    A second paragraph demonstrates the rhythm between blocks of body text. Containers are capped at 50 to 75 characters per line to keep long-form copy comfortable. Inter's x-height carries readability all the way down to 14px for supporting metadata.
+  </div>
+</div>
+
+<Note>
+  Page Title at 40px Extrabold, subheadline at 20px Medium, body at 16px Regular. The 4-unit gap between title and subheadline, and the 6-unit gap before body, produce the vertical rhythm used across every page in the system.
+</Note>
+
+---
+
+## Rhythm {{ id: 'rhythm' }}
+
+Line-height and letter-spacing tighten as type gets larger. Small text breathes, large text compresses.
+
+<Properties>
+  <Property name="72, 64, 56">
+    Line-height 1.1 to 1.15, letter-spacing -0.02em to -0.03em. Tight and compressed for impact.
+  </Property>
+  <Property name="48, 40">
+    Line-height 1.2, letter-spacing -0.015em to -0.02em. Slight negative tracking at heading weights.
+  </Property>
+  <Property name="32, 24">
+    Line-height 1.25 to 1.3, letter-spacing 0em. Neutral tracking at sub-heading sizes.
+  </Property>
+  <Property name="16 body">
+    Line-height 1.6, letter-spacing 0em. Generous leading for long-form readability.
+  </Property>
+</Properties>
+
+<Note>
+  Rhythm follows the size. Large type compresses for impact, body type opens up for comfort. Do not override line-heights on a per-component basis. Use the system values.
+</Note>
+
+---
+
+## Accessibility {{ id: 'accessibility' }}
+
+Typography accessibility rules across the design system.
+
+<Properties>
+  <Property name="Minimum contrast">
+    4.5:1 for body text. 3:1 for large text at 24px and above, or 19px and above when bold.
+  </Property>
+  <Property name="Minimum size">
+    16px for body copy. 14px floor for supporting labels and metadata only.
+  </Property>
+  <Property name="Line length">
+    50 to 75 characters per line for comfortable reading. Cap long-form containers accordingly.
+  </Property>
+  <Property name="Paragraph spacing">
+    1.5em between paragraphs. Enough air to separate ideas without breaking flow.
+  </Property>
+</Properties>
+
+<Note>
+  Every size in the scale meets WCAG 2.1 AA against the brand palette. Yellow 400 never carries body copy. Dark text on light and light text on dark are the only default pairings.
+</Note>
+
+---
+
+<div className="not-prose mt-12 flex gap-3">
+  <Button href="/buttons" arrow="right">
+    <>View Buttons</>
+  </Button>
+  <Button href="/forms" variant="outline">
+    <>Explore Forms</>
+  </Button>
+</div>

@@ -1,0 +1,308 @@
+import { HeroPattern } from '@/components/HeroPattern'
+
+export const metadata = {
+  title: 'Design Tokens',
+  description:
+    'Complete CSS custom properties ready for implementation in your applications.',
+}
+
+export const sections = [
+  { title: 'Colour Tokens', id: 'colour-tokens' },
+  { title: 'Typography Tokens', id: 'typography-tokens' },
+  { title: 'Spacing Tokens', id: 'spacing-tokens' },
+  { title: 'Radius and Shadow', id: 'radius-shadow' },
+  { title: 'Implementation', id: 'implementation' },
+]
+
+<HeroPattern />
+
+# Design Tokens
+
+Complete CSS custom properties ready for implementation in your applications. Every token here mirrors the values documented across the rest of the design system. {{ className: 'lead' }}
+
+---
+
+## Colour Tokens {{ id: 'colour-tokens' }}
+
+### Brand Colours
+
+```css
+:root {
+  /* Primary brand colours */
+  --color-yellow-400: #facc15;  /* Brand primary */
+  --color-yellow-500: #eab308;  /* Hover state */
+  --color-yellow-600: #ca8a04;  /* Active state */
+
+  --color-black-950: #09090b;   /* Brand black */
+  --color-black-1000: #000000;  /* Pure black */
+  --color-white:     #FFFFFF;
+}
+```
+
+### Yellow Scale
+
+```css
+:root {
+  --color-yellow-50:  #fefce8;
+  --color-yellow-100: #fef9c3;
+  --color-yellow-200: #fef08a;
+  --color-yellow-300: #fde047;
+  --color-yellow-400: #facc15;  /* Brand primary */
+  --color-yellow-500: #eab308;
+  --color-yellow-600: #ca8a04;
+  --color-yellow-700: #a16207;
+  --color-yellow-800: #854d0e;
+  --color-yellow-900: #713f12;
+}
+```
+
+### Black Scale (Tailwind zinc aligned)
+
+```css
+:root {
+  --color-black-50:   #fafafa;
+  --color-black-100:  #f5f5f5;
+  --color-black-200:  #e5e5e5;
+  --color-black-300:  #d4d4d4;
+  --color-black-400:  #a3a3a3;
+  --color-black-500:  #737373;
+  --color-black-600:  #525252;
+  --color-black-700:  #404040;
+  --color-black-800:  #262626;
+  --color-black-900:  #18181b;
+  --color-black-950:  #09090b;  /* Brand primary */
+  --color-black-1000: #000000;
+}
+```
+
+### Cool Slate Scale (Dark mode)
+
+```css
+:root {
+  --color-slate-50:  #F8FAFC;
+  --color-slate-100: #F1F5F9;
+  --color-slate-200: #E2E8F0;  /* Body text on dark */
+  --color-slate-300: #CBD5E1;
+  --color-slate-400: #94A3B8;
+  --color-slate-500: #64748B;
+  --color-slate-600: #475569;
+  --color-slate-700: #334155;
+  --color-slate-800: #1E293B;
+  --color-slate-900: #0F172A;
+  --color-slate-950: #020617;
+}
+```
+
+### Semantic Colours
+
+```css
+:root {
+  /* Success - Green */
+  --color-success-100: #DCFCE7;
+  --color-success-700: #15803D;  /* 5.02:1 on white, AA pass */
+  --color-success-800: #166534;
+
+  /* Warning - Orange */
+  --color-warning-100: #FFEDD5;
+  --color-warning-700: #C2410C;  /* 5.18:1 on white, AA pass */
+  --color-warning-800: #9A3412;
+
+  /* Error - Red */
+  --color-error-100:   #FEE2E2;
+  --color-error-600:   #DC2626;  /* 4.83:1 on white, AA pass */
+  --color-error-800:   #991B1B;
+
+  /* Info - Blue */
+  --color-info-100:    #DBEAFE;
+  --color-info-600:    #2563EB;  /* 5.17:1 on white, AA pass */
+  --color-info-800:    #1E40AF;
+}
+```
+
+---
+
+## Typography Tokens {{ id: 'typography-tokens' }}
+
+### Font Families
+
+```css
+:root {
+  --font-primary: 'Inter', ui-sans-serif, system-ui, sans-serif;
+  --font-mono:    'JetBrains Mono', 'Fira Code', 'Courier New', monospace;
+}
+```
+
+### Font Weights
+
+```css
+:root {
+  --font-weight-regular:   400;
+  --font-weight-medium:    500;
+  --font-weight-semibold:  600;
+  --font-weight-bold:      700;
+  --font-weight-extrabold: 800;  /* All H1 through H6 */
+  --font-weight-black:     900;  /* Logo wordmark only */
+}
+```
+
+### Font Sizes (strict 8px-divisible)
+
+```css
+:root {
+  --font-size-sm:      0.875rem;  /* 14px, metadata only */
+  --font-size-base:    1rem;      /* 16px, body default */
+  --font-size-h3:      1.5rem;    /* 24px, card heading */
+  --font-size-h2:      2rem;      /* 32px, section heading */
+  --font-size-h1:      2.5rem;    /* 40px, page title */
+  --font-size-feature: 3rem;      /* 48px, feature heading */
+  --font-size-marketing: 3.5rem;  /* 56px, marketing headline */
+  --font-size-hero:    4rem;      /* 64px, hero headline */
+  --font-size-display: 4.5rem;    /* 72px, logo wordmark */
+}
+```
+
+### Line Heights
+
+```css
+:root {
+  --line-height-display:  1.1;   /* 72, 64 */
+  --line-height-heading:  1.2;   /* 48, 40 */
+  --line-height-section:  1.25;  /* 32 */
+  --line-height-card:     1.3;   /* 24 */
+  --line-height-body:     1.6;   /* 16 */
+}
+```
+
+### Letter Spacing
+
+```css
+:root {
+  --letter-spacing-display:  -0.03em;   /* 72 */
+  --letter-spacing-hero:     -0.02em;   /* 64, 56, 48 */
+  --letter-spacing-heading:  -0.015em;  /* 40 */
+  --letter-spacing-normal:   0;         /* 32 and below */
+}
+```
+
+---
+
+## Spacing Tokens {{ id: 'spacing-tokens' }}
+
+Based on an 8px grid system for consistency.
+
+```css
+:root {
+  --space-1:  0.25rem;  /* 4px */
+  --space-2:  0.5rem;   /* 8px */
+  --space-3:  0.75rem;  /* 12px */
+  --space-4:  1rem;     /* 16px */
+  --space-5:  1.25rem;  /* 20px */
+  --space-6:  1.5rem;   /* 24px */
+  --space-8:  2rem;     /* 32px */
+  --space-10: 2.5rem;   /* 40px */
+  --space-12: 3rem;     /* 48px */
+  --space-16: 4rem;     /* 64px */
+  --space-20: 5rem;     /* 80px */
+  --space-24: 6rem;     /* 96px */
+}
+```
+
+---
+
+## Radius and Shadow {{ id: 'radius-shadow' }}
+
+### Border Radius
+
+```css
+:root {
+  --radius-sm:   0.25rem;  /* 4px, tags and inline */
+  --radius-md:   0.5rem;   /* 8px, inputs and buttons */
+  --radius-lg:   0.75rem;  /* 12px, cards and panels */
+  --radius-xl:   1rem;     /* 16px, feature cards, modals */
+  --radius-2xl:  1.5rem;   /* 24px, hero cards */
+  --radius-full: 9999px;   /* Pills, avatars */
+}
+```
+
+### Shadows (Light Mode)
+
+```css
+:root {
+  --shadow-sm:  0 1px 2px 0 rgb(0 0 0 / 0.05);
+  --shadow-md:  0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+  --shadow-lg:  0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+  --shadow-xl:  0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+  --shadow-2xl: 0 25px 50px -12px rgb(0 0 0 / 0.25);
+}
+```
+
+### Shadows (Dark Mode)
+
+```css
+.dark {
+  --shadow-sm:  none;
+  --shadow-md:  0 4px 6px -1px rgb(255 255 255 / 0.05);
+  --shadow-lg:  0 10px 15px -3px rgb(255 255 255 / 0.05);
+  --shadow-xl:  0 20px 25px -5px rgb(255 255 255 / 0.06);
+  --shadow-2xl: 0 25px 50px -12px rgb(255 255 255 / 0.08);
+
+  --ring-sm: 1px solid rgb(255 255 255 / 0.1);
+}
+```
+
+---
+
+## Implementation {{ id: 'implementation' }}
+
+### Usage Example
+
+```css
+.button-primary {
+  background-color: var(--color-yellow-400);
+  color: var(--color-black-950);
+  font-family: var(--font-primary);
+  font-weight: var(--font-weight-bold);
+  padding: var(--space-3) var(--space-6);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-md);
+}
+
+.button-primary:hover {
+  background-color: var(--color-yellow-500);
+}
+```
+
+### Tailwind Configuration
+
+```js
+module.exports = {
+  theme: {
+    extend: {
+      colors: {
+        yellow: {
+          400: '#facc15',
+          500: '#eab308',
+          600: '#ca8a04',
+        },
+        black: {
+          950: '#09090b',
+        },
+      },
+      fontFamily: {
+        sans: ['Inter', 'ui-sans-serif', 'system-ui', 'sans-serif'],
+      },
+    },
+  },
+}
+```
+
+---
+
+<div className="not-prose mt-12 flex gap-3">
+  <Button href="/design-brief" arrow="right">
+    <>View AI Design Brief</>
+  </Button>
+  <Button href="/introduction" variant="outline">
+    <>View Introduction</>
+  </Button>
+</div>
