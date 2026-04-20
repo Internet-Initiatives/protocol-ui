@@ -6,7 +6,11 @@
       "Bash(npm run dev:*)",
       "Bash(mkdir -p ~/GitHub/Internet-Initiatives/tailwind-plus/.claude)",
       "Bash(touch ~/GitHub/Internet-Initiatives/tailwind-plus/.claude/.gitkeep)",
-      "Read(//Users/chrisholloway/GitHub/Internet-Initiatives/tailwind-plus/**)"
+      "Read(//Users/chrisholloway/GitHub/Internet-Initiatives/tailwind-plus/**)",
+      "Bash(mv .claude/commands/core_piv_loop/*.md .claude/commands/)",
+      "Bash(mv .claude/commands/validation/*.md .claude/commands/)",
+      "Bash(rmdir .claude/commands/core_piv_loop .claude/commands/validation)",
+      "Bash(rm -rf .claude/commands/core_piv_loop .claude/commands/validation)"
     ]
   }
 }
